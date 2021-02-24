@@ -11,22 +11,24 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
+
+    // 把 post 的 url 改成檔名而非 title
     if (
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`;
+      slug = `${_.kebabCase(node.frontmatter.title)}`;
     } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
-      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
+      slug = `${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === "") {
-      slug = `/${parsedFilePath.name}/`;
+      slug = `${parsedFilePath.name}/`;
     } else {
-      slug = `/${parsedFilePath.dir}/`;
+      slug = `${parsedFilePath.dir}/`;
     }
 
     if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug"))
-        slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+        slug = `${_.kebabCase(node.frontmatter.slug)}`;
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
         const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
         if (!date.isValid)
@@ -45,6 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
   const listingPage = path.resolve("./src/templates/listing.jsx");
+  const blogPage = path.resolve("./src/templates/blog.jsx");
   const landingPage = path.resolve("./src/templates/landing.jsx");
 
   // Get a full list of markdown posts
@@ -103,8 +106,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
     [...Array(pageCount)].forEach((_val, pageNum) => {
       createPage({
-        path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
-        component: listingPage,
+        path: pageNum === 0 ? `/blog` : `/blog/${pageNum + 1}/`,
+        component: blogPage,
         context: {
           limit: postsPerPage,
           skip: pageNum * postsPerPage,
@@ -113,13 +116,14 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       });
     });
-  } else {
-    // Load the landing page instead
-    createPage({
-      path: `/`,
-      component: landingPage,
-    });
   }
+  // else {
+  //   // Load the landing page instead
+  //   createPage({
+  //     path: `/`,
+  //     component: landingPage,
+  //   });
+  // }
 
   // Post page creating
   postsEdges.forEach((edge, index) => {
@@ -142,7 +146,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const prevEdge = postsEdges[prevID];
 
     createPage({
-      path: edge.node.fields.slug,
+      path: `/post/${edge.node.fields.slug}`,
       component: postPage,
       context: {
         slug: edge.node.fields.slug,

@@ -22,6 +22,15 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
     {
@@ -35,7 +44,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/`,
+        path: `${__dirname}/posts/`,
       },
     },
     {

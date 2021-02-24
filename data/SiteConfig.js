@@ -18,6 +18,7 @@ const config = {
   userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment
   userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "North Pole, Earth", // User location to display in the author segment.
+  userResume: "https://google.com",
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
@@ -37,6 +38,29 @@ const config = {
       label: "Email",
       url: "mailto:vagr9k@gmail.com",
       iconClassName: "fa fa-envelope",
+    },
+    {
+      label: "Instagram",
+      url: "https://twitter.com/Vagr9K",
+      iconClassName: "fa fa-envelope",
+    },
+  ],
+  tabLinks: [
+    {
+      title: "Home",
+      url: "/",
+    },
+    {
+      title: "About",
+      url: "/about",
+    },
+    {
+      title: "Work",
+      url: "/work",
+    },
+    {
+      title: "Blog",
+      url: "/blog",
     },
   ],
   copyright: "Copyright © 2020. Advanced User", // Copyright string for the footer of the website and RSS feed.
