@@ -1,40 +1,46 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import styled from "styled-components";
+import Drawer from "@material-ui/core/Drawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import Hidden from "@material-ui/core/Hidden";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
 import Container from "@material-ui/core/Container";
 import Toolbar from "@material-ui/core/Toolbar";
+import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { AppBar } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import Slide from "@material-ui/core/Slide";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import { LinkOff } from "@material-ui/icons";
+import { MEDIA_QUERY_SM, MEDIA_QUERY_MD } from "../../constants/breakpoint";
 
-const HeaderContainer = styled.header`
+const StyledAppBar = styled(AppBar)`
   border-bottom: 1px solid #dbdbdb;
   position: fixed;
-  width: 100%;
+  min-width: 100vw;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: 0.1s ease-in;
 
-  background-color: ${(props) => props.theme.palette.primary.main};
-`;
-
-const StyledContainer = styled(Container)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const StyledLink = styled(Link)`
-  padding: 0.5rem 1rem;
-
-  & ~ & {
-    margin-left: 1rem;
+  ${MEDIA_QUERY_MD} {
   }
+`;
 
+const StyledContainer = styled(Container)``;
+
+const StyledToolbar = styled(Toolbar)`
+  justify-content: space-between;
+`;
+
+const StyledLink = styled(Button)`
   ${(props) =>
     props.$active &&
     `
@@ -51,34 +57,62 @@ function HideOnScroll(props) {
 
 function Header({ config, theme }) {
   const { siteTitle, tabLinks } = config;
+  const [state, setState] = React.useState(false);
+
+  const toggleDrawer = () => {
+    setState(!state);
+  };
 
   return (
     <>
       <HideOnScroll>
-        <AppBar>
-          <HeaderContainer component="header">
-            <StyledContainer disableGutters>
+        <StyledAppBar color="secondary">
+          <StyledContainer>
+            <StyledToolbar component="nav" disableGutters>
               <Link color="textPrimary" variant="h5" href="/" underline="none">
                 {siteTitle}
               </Link>
-              <Toolbar component="nav" disableGutters>
-                {tabLinks &&
-                  tabLinks.map((link) => (
-                    <StyledLink
-                      color="primary"
-                      variant="inherit"
-                      noWrap
-                      key={link.title}
-                      href={link.url}
-                      $active={location.pathname === link.url}
-                    >
-                      {link.title}
-                    </StyledLink>
-                  ))}
-              </Toolbar>
-            </StyledContainer>
-          </HeaderContainer>
-        </AppBar>
+
+              <Hidden smUp>
+                <IconButton onClick={toggleDrawer}>
+                  <MenuIcon />
+                </IconButton>
+                <Drawer anchor="left" open={state} onClose={toggleDrawer}>
+                  {tabLinks &&
+                    tabLinks.map((link) => (
+                      <ListItem button key={link.title}>
+                        <StyledLink color="primary" href={link.url}>
+                          {link.title}
+                        </StyledLink>
+                      </ListItem>
+                    ))}
+                </Drawer>
+              </Hidden>
+
+              <Hidden xsDown>
+                <Toolbar>
+                  <List>
+                    {tabLinks &&
+                      tabLinks.map((link) => (
+                        <StyledLink
+                          color="primary"
+                          key={link.title}
+                          href={link.url}
+                          $active={
+                            link.url === "/"
+                              ? location.pathname === link.url
+                              : location.pathname.includes(link.url)
+                          }
+                        >
+                          {link.title}
+                        </StyledLink>
+                      ))}
+                  </List>
+                </Toolbar>
+              </Hidden>
+            </StyledToolbar>
+          </StyledContainer>
+        </StyledAppBar>
       </HideOnScroll>
     </>
   );

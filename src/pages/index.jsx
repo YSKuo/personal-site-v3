@@ -8,7 +8,7 @@ function IndexPage() {
   return (
     <>
       <Layout>
-        <Container disableGutters>Test</Container>
+        <Container>Test</Container>
       </Layout>
     </>
   );

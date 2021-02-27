@@ -3,6 +3,7 @@ import "./UserLinks.css";
 import styled from "styled-components";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
+import IconButton from "@material-ui/core/IconButton";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -14,7 +15,7 @@ const iconMapTable = {
   Twitter: <TwitterIcon />,
   GitHub: <GitHubIcon />,
   Instagram: <InstagramIcon />,
-  LinkedInIcon: <LinkedInIcon />,
+  LinkedIn: <LinkedInIcon />,
 };
 
 function UserLinks({ config, labeled }) {
@@ -22,8 +23,10 @@ function UserLinks({ config, labeled }) {
     const { userLinks } = config;
 
     return userLinks.map((link) => (
-      <Link color="secondary" href={link.url} key={link.label} target="_blank">
-        {iconMapTable[link.label]}
+      <Link href={link.url} key={link.label} target="_blank">
+        <IconButton color="secondary" aria-label={link.label}>
+          {iconMapTable[link.label]}
+        </IconButton>
       </Link>
     ));
   }
@@ -32,7 +35,7 @@ function UserLinks({ config, labeled }) {
   if (!userLinks) {
     return null;
   }
-  return <div>{getLinkElements()}</div>;
+  return getLinkElements();
 }
 
 export default UserLinks;

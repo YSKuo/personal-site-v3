@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider as MaterialThemeProvider } from "@material-ui/styles";
 import Container from "@material-ui/core/Container";
+import SEO from "../components/SEO/SEO";
 import theme from "../constants/theme";
 import config from "../../data/SiteConfig";
 import Header from "../components/Header";
@@ -16,6 +18,7 @@ import {
 } from "../constants/breakpoint";
 
 const GlobalStyle = createGlobalStyle`
+${"" /* 待調整 */}
   html {    
     ${MEDIA_QUERY_XS} {
       padding-top: 48px;
@@ -35,21 +38,21 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const StyledMain = styled.main``;
-
 export default function MainLayout({ children }) {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Helmet>
-          <meta name="description" content={config.siteDescription} />
-          <html lang="en" />
-        </Helmet>
-        <GlobalStyle />
-        <Header config={config} />
-        <main>{children}</main>
-        <Footer config={config} />
-      </ThemeProvider>
+      <MaterialThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          <Helmet>
+            <meta name="description" content={config.siteDescription} />
+            <html lang="en" />
+          </Helmet>
+          <GlobalStyle />
+          <Header config={config} />
+          <main>{children}</main>
+          <Footer config={config} />
+        </ThemeProvider>
+      </MaterialThemeProvider>
     </>
   );
 }
