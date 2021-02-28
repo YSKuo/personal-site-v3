@@ -1,23 +1,20 @@
 import React from "react";
-import { Link as GatsbyLink } from "gatsby";
 import styled from "styled-components";
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import Hidden from "@material-ui/core/Hidden";
-import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import Container from "@material-ui/core/Container";
-import Toolbar from "@material-ui/core/Toolbar";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import { AppBar } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
-import Link from "@material-ui/core/Link";
-import Slide from "@material-ui/core/Slide";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import {
+  AppBar,
+  Button,
+  Link,
+  Slide,
+  useScrollTrigger,
+  IconButton,
+  Hidden,
+  List,
+  ListItem,
+  Drawer,
+  Container,
+  Toolbar,
+} from "@material-ui/core";
 import { MEDIA_QUERY_SM, MEDIA_QUERY_MD } from "../../constants/breakpoint";
 
 const StyledAppBar = styled(AppBar)`
@@ -29,23 +26,18 @@ const StyledAppBar = styled(AppBar)`
   right: 0;
   z-index: 1000;
   transition: 0.1s ease-in;
-
-  ${MEDIA_QUERY_MD} {
-  }
 `;
-
-const StyledContainer = styled(Container)``;
 
 const StyledToolbar = styled(Toolbar)`
   justify-content: space-between;
 `;
 
-const StyledLink = styled(Button)`
-  ${(props) =>
-    props.$active &&
-    `
-    color: white;
-  `}
+const NavLink = styled(Button)`
+  font-size: 1.2rem;
+
+  & ~ & {
+    margin-left: 1rem;
+  }
 `;
 
 function HideOnScroll(props) {
@@ -53,6 +45,12 @@ function HideOnScroll(props) {
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
 
   return <Slide in={!trigger}>{children}</Slide>;
+}
+
+function isTabActive(link) {
+  return link.url === "/"
+    ? location.pathname === link.url
+    : location.pathname.includes(link.url);
 }
 
 function Header({ config, theme }) {
@@ -66,8 +64,8 @@ function Header({ config, theme }) {
   return (
     <>
       <HideOnScroll>
-        <StyledAppBar color="secondary">
-          <StyledContainer>
+        <StyledAppBar color="primary">
+          <Container>
             <StyledToolbar component="nav" disableGutters>
               <Link color="textPrimary" variant="h5" href="/" underline="none">
                 {siteTitle}
@@ -81,37 +79,38 @@ function Header({ config, theme }) {
                   {tabLinks &&
                     tabLinks.map((link) => (
                       <ListItem button key={link.title}>
-                        <StyledLink color="primary" href={link.url}>
+                        <Button
+                          color={isTabActive(link) ? "secondary" : "default"}
+                          variant={isTabActive(link) ? "contained" : "default"}
+                          href={link.url}
+                        >
                           {link.title}
-                        </StyledLink>
+                        </Button>
                       </ListItem>
                     ))}
                 </Drawer>
               </Hidden>
 
               <Hidden xsDown>
-                <Toolbar>
+                <Toolbar disableGutters>
                   <List>
                     {tabLinks &&
-                      tabLinks.map((link) => (
-                        <StyledLink
-                          color="primary"
-                          key={link.title}
-                          href={link.url}
-                          $active={
-                            link.url === "/"
-                              ? location.pathname === link.url
-                              : location.pathname.includes(link.url)
-                          }
-                        >
-                          {link.title}
-                        </StyledLink>
-                      ))}
+                      tabLinks.map((link) => {
+                        return (
+                          <NavLink
+                            color={isTabActive(link) ? "secondary" : "default"}
+                            key={link.title}
+                            href={link.url}
+                          >
+                            {link.title}
+                          </NavLink>
+                        );
+                      })}
                   </List>
                 </Toolbar>
               </Hidden>
             </StyledToolbar>
-          </StyledContainer>
+          </Container>
         </StyledAppBar>
       </HideOnScroll>
     </>

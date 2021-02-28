@@ -1,13 +1,15 @@
 import React from "react";
-import { Link as gatsbyLink } from "gatsby";
 import UserLinks from "../UserLinks/UserLinks";
 import styled from "styled-components";
-import Container from "@material-ui/core/Container";
-import Toolbar from "@material-ui/core/Toolbar";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
-import Divider from "@material-ui/core/Divider";
+import {
+  Container,
+  Toolbar,
+  Grid,
+  Typography,
+  Link,
+  Divider,
+} from "@material-ui/core";
+
 import {
   MEDIA_QUERY_XS,
   MEDIA_QUERY_SM,
@@ -27,10 +29,6 @@ const StyledContainer = styled(Container)`
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-`;
-
-const StyledToolbar = styled(Toolbar)`
-  justify-content: space-between;
 `;
 
 const PersonalInfoContainer = styled(Grid)`
@@ -58,11 +56,6 @@ const SiteInfoContainer = styled(Grid)`
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-
-  ${MEDIA_QUERY_MD} {
-    flex-direction: row;
-    margin-bottom: 0;
-  }
 `;
 
 const StyledDivider = styled(Divider)`
