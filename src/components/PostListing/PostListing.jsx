@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import Link from "@material-ui/core/Link";
 
 function PostListing({ postEdges }) {
   const postList = [];
@@ -20,7 +20,7 @@ function PostListing({ postEdges }) {
       {
         /* Your post list here. */
         postList.map((post) => (
-          <Link to={`/post/${post.path}`} key={post.title}>
+          <Link href={`/post/${post.path}`} key={post.title}>
             <h1>{post.title}</h1>
           </Link>
         ))
