@@ -1,21 +1,43 @@
 import React from "react";
 import _ from "lodash";
-import { Link } from "gatsby";
+import styled from "styled-components";
+import {
+  Container,
+  Toolbar,
+  Grid,
+  Typography,
+  Link,
+  Button,
+  IconButton,
+  Hidden,
+  Divider,
+} from "@material-ui/core";
+
+const Tags = styled(Grid)`
+  margin-bottom: 2rem;
+`;
+
+const TagContainer = styled(Grid)`
+  padding: 0.25rem;
+`;
 
 function PostTags({ tags }) {
   return (
-    <div className="post-tag-container">
+    <Tags container disableGutters>
       {tags &&
         tags.map((tag) => (
-          <Link
-            key={tag}
-            style={{ textDecoration: "none" }}
-            to={`/tags/${_.kebabCase(tag)}`}
-          >
-            <button type="button">{tag}</button>
-          </Link>
+          <TagContainer item>
+            <Button
+              key={tag}
+              href={`/tags/${_.kebabCase(tag)}`}
+              variant="contained"
+              disableElevation
+            >
+              #{tag}
+            </Button>
+          </TagContainer>
         ))}
-    </div>
+    </Tags>
   );
 }
 

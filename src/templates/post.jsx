@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
+import {
+  Container,
+  Toolbar,
+  Grid,
+  Typography,
+  Link,
+  Button,
+  IconButton,
+  Hidden,
+  Divider,
+} from "@material-ui/core";
+import CommentIcon from "@material-ui/icons/Comment";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
@@ -9,8 +22,58 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
-import "./post.css";
+
+const Content = styled.div`
+  margin-bottom: 2rem;
+
+  h1 {
+    font-weight: 300;
+    ${"" /* font-size: 6rem; */}
+    line-height: 1.167;
+    letter-spacing: -0.01562em;
+  }
+  h2 {
+    font-weight: 300;
+    ${"" /* font-size: 3.75rem; */}
+    line-height: 1.2;
+    letter-spacing: -0.00833em;
+  }
+  h3 {
+    font-weight: 400;
+    ${"" /* font-size: 3rem; */}
+    line-height: 1.167;
+    letter-spacing: 0em;
+  }
+  h4 {
+    font-weight: 400;
+    ${"" /* font-size: 2.125rem; */}
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+  }
+  h5 {
+    font-weight: 400;
+    ${"" /* font-size: 1.5rem; */}
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+  h6 {
+    font-weight: 500;
+    ${"" /* font-size: 1.25rem; */}
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+  }
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+  }
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 export default function PostTemplate({ data, pageContext }) {
   const { slug } = pageContext;
@@ -19,26 +82,37 @@ export default function PostTemplate({ data, pageContext }) {
   if (!post.id) {
     post.id = slug;
   }
+  const [isShowDisqus, setIsShowDisqus] = useState(false);
 
   return (
     <Layout>
-      <div>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        <div>
-          <h1>{post.title}</h1>
-          {/* eslint-disable-next-line react/no-danger */}
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
-          </div>
-          <UserInfo config={config} />
+      <Helmet>
+        <title>{`${post.title} | ${config.siteTitle}`}</title>
+      </Helmet>
+      <SEO postPath={slug} postNode={postNode} postSEO />
+      <Container maxWidth="md">
+        <Typography variant="h3" component="h1" display="inline" gutterBottom>
+          {post.title}
+        </Typography>
+        {/* eslint-disable-next-line react/no-danger */}
+        <Content dangerouslySetInnerHTML={{ __html: postNode.html }} />
+        <PostTags tags={post.tags} />
+        {isShowDisqus ? (
           <Disqus postNode={postNode} />
-        </div>
-      </div>
+        ) : (
+          <ButtonContainer>
+            <Button
+              variant="contained"
+              color="secondary"
+              size="large"
+              startIcon={<CommentIcon />}
+              onClick={() => setIsShowDisqus(true)}
+            >
+              Disqus
+            </Button>
+          </ButtonContainer>
+        )}
+      </Container>
     </Layout>
   );
 }
