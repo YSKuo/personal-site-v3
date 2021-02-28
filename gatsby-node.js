@@ -117,13 +117,6 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     });
   }
-  // else {
-  //   // Load the landing page instead
-  //   createPage({
-  //     path: `/`,
-  //     component: landingPage,
-  //   });
-  // }
 
   // Post page creating
   postsEdges.forEach((edge, index) => {

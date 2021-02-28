@@ -38,6 +38,10 @@ ${"" /* 待調整 */}
   }
 `;
 
+const Main = styled.main`
+  padding: 3rem 0;
+`;
+
 export default function MainLayout({ children }) {
   return (
     <>
@@ -49,7 +53,7 @@ export default function MainLayout({ children }) {
           </Helmet>
           <GlobalStyle />
           <Header config={config} />
-          <main>{children}</main>
+          <Main>{children}</Main>
           <Footer config={config} />
         </ThemeProvider>
       </MaterialThemeProvider>
