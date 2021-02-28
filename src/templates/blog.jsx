@@ -39,7 +39,7 @@ function Blog({ pageContext, data }) {
       align-items: center;
       list-style: none;
     `;
-    const PaginationLinkContainer = styled.li``;
+    const PaginationNumber = styled.li``;
     const PaginationLink = styled(Button)`
       height: 2rem;
       width: 2rem;
@@ -49,22 +49,31 @@ function Blog({ pageContext, data }) {
       margin: 0 1rem;
     `;
 
-    const PaginationButton = styled(Grid)`
-      text-align: center;
+    const PaginationPreviousButton = styled(Grid)`
+      text-align: start;
+    `;
+
+    const PaginationNextButton = styled(Grid)`
+      text-align: end;
     `;
 
     return (
-      <Grid container alignItems="center">
-        <PaginationButton item xs={6} sm={1}>
+      <Grid container component="nav" alignItems="center">
+        <PaginationPreviousButton item xs={6} sm={2}>
           {!isFirstPage && (
-            <IconButton href={prevPage} color="primary" variant="outlined">
-              <ArrowBackIosIcon />
-            </IconButton>
+            <Button
+              href={prevPage}
+              color="primary"
+              variant="outlined"
+              startIcon={<ArrowBackIosIcon />}
+            >
+              Previous
+            </Button>
           )}
-        </PaginationButton>
+        </PaginationPreviousButton>
 
         <Hidden xsDown>
-          <Grid item sm={10}>
+          <Grid item sm={8}>
             <PaginationList>
               {[...Array(pageCount)].map((_val, index) => {
                 const pageNum = index + 1;
@@ -76,7 +85,7 @@ function Blog({ pageContext, data }) {
                   pageNum === currentPage - 1
                 ) {
                   return (
-                    <PaginationLinkContainer key={`blog-page-${pageNum}`}>
+                    <PaginationNumber key={`blog-page-${pageNum}`}>
                       <PaginationLink
                         variant={pageNum === currentPage ? "contained" : "text"}
                         size={pageNum === currentPage ? "medium" : "small"}
@@ -88,7 +97,7 @@ function Blog({ pageContext, data }) {
                       >
                         {pageNum}
                       </PaginationLink>
-                    </PaginationLinkContainer>
+                    </PaginationNumber>
                   );
                 }
                 if (
@@ -96,24 +105,29 @@ function Blog({ pageContext, data }) {
                   pageNum === currentPage - 2
                 ) {
                   return (
-                    <PaginationLinkContainer key={`blog-page-${pageNum}`}>
+                    <PaginationNumber key={`blog-page-${pageNum}`}>
                       <IconButton disabled>
                         <MoreHorizIcon />
                       </IconButton>
-                    </PaginationLinkContainer>
+                    </PaginationNumber>
                   );
                 }
               })}
             </PaginationList>
           </Grid>
         </Hidden>
-        <PaginationButton item xs={6} sm={1}>
+        <PaginationNextButton item xs={6} sm={2}>
           {!isLastPage && (
-            <IconButton href={nextPage} color="primary" variant="outlined">
-              <ArrowForwardIosIcon />
-            </IconButton>
+            <Button
+              href={nextPage}
+              color="primary"
+              variant="outlined"
+              endIcon={<ArrowForwardIosIcon />}
+            >
+              Next
+            </Button>
           )}
-        </PaginationButton>
+        </PaginationNextButton>
       </Grid>
     );
   }
@@ -124,10 +138,8 @@ function Blog({ pageContext, data }) {
     <Layout>
       <Helmet title={`Blog | ${config.siteTitle}`} />
       <SEO />
-      <Container>
-        <div className="posts-container">
-          <PostListing postEdges={postEdges} />
-        </div>
+      <Container maxWidth="md">
+        <PostListing postEdges={postEdges} />
         {renderPaging()}
       </Container>
     </Layout>
@@ -157,6 +169,7 @@ export const blogQuery = graphql`
             tags
             cover
             date
+            category
           }
         }
       }
