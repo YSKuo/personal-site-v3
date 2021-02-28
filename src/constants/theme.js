@@ -2,9 +2,21 @@
 // https://material-ui.com/customization/default-theme/#default-theme
 
 import { createMuiTheme } from "@material-ui/core/styles";
+import { breakpoints } from "./breakpoint";
+
+const { xs, sm, md, lg, xl } = breakpoints;
 
 const theme = createMuiTheme({
   palette: {
+    breakpoints: {
+      values: {
+        xs,
+        sm,
+        md,
+        lg,
+        xl,
+      },
+    },
     primary: {
       main: "#90a4ae",
       light: "#c1d5e0",
