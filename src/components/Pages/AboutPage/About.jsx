@@ -65,11 +65,18 @@ function About({ config }) {
           feed my imagination of impossibilities with <B>video games</B> and{" "}
           <B>films</B>.
         </P>
-        <B>
+        <P>
           You may also know more about me through my{" "}
-          <A href={linkedinInfo.url}>{linkedinInfo.label}</A> or{" "}
-          <A href={instagramInfo.url}>{instagramInfo.label}</A>.
-        </B>
+          <B>
+            <A href={linkedinInfo.url}>{linkedinInfo.label}</A>
+          </B>{" "}
+          or{" "}
+          <B>
+            {" "}
+            <A href={instagramInfo.url}>{instagramInfo.label}</A>
+          </B>{" "}
+          .
+        </P>
       </Section>
       <StyledDivider yMargin="2rem" />
       <Section>
