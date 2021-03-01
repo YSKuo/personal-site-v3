@@ -35,46 +35,6 @@ function PostListing({ postEdges }) {
     });
   });
 
-  const PostList = styled(Grid)`
-    margin-bottom: 2rem;
-  `;
-
-  const Post = styled(Grid)`
-    display: flex;
-    flex-direction: column;
-  `;
-
-  const PostInfo = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-
-    ${MEDIA_QUERY_SM} {
-      flex-direction: row;
-    }
-  `;
-
-  const TimeInfo = styled(Typography)`
-    margin-bottom: 1rem;
-
-    ${MEDIA_QUERY_SM} {
-      margin-bottom: 0rem;
-      margin-right: 1rem;
-    }
-  `;
-
-  const CategoryLink = styled(Button)`
-    width: fit-content;
-  `;
-
-  const PostExcerpt = styled(Typography)`
-    margin-bottom: 2rem;
-  `;
-
-  const StyledDivider = styled(Divider)`
-    margin: 1.5rem 0;
-  `;
-
   return (
     <PostList container direction="column" spacing="8">
       {
@@ -144,5 +104,45 @@ function PostListing({ postEdges }) {
     </PostList>
   );
 }
+
+const PostList = styled(Grid)`
+  margin-bottom: 2rem;
+`;
+
+const Post = styled(Grid)`
+  display: flex;
+  flex-direction: column;
+`;
+
+const PostInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  ${MEDIA_QUERY_SM} {
+    flex-direction: row;
+  }
+`;
+
+const TimeInfo = styled(Typography)`
+  margin-bottom: 1rem;
+
+  ${MEDIA_QUERY_SM} {
+    margin-bottom: 0rem;
+    margin-right: 1rem;
+  }
+`;
+
+const CategoryLink = styled(Button)`
+  width: fit-content;
+`;
+
+const PostExcerpt = styled(Typography)`
+  margin-bottom: 2rem;
+`;
+
+const StyledDivider = styled(Divider)`
+  margin: 1.5rem 0;
+`;
 
 export default PostListing;

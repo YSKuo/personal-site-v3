@@ -30,7 +30,6 @@ export default function TagTemplate({ pageContext, data }) {
             #{tag}
           </Button>
         </TagContainer>
-
         <PostListing postEdges={postEdges} />
       </Container>
     </Layout>
