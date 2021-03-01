@@ -55,6 +55,13 @@ module.exports = {
             resolve: `gatsby-remark-relative-images`,
           },
           {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: "carbon",
+              theme: "blackboard",
+            },
+          },
+          {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 690,
