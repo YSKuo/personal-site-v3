@@ -5,7 +5,7 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { ThemeProvider as MaterialThemeProvider } from "@material-ui/styles";
 import Container from "@material-ui/core/Container";
 import SEO from "../components/SEO/SEO";
-import theme from "../constants/theme";
+import { theme, CustomMuiTheme } from "../constants/theme";
 import config from "../../data/SiteConfig";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -45,11 +45,11 @@ const Main = styled.main`
 export default function MainLayout({ children }) {
   return (
     <>
-      <MaterialThemeProvider theme={theme}>
+      <MaterialThemeProvider theme={CustomMuiTheme}>
         <ThemeProvider theme={theme}>
           <Helmet>
             <meta name="description" content={config.siteDescription} />
-            <html lang="en" />
+            <html />
           </Helmet>
           <GlobalStyle />
           <Header config={config} />

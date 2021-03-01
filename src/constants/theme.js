@@ -6,16 +6,20 @@ import { breakpoints } from "./breakpoint";
 
 const { xs, sm, md, lg, xl } = breakpoints;
 
-const theme = createMuiTheme({
+export const theme = {
+  breakpoints: {
+    values: {
+      xs,
+      sm,
+      md,
+      lg,
+      xl,
+    },
+  },
   palette: {
-    breakpoints: {
-      values: {
-        xs,
-        sm,
-        md,
-        lg,
-        xl,
-      },
+    common: {
+      black: "#000",
+      white: "#fff",
     },
     primary: {
       main: "#90a4ae",
@@ -28,6 +32,6 @@ const theme = createMuiTheme({
       dark: "#006978",
     },
   },
-});
+};
 
-export default theme;
+export const CustomMuiTheme = createMuiTheme(theme);
