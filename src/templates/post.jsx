@@ -15,58 +15,62 @@ import {
 } from "@material-ui/core";
 import CommentIcon from "@material-ui/icons/Comment";
 import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
-import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
 
 const Content = styled.div`
   margin-bottom: 2rem;
 
   h1 {
     font-weight: 300;
-    ${"" /* font-size: 6rem; */}
     line-height: 1.167;
     letter-spacing: -0.01562em;
+    border-bottom: 1px solid #ddd;
   }
   h2 {
     font-weight: 300;
-    ${"" /* font-size: 3.75rem; */}
     line-height: 1.2;
     letter-spacing: -0.00833em;
+    margin: 2rem 0;
   }
   h3 {
     font-weight: 400;
-    ${"" /* font-size: 3rem; */}
     line-height: 1.167;
     letter-spacing: 0em;
   }
   h4 {
     font-weight: 400;
-    ${"" /* font-size: 2.125rem; */}
     line-height: 1.235;
     letter-spacing: 0.00735em;
   }
   h5 {
     font-weight: 400;
-    ${"" /* font-size: 1.5rem; */}
     line-height: 1.334;
     letter-spacing: 0em;
   }
   h6 {
     font-weight: 500;
-    ${"" /* font-size: 1.25rem; */}
     line-height: 1.6;
     letter-spacing: 0.0075em;
   }
   p {
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     letter-spacing: 0.00938em;
+  }
+  li p {
+    font-weight: initial;
+    font-size: initial;
+    line-height: initial;
+    letter-spacing: initial;
+  }
+  a {
+    text-decoration: none;
   }
 `;
 
