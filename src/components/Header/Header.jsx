@@ -17,29 +17,6 @@ import {
 } from "@material-ui/core";
 import { MEDIA_QUERY_SM, MEDIA_QUERY_MD } from "../../constants/breakpoint";
 
-const StyledAppBar = styled(AppBar)`
-  border-bottom: 1px solid #dbdbdb;
-  position: fixed;
-  min-width: 100vw;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: 0.1s ease-in;
-`;
-
-const StyledToolbar = styled(Toolbar)`
-  justify-content: space-between;
-`;
-
-const NavLink = styled(Button)`
-  font-size: 1.2rem;
-
-  & ~ & {
-    margin-left: 1rem;
-  }
-`;
-
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
@@ -96,15 +73,17 @@ function Header({ config, theme }) {
                   <List>
                     {tabLinks &&
                       tabLinks.map((link) => {
-                        return (
-                          <NavLink
-                            color={isTabActive(link) ? "secondary" : "default"}
-                            key={link.title}
-                            href={link.url}
-                          >
-                            {link.title}
-                          </NavLink>
-                        );
+                        if (link.title !== "Work") {
+                          return (
+                            <NavLink
+                              isTabActive={isTabActive(link)}
+                              key={link.title}
+                              href={link.url}
+                            >
+                              {link.title}
+                            </NavLink>
+                          );
+                        }
                       })}
                   </List>
                 </Toolbar>
@@ -116,5 +95,32 @@ function Header({ config, theme }) {
     </>
   );
 }
+
+const StyledAppBar = styled(AppBar)`
+  border-bottom: 1px solid #dbdbdb;
+  position: fixed;
+  min-width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: 0.1s ease-in;
+`;
+
+const StyledToolbar = styled(Toolbar)`
+  justify-content: space-between;
+`;
+
+const NavLink = styled(Button)`
+  font-size: 1.2rem;
+  text-transform: none;
+
+  & ~ & {
+    margin-left: 1rem;
+  }
+
+  color: ${({ theme, isTabActive }) =>
+    isTabActive && theme.palette.common.white};
+`;
 
 export default Header;

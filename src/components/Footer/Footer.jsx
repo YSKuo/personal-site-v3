@@ -9,12 +9,56 @@ import {
   Link,
   Divider,
 } from "@material-ui/core";
-
 import {
   MEDIA_QUERY_XS,
   MEDIA_QUERY_SM,
   MEDIA_QUERY_MD,
 } from "../../constants/breakpoint";
+
+function Footer({ config }) {
+  const { siteTitle, userName, userEmail, userResume, copyright } = config;
+
+  return (
+    <StyledContainer component="footer">
+      <Grid container justify="space-between">
+        <PersonalInfoContainer item xs={12} sm={6}>
+          <Typography component="p" variant="h5" color="inherit" gutterBottom>
+            {userName}
+          </Typography>
+          <Link href={`mailto:${userEmail}`}>{userEmail}</Link>
+        </PersonalInfoContainer>
+        <IconContainer item component="nav" xs={12} sm={6}>
+          <UserLinks config={config} labeled />
+        </IconContainer>
+      </Grid>
+
+      <StyledDivider />
+
+      <Grid container justify="space-between">
+        <SiteInfoContainer item>
+          <Typography component="p" variant="body2" gutterBottom>
+            {copyright}
+          </Typography>
+          <Typography component="p" variant="body2" color="inherit">
+            Powered by <Link href="https://www.gatsbyjs.com/">Gatsby</Link> and{" "}
+            <Link href="https://github.com/Vagr9K/gatsby-advanced-starter">
+              Gatsby Advanced Starter
+            </Link>
+            .
+          </Typography>
+        </SiteInfoContainer>
+        <Grid item>
+          <Typography component="p" variant="body2">
+            Download{" "}
+            <Link target="_blank" href={userResume}>
+              Resume
+            </Link>
+          </Typography>
+        </Grid>
+      </Grid>
+    </StyledContainer>
+  );
+}
 
 const StyledContainer = styled(Container)`
   padding-top: 2rem;
@@ -61,68 +105,5 @@ const SiteInfoContainer = styled(Grid)`
 const StyledDivider = styled(Divider)`
   margin: 1rem 0;
 `;
-
-function Footer({ config }) {
-  const { siteTitle, userEmail, userResume, copyright } = config;
-
-  return (
-    <StyledContainer component="footer">
-      <Grid container justify="space-between">
-        <PersonalInfoContainer item xs={12} sm={6}>
-          <Typography component="h2" variant="body2" color="inherit" noWrap>
-            {siteTitle}
-          </Typography>
-          <Link href={`mailto:${userEmail}`}>{userEmail}</Link>
-        </PersonalInfoContainer>
-        <IconContainer item component="nav" xs={12} sm={6}>
-          <UserLinks config={config} labeled />
-        </IconContainer>
-      </Grid>
-
-      <StyledDivider />
-
-      <Grid container justify="space-between">
-        <SiteInfoContainer item>
-          <Typography component="h2" variant="body2" color="inherit">
-            {copyright},
-          </Typography>
-          <Typography component="h2" variant="body2" color="inherit">
-            <Typography component="span" variant="body2">
-              Powered by{" "}
-            </Typography>
-            <Link href="https://www.gatsbyjs.com/" variant="inherit">
-              Gatsby
-            </Link>
-            <Typography component="span" variant="body2">
-              {" "}
-              and{" "}
-            </Typography>
-            <Link
-              href="https://github.com/Vagr9K/gatsby-advanced-starter"
-              variant="inherit"
-            >
-              Gatsby Advanced Starter
-            </Link>
-            .
-          </Typography>
-        </SiteInfoContainer>
-        <Grid item>
-          <Typography
-            component="h2"
-            variant="body2"
-            color="inherit"
-            align="center"
-            noWrap
-          >
-            Download{" "}
-            <Link target="_blank" href={userResume}>
-              Resume
-            </Link>
-          </Typography>
-        </Grid>
-      </Grid>
-    </StyledContainer>
-  );
-}
 
 export default Footer;
