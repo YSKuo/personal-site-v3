@@ -25,9 +25,12 @@ function HideOnScroll(props) {
 }
 
 function isTabActive(link) {
-  return link.url === "/"
-    ? globalThis.location.pathname === link.url
-    : globalThis.location.pathname.includes(link.url);
+  if (globalThis?.location) {
+    return link.url === "/"
+      ? globalThis.location.pathname === link.url
+      : globalThis.location.pathname.includes(link.url);
+  }
+  return false;
 }
 
 function Header({ config, theme }) {
