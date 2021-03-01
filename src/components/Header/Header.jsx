@@ -26,8 +26,8 @@ function HideOnScroll(props) {
 
 function isTabActive(link) {
   return link.url === "/"
-    ? location.pathname === link.url
-    : location.pathname.includes(link.url);
+    ? globalThis.location.pathname === link.url
+    : globalThis.location.pathname.includes(link.url);
 }
 
 function Header({ config, theme }) {
