@@ -153,7 +153,7 @@ export const blogQuery = graphql`
             slug
             date
           }
-          excerpt
+          excerpt(pruneLength: 500)
           timeToRead
           frontmatter {
             title

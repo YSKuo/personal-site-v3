@@ -46,11 +46,25 @@ function PostListing({ postEdges }) {
 
   const PostInfo = styled.div`
     display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
+
+    ${MEDIA_QUERY_SM} {
+      flex-direction: row;
+    }
   `;
 
   const TimeInfo = styled(Typography)`
-    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    ${MEDIA_QUERY_SM} {
+      margin-bottom: 0rem;
+      margin-right: 1rem;
+    }
+  `;
+
+  const CategoryLink = styled(Button)`
+    width: fit-content;
   `;
 
   const PostExcerpt = styled(Typography)`
@@ -90,15 +104,13 @@ function PostListing({ postEdges }) {
                   <TimeInfo variant="h6" component="p" display="inline">
                     {post.date.slice(0, 10)} · {post.timeToRead} min read
                   </TimeInfo>
-                  {!location.pathname.includes("categories") && (
-                    <Button
-                      variant="outlined"
-                      startIcon={<FolderOutlinedIcon />}
-                      href={`/categories/${post.category}`}
-                    >
-                      {post.category}
-                    </Button>
-                  )}
+                  <CategoryLink
+                    variant="outlined"
+                    startIcon={<FolderOutlinedIcon />}
+                    href={`/categories/${post.category}`}
+                  >
+                    {post.category}
+                  </CategoryLink>
                 </PostInfo>
                 <PostExcerpt
                   variant="body1"
