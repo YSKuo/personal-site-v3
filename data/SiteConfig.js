@@ -1,6 +1,6 @@
 const config = {
-  siteTitle: "Arsene Kuo", // Site title.
-  siteTitleShort: "GA Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitle: "Arsene's Alibi", // Site title.
+  siteTitleShort: "Arsene", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix.
@@ -14,11 +14,12 @@ const config = {
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 5, // Amount of posts displayed per listing page.
-  userName: "Arsene Kuo", // Username to display in the author segment.
+  userName: "Yan-Sheng (Arsene) Kuo", // Username to display in the author segment.
   userEmail: "crowley3141@hotmail.com", // Email used for RSS feed's author segment
   userTwitter: "https://twitter.com/ArseneKuo", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "North Pole, Earth", // User location to display in the author segment.
-  userResume: "https://google.com",
+  userLocation: "Taipei, Taiwan", // User location to display in the author segment.
+  userResume:
+    "https://drive.google.com/file/d/1HTimaKo2zLBpZcGWh7PufG3inxR59zWG/view",
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription:
     "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
@@ -27,17 +28,14 @@ const config = {
     {
       label: "GitHub",
       url: "https://github.com/YSKuo",
-      iconClassName: "fa fa-github",
     },
     {
       label: "Twitter",
       url: "https://twitter.com/ArseneKuo",
-      iconClassName: "fa fa-twitter",
     },
     {
       label: "Instagram",
       url: "https://www.instagram.com/arsene_alibi/",
-      iconClassName: "fa fa-envelope",
     },
     {
       label: "LinkedIn",
@@ -62,6 +60,39 @@ const config = {
       url: "/blog",
     },
   ],
+  userSkills: {
+    design: [
+      "Sketch",
+      "Photoshop",
+      "Figma",
+      "Zeplin",
+      "Wireframing",
+      "Prototyping",
+    ],
+    development: [
+      "JavaScript (ES6+)",
+      "React",
+      "Redux",
+      "Gatsby",
+      "Express",
+      "GraphQL",
+      "jQuery",
+      "HTML",
+      "CSS",
+      "SASS/SCSS",
+      "styled-components",
+      "react-beautiful-dnd",
+      "Git",
+      "Bootstrap",
+      "Webpack",
+      "Babel",
+      "Gulp",
+      "PHP",
+      "MySQL",
+    ],
+    general: ["Web Application", "RWD", "Interaction Design", "Scrum"],
+  },
+
   copyright: `Copyright © Arsene Kuo 2019 - ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.

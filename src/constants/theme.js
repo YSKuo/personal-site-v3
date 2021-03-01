@@ -32,6 +32,12 @@ export const theme = {
       dark: "#006978",
     },
   },
+  typography: {
+    fontFamily: ["Inter", "Roboto", '"Helvetica Neue"', "sans-serif"].join(","),
+    body1: {
+      fontSize: "1.25rem",
+    },
+  },
 };
 
 export const CustomMuiTheme = createMuiTheme(theme);
