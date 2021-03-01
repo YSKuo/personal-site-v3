@@ -11,7 +11,7 @@ import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
-function renderPaging(pageContext) {
+function renderPaging(pageContext, location) {
   const { currentPageNum, pageCount } = pageContext;
   const prevPage =
     currentPageNum - 1 === 1 ? "/blog" : `/blog/${currentPageNum - 1}/`;
@@ -92,7 +92,7 @@ function renderPaging(pageContext) {
   );
 }
 
-function Blog({ pageContext, data }) {
+function Blog({ pageContext, data, location }) {
   const postEdges = data.allMarkdownRemark.edges;
 
   return (
@@ -101,7 +101,7 @@ function Blog({ pageContext, data }) {
       <SEO />
       <Container maxWidth="md">
         <PostListing postEdges={postEdges} />
-        {renderPaging(pageContext)}
+        {renderPaging(pageContext, location)}
       </Container>
     </Layout>
   );
