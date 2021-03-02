@@ -75,19 +75,15 @@ function Header({ config, theme }) {
                 <Toolbar disableGutters>
                   <List>
                     {tabLinks &&
-                      tabLinks.map((link) => {
-                        if (link.title !== "Work") {
-                          return (
-                            <NavLink
-                              isTabActive={isTabActive(link)}
-                              key={link.title}
-                              href={link.url}
-                            >
-                              {link.title}
-                            </NavLink>
-                          );
-                        }
-                      })}
+                      tabLinks.map((link) => (
+                        <NavLink
+                          isTabActive={isTabActive(link)}
+                          key={link.title}
+                          href={link.url}
+                        >
+                          {link.title}
+                        </NavLink>
+                      ))}
                   </List>
                 </Toolbar>
               </Hidden>

@@ -51,10 +51,14 @@ const config = {
       title: "About",
       url: "/about",
     },
-    {
-      title: "Work",
-      url: "/work",
-    },
+    // {
+    //   title: "Work",
+    //   url: "/work",
+    // },
+    // {
+    //   title: "Playground",
+    //   url: "/playground",
+    // },
     {
       title: "Blog",
       url: "/blog",
