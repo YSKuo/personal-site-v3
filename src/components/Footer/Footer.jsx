@@ -9,11 +9,7 @@ import {
   Link,
   Divider,
 } from "@material-ui/core";
-import {
-  MEDIA_QUERY_XS,
-  MEDIA_QUERY_SM,
-  MEDIA_QUERY_MD,
-} from "../../constants/breakpoint";
+import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 
 function Footer({ config }) {
   const { siteTitle, userName, userEmail, userResume, copyright } = config;
@@ -64,12 +60,12 @@ const StyledContainer = styled(Container)`
   padding-top: 2rem;
   padding-bottom: 2rem;
 
-  ${MEDIA_QUERY_SM} {
+  ${mediaQueryBreakpoint("sm")} {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
 
-  ${MEDIA_QUERY_MD} {
+  ${mediaQueryBreakpoint("md")} {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
@@ -81,7 +77,7 @@ const PersonalInfoContainer = styled(Grid)`
   flex-direction: column;
   margin-bottom: 1rem;
 
-  ${MEDIA_QUERY_SM} {
+  ${mediaQueryBreakpoint("sm")} {
     justify-content: flex-end;
     margin: 0;
   }
@@ -91,7 +87,7 @@ const IconContainer = styled(Grid)`
   display: flex;
   justify-content: flex-start;
 
-  ${MEDIA_QUERY_SM} {
+  ${mediaQueryBreakpoint("sm")} {
     justify-content: flex-end;
   }
 `;

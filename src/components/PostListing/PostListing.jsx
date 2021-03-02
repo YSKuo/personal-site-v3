@@ -11,12 +11,7 @@ import {
   Hidden,
   Divider,
 } from "@material-ui/core";
-import {
-  breakpoints,
-  MEDIA_QUERY_XS,
-  MEDIA_QUERY_SM,
-  MEDIA_QUERY_MD,
-} from "../../constants/breakpoint";
+import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 import FolderOutlinedIcon from "@material-ui/icons/FolderOutlined";
 
 function PostListing({ postEdges }) {
@@ -119,7 +114,7 @@ const PostInfo = styled.div`
   flex-direction: column;
   margin-bottom: 1rem;
 
-  ${MEDIA_QUERY_SM} {
+  ${mediaQueryBreakpoint("sm")} {
     flex-direction: row;
   }
 `;
@@ -127,7 +122,7 @@ const PostInfo = styled.div`
 const TimeInfo = styled(Typography)`
   margin-bottom: 1rem;
 
-  ${MEDIA_QUERY_SM} {
+  ${mediaQueryBreakpoint("sm")} {
     margin-bottom: 0rem;
     margin-right: 1rem;
   }

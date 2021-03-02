@@ -15,7 +15,7 @@ import {
   Container,
   Toolbar,
 } from "@material-ui/core";
-import { MEDIA_QUERY_SM, MEDIA_QUERY_MD } from "../../constants/breakpoint";
+import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 
 function HideOnScroll(props) {
   const { children, window } = props;

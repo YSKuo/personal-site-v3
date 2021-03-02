@@ -11,24 +11,20 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./normalize.css";
 import "./index.css";
-import {
-  MEDIA_QUERY_XS,
-  MEDIA_QUERY_SM,
-  MEDIA_QUERY_MD,
-} from "../constants/breakpoint";
+import { mediaQueryBreakpoint } from "../constants/breakpoint";
 
 const GlobalStyle = createGlobalStyle`
 ${"" /* 待調整 */}
   html {    
-    ${MEDIA_QUERY_XS} {
+    ${mediaQueryBreakpoint("xs")} {
       padding-top: 48px;
     }
 
-    ${MEDIA_QUERY_SM} {
+    ${mediaQueryBreakpoint("sm")} {
       padding-top: 56px;
     }
 
-    ${MEDIA_QUERY_MD} {
+    ${mediaQueryBreakpoint("md")} {
       padding-top: 64px;
     }
   }

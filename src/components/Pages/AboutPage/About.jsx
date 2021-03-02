@@ -19,7 +19,7 @@ import {
   B,
   A,
 } from "../../Section/Section";
-import { MEDIA_QUERY_SM } from "../../../constants/breakpoint";
+import { mediaQueryBreakpoint } from "../../../constants/breakpoint";
 import StyledDivider from "../../StyledDivider";
 
 function About({ config }) {
@@ -96,7 +96,7 @@ const TagsSection = ({ category, userSkills }) => {
     padding-right: 0rem;
     margin-bottom: 2rem;
 
-    ${MEDIA_QUERY_SM} {
+    ${mediaQueryBreakpoint("sm")} {
       padding-right: 1rem;
     }
   `;

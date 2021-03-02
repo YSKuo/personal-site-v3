@@ -11,10 +11,10 @@ import {
   Hidden,
   Divider,
 } from "@material-ui/core";
-import { MEDIA_QUERY_SM } from "../../constants/breakpoint";
+import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 
 export const Section = styled.section`
-  ${MEDIA_QUERY_SM} {
+  ${mediaQueryBreakpoint("sm")} {
     padding: 1rem 0;
   }
 `;
@@ -35,7 +35,7 @@ export const P = ({ children }) => {
   const Paragraph = styled(Typography)`
     font-size: 1rem;
 
-    ${MEDIA_QUERY_SM} {
+    ${mediaQueryBreakpoint("sm")} {
       font-size: ${(props) => props.theme.typography.body1.fontSize};
     }
   `;
