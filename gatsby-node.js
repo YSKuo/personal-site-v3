@@ -27,16 +27,26 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
 
     if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug"))
-        slug = `${_.kebabCase(node.frontmatter.slug)}`;
+      let date;
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
-        const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
+        date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
         if (!date.isValid)
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
         createNodeField({ node, name: "date", value: date.toISOString() });
       }
+
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")) {
+        slug = `${_.kebabCase(node.frontmatter.slug)}`;
+      } else if (date.isValid) {
+        slug = `${_.replace(
+          date.toISOString().substr(0, 10),
+          new RegExp("-", "g"),
+          "/"
+        )}/${_.kebabCase(parsedFilePath.name)}`;
+      }
     }
+
     createNodeField({ node, name: "slug", value: slug });
   }
 };
@@ -46,9 +56,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const postPage = path.resolve("src/templates/post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
-  const listingPage = path.resolve("./src/templates/listing.jsx");
   const blogPage = path.resolve("./src/templates/blog.jsx");
-  const landingPage = path.resolve("./src/templates/landing.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
