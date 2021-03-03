@@ -27,6 +27,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
 
     if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "excerpt")) {
+        createNodeField({
+          node,
+          name: "excerpt",
+          value: node.frontmatter.excerpt,
+        });
+      }
+
       let date;
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
         date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
@@ -164,7 +172,7 @@ exports.createPages = async ({ graphql, actions }) => {
   //  Create tag pages
   tagSet.forEach((tag) => {
     createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
+      path: `/tags/${tag}/`,
       component: tagPage,
       context: { tag },
     });
@@ -173,7 +181,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create category pages
   categorySet.forEach((category) => {
     createPage({
-      path: `/categories/${_.kebabCase(category)}/`,
+      path: `/categories/${category}/`,
       component: categoryPage,
       context: { category },
     });

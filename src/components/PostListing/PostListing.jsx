@@ -25,7 +25,7 @@ function PostListing({ postEdges }) {
       category: postEdge.node.frontmatter.category,
       date: postEdge.node.fields.date,
       slug: postEdge.node.fields.slug,
-      excerpt: postEdge.node.excerpt,
+      excerpt: postEdge.node.fields.excerpt || postEdge.node.excerpt,
       timeToRead: postEdge.node.timeToRead,
     });
   });
@@ -59,13 +59,15 @@ function PostListing({ postEdges }) {
                   <TimeInfo variant="h6" component="p" display="inline">
                     {post.date.slice(0, 10)} · {post.timeToRead} min read
                   </TimeInfo>
-                  <CategoryLink
-                    variant="outlined"
-                    startIcon={<FolderOutlinedIcon />}
-                    href={`/categories/${post.category}`}
-                  >
-                    {post.category}
-                  </CategoryLink>
+                  {post.category && (
+                    <CategoryLink
+                      variant="outlined"
+                      startIcon={<FolderOutlinedIcon />}
+                      href={`/categories/${post.category}`}
+                    >
+                      {post.category}
+                    </CategoryLink>
+                  )}
                 </PostInfo>
                 <PostExcerpt
                   variant="body1"
