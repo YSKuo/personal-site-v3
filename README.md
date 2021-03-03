@@ -35,3 +35,18 @@
 - code block 的 plain text 字體變色
   - [gatsby-remark-highlight-code | Gatsby](https://www.gatsbyjs.com/plugins/gatsby-remark-highlight-code/)
   - [DeckDeckGo | Documentation](https://docs.deckdeckgo.com/components/code/)
+
+---
+
+## Blog
+
+### categories
+
+- Front-end
+- Back-end
+- JavaScript
+- Web
+- React
+- Algorithm
+- Learning
+- Others
