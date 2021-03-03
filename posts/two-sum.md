@@ -1,26 +1,15 @@
 ---
 title: "菜雞自評 - 解 Two Sum"
+cover: "Algorithm"
+category: "JavaScript"
 excerpt: "訓練解題似乎是 junior 到 senior 的必經過程，所以偶爾也來練解題，這次要解的是 LeetCode 的經典入門題：Two-Sum。"
 date: "2020-12-04"
 published: true
 featured: true
 tags:
-  - Self-Assessment
+  - self-assessment
   - LeetCode
-  - Mandarin
-metatags:
-  title: 菜雞自評 - 解 Two Sum
-  description: 訓練解題似乎是 junior 到 senior 的必經過程，所以偶爾也來練解題，這次要解的是 LeetCode 的經典入門題：Two-Sum。
-  og:
-    title: 菜雞自評 - 解 Two Sum
-    description: 訓練解題似乎是 junior 到 senior 的必經過程，所以偶爾也來練解題，這次要解的是 LeetCode 的經典入門題：Two-Sum。
-    image: https://images.unsplash.com/photo-1518214598173-1666bc921d66?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80
-    type: article
-  twitter:
-    title: 菜雞自評 - 解 Two Sum
-    description: 訓練解題似乎是 junior 到 senior 的必經過程，所以偶爾也來練解題，這次要解的是 LeetCode 的經典入門題：Two-Sum。
-    image: https://images.unsplash.com/photo-1518214598173-1666bc921d66?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80
-    card: Run
+  - 中文
 ---
 
 ## 前言
