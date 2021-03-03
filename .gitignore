@@ -63,3 +63,6 @@ bundle-stats.json
 
 # dotenv environment variable files
 .env*
+
+# posts
+.posts/archived

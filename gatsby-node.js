@@ -37,8 +37,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
 
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")) {
+        // 文章 frontmatter 有 slug 就直接拿來用
         slug = `${_.kebabCase(node.frontmatter.slug)}`;
       } else if (date.isValid) {
+        // 以日期加上檔名當 slug
         slug = `${_.replace(
           date.toISOString().substr(0, 10),
           new RegExp("-", "g"),
