@@ -65,5 +65,5 @@ bundle-stats.json
 .env*
 
 # posts
-.posts/archived
-.posts/draft
+posts/archived
+posts/draft
