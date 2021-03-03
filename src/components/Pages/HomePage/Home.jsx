@@ -20,7 +20,7 @@ import {
   B,
   A,
 } from "../../Section/Section";
-import { MEDIA_QUERY_SM } from "../../../constants/breakpoint";
+import { mediaQueryBreakpoint } from "../../../constants/breakpoint";
 import StyledDivider from "../../StyledDivider";
 
 function About({ config }) {
@@ -71,7 +71,7 @@ const Intro = styled(Typography)`
   font-weight: bold;
   font-size: 3rem;
 
-  ${MEDIA_QUERY_SM} {
+  ${mediaQueryBreakpoint("sm")} {
     font-size: 4rem;
   }
 `;

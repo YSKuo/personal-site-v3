@@ -74,7 +74,7 @@ function About({ config }) {
           <B>
             {" "}
             <A href={instagramInfo.url}>{instagramInfo.label}</A>
-          </B>{" "}
+          </B>
           .
         </P>
       </Section>
