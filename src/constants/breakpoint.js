@@ -13,18 +13,5 @@ export const MEDIA_QUERY_LG = `@media screen and (min-width: ${breakpoints.lg}px
 export const MEDIA_QUERY_XL = `@media screen and (min-width: ${breakpoints.xl}px)`;
 
 export function mediaQueryBreakpoint(size) {
-  switch (size.toLowerCase()) {
-    case "xs":
-      return MEDIA_QUERY_XS;
-    case "sm":
-      return MEDIA_QUERY_SM;
-    case "md":
-      return MEDIA_QUERY_MD;
-    case "lg":
-      return MEDIA_QUERY_LG;
-    case "xl":
-      return MEDIA_QUERY_XL;
-    default:
-      return MEDIA_QUERY_XS;
-  }
+  return `@media screen and (min-width: ${breakpoints[size.toLowerCase()]}px)`;
 }
