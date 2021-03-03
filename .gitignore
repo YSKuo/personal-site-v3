@@ -66,3 +66,4 @@ bundle-stats.json
 
 # posts
 .posts/archived
+.posts/draft
