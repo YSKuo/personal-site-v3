@@ -11,6 +11,7 @@ import {
   Hidden,
   Divider,
 } from "@material-ui/core";
+import PostSecondaryInfo from "../Post/PostSecondaryInfo";
 import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 import FolderOutlinedIcon from "@material-ui/icons/FolderOutlined";
 
@@ -54,21 +55,7 @@ function PostListing({ postEdges }) {
                     {post.title}
                   </Link>
                 </Typography>
-
-                <PostInfo>
-                  <TimeInfo variant="h6" component="p" display="inline">
-                    {post.date.slice(0, 10)} · {post.timeToRead} min read
-                  </TimeInfo>
-                  {post.category && (
-                    <CategoryLink
-                      variant="outlined"
-                      startIcon={<FolderOutlinedIcon />}
-                      href={`/categories/${post.category}`}
-                    >
-                      {post.category}
-                    </CategoryLink>
-                  )}
-                </PostInfo>
+                <PostSecondaryInfo post={post} />
                 <PostExcerpt
                   variant="body1"
                   component="p"
@@ -109,29 +96,6 @@ const PostList = styled(Grid)`
 const Post = styled(Grid)`
   display: flex;
   flex-direction: column;
-`;
-
-const PostInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-
-  ${mediaQueryBreakpoint("sm")} {
-    flex-direction: row;
-  }
-`;
-
-const TimeInfo = styled(Typography)`
-  margin-bottom: 1rem;
-
-  ${mediaQueryBreakpoint("sm")} {
-    margin-bottom: 0rem;
-    margin-right: 1rem;
-  }
-`;
-
-const CategoryLink = styled(Button)`
-  width: fit-content;
 `;
 
 const PostExcerpt = styled(Typography)`

@@ -18,6 +18,7 @@ import Layout from "../layout";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
+import PostSecondaryInfo from "../components/Post/PostSecondaryInfo";
 import config from "../../data/SiteConfig";
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
@@ -37,10 +38,11 @@ export default function PostTemplate({ data, pageContext }) {
         <title>{`${post.title} | ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postPath={slug} postNode={postNode} postSEO />
-      <Container maxWidth="md">
-        <Typography variant="h3" component="h1" display="inline" gutterBottom>
+      <Container>
+        <Typography variant="h3" component="h1" gutterBottom>
           {post.title}
         </Typography>
+        <PostSecondaryInfo post={post} />
         {/* eslint-disable-next-line react/no-danger */}
         <Content dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <PostTags tags={post.tags} />
