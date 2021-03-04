@@ -43,7 +43,9 @@ export default function PostTemplate({ data, pageContext }) {
         <Typography variant="h1" component="h1" gutterBottom>
           {post.title}
         </Typography>
-        <PostSecondaryInfo post={post} />
+        <PostSecondaryInfo
+          post={{ timeToRead: postNode.timeToRead, ...post }}
+        />
         {/* eslint-disable-next-line react/no-danger */}
         <Content dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <PostTags tags={post.tags} />
