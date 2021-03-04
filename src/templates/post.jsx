@@ -132,8 +132,9 @@ const Content = styled.div`
   }
 
   code {
-    background: #1d1f21;
+    background: #0c1021;
     color: #c5c8c6;
+    font-family: "monospace";
   }
 `;
 
