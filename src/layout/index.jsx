@@ -32,6 +32,7 @@ ${"" /* 待調整 */}
   body {
     width: inherit;
   }
+
 `;
 
 const Main = styled.main`

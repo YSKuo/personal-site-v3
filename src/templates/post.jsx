@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import CommentIcon from "@material-ui/icons/Comment";
 import Layout from "../layout";
+import fontSizeRWD from "../utils/fontSizeRWD";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
@@ -39,7 +40,7 @@ export default function PostTemplate({ data, pageContext }) {
       </Helmet>
       <SEO postPath={slug} postNode={postNode} postSEO />
       <Container>
-        <Typography variant="h3" component="h1" gutterBottom>
+        <Typography variant="h1" component="h1" gutterBottom>
           {post.title}
         </Typography>
         <PostSecondaryInfo post={post} />
@@ -70,52 +71,69 @@ const Content = styled.div`
   margin-bottom: 2rem;
   font-family: ${(props) => props.theme.typography.fontFamily};
 
+  ${fontSizeRWD("h1", ["4xl", "5xl", "6xl"])}
+  ${fontSizeRWD("h2", ["3xl", "4xl", "5xl"])}
+  ${fontSizeRWD("h3", ["2xl", "3xl", "4xl"])}
+  ${fontSizeRWD("h4", ["xl", "2xl", "3xl"])}
+  ${fontSizeRWD("h5", ["lg", "xl", "2xl"])}
+  ${fontSizeRWD("h6", ["md", "lg", "xl"])}
+  ${fontSizeRWD("p", ["sm", "md", "lg"])} 
+  ${fontSizeRWD("li", ["sm", "md", "lg"])} 
+
   h1 {
-    font-weight: 300;
-    line-height: 1.167;
-    letter-spacing: -0.01562em;
-    border-bottom: 1px solid #ddd;
+    font-weight: ${(props) => props.theme.typography.h1.fontSize};
+    line-height: ${(props) => props.theme.typography.h1.lineHeight};
+    letter-spacing: ${(props) => props.theme.typography.h1.letterSpacing};
   }
+
   h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: -0.00833em;
-    margin: 2rem 0;
+    font-weight: ${(props) => props.theme.typography.h2.fontSize};
+    line-height: ${(props) => props.theme.typography.h2.lineHeight};
+    letter-spacing: ${(props) => props.theme.typography.h2.letterSpacing};
   }
+
   h3 {
-    font-weight: 400;
-    line-height: 1.167;
-    letter-spacing: 0em;
+    font-weight: ${(props) => props.theme.typography.h3.fontSize};
+    line-height: ${(props) => props.theme.typography.h3.lineHeight};
+    letter-spacing: ${(props) => props.theme.typography.h3.letterSpacing};
   }
+
   h4 {
-    font-weight: 400;
-    line-height: 1.235;
-    letter-spacing: 0.00735em;
+    font-weight: ${(props) => props.theme.typography.h4.fontSize};
+    line-height: ${(props) => props.theme.typography.h4.lineHeight};
+    letter-spacing: ${(props) => props.theme.typography.h4.letterSpacing};
   }
+
   h5 {
-    font-weight: 400;
-    line-height: 1.334;
-    letter-spacing: 0em;
+    font-weight: ${(props) => props.theme.typography.h5.fontSize};
+    line-height: ${(props) => props.theme.typography.h5.lineHeight};
+    letter-spacing: ${(props) => props.theme.typography.h5.letterSpacing};
   }
+
   h6 {
-    font-weight: 500;
-    line-height: 1.6;
-    letter-spacing: 0.0075em;
+    font-weight: ${(props) => props.theme.typography.h6.fontSize};
+    line-height: ${(props) => props.theme.typography.h6.lineHeight};
+    letter-spacing: ${(props) => props.theme.typography.h6.letterSpacing};
   }
-  p {
-    font-weight: 400;
-    font-size: 1.2rem;
+
+  p,
+  li {
     line-height: 1.5;
     letter-spacing: 0.00938em;
   }
+
+  li,
   li p {
-    font-weight: initial;
-    font-size: initial;
-    line-height: initial;
-    letter-spacing: initial;
+    margin: 0.5rem 0;
   }
+
   a {
     text-decoration: none;
+  }
+
+  code {
+    background: #1d1f21;
+    color: #c5c8c6;
   }
 `;
 
