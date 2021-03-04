@@ -18,6 +18,7 @@ export default function CategoryTemplate({ pageContext, data }) {
 
   const CategoryTitle = styled(Button)`
     margin-bottom: 3rem;
+    text-transform: none;
   `;
 
   return (

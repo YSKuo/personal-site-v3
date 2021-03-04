@@ -33,11 +33,11 @@ export const SectionSubtitle = ({ children }) => (
 
 export const P = ({ children }) => {
   const Paragraph = styled(Typography)`
-    font-size: 1rem;
+    ${"" /* font-size: 1rem;
 
     ${mediaQueryBreakpoint("sm")} {
       font-size: ${(props) => props.theme.typography.body1.fontSize};
-    }
+    } */}
   `;
 
   return (

@@ -33,15 +33,6 @@ function About({ config }) {
     userSkills,
   } = config;
 
-  const findUserLinks = (target) => {
-    return userLinks.find(
-      (item) => item.label.toLowerCase() === target.toLowerCase()
-    );
-  };
-
-  const linkedinInfo = findUserLinks("linkedin");
-  const instagramInfo = findUserLinks("instagram");
-
   return (
     <Container>
       <Section>
@@ -49,7 +40,7 @@ function About({ config }) {
         <Intro variant="h1" component="h1">
           I’m Arsene Kuo.
         </Intro>
-        <Typography variant="h5" component="p" gutterBottom>
+        <Typography variant="body1" component="p" gutterBottom>
           I'm a frontend designer and developer, passionate about improving user
           experience through design and engineering.
         </Typography>
