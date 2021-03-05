@@ -99,7 +99,7 @@ function Blog({ pageContext, data, location }) {
     <Layout>
       <Helmet title={`Blog | ${config.siteTitle}`} />
       <SEO />
-      <Container maxWidth="md">
+      <Container>
         <PostListing postEdges={postEdges} />
         {renderPaging(pageContext, location)}
       </Container>
