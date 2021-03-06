@@ -11,25 +11,22 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import { Tags, Tag } from "../components/Tag/Tag";
 
 export default function TagTemplate({ pageContext, data }) {
   const { tag } = pageContext;
   const postEdges = data.allMarkdownRemark.edges;
 
-  const TagContainer = styled.div`
-    margin-bottom: 3rem;
-  `;
-
   return (
     <Layout>
       <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
       <SEO />
-      <Container maxWidth="md">
-        <TagContainer>
-          <Button variant="contained" disableElevation>
+      <Container>
+        <Tags>
+          <Tag variant="contained" disableElevation>
             #{tag}
-          </Button>
-        </TagContainer>
+          </Tag>
+        </Tags>
         <PostListing postEdges={postEdges} />
       </Container>
     </Layout>

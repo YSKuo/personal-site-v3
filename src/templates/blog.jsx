@@ -11,6 +11,23 @@ import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
+function Blog({ pageContext, data, location }) {
+  const postEdges = data.allMarkdownRemark.edges;
+
+  return (
+    <Layout>
+      <Helmet title={`Blog | ${config.siteTitle}`} />
+      <SEO />
+      <Container>
+        <PostListing postEdges={postEdges} />
+        {renderPaging(pageContext, location)}
+      </Container>
+    </Layout>
+  );
+}
+
+export default Blog;
+
 function renderPaging(pageContext, location) {
   const { currentPageNum, pageCount } = pageContext;
   const prevPage =
@@ -91,23 +108,6 @@ function renderPaging(pageContext, location) {
     </Grid>
   );
 }
-
-function Blog({ pageContext, data, location }) {
-  const postEdges = data.allMarkdownRemark.edges;
-
-  return (
-    <Layout>
-      <Helmet title={`Blog | ${config.siteTitle}`} />
-      <SEO />
-      <Container>
-        <PostListing postEdges={postEdges} />
-        {renderPaging(pageContext, location)}
-      </Container>
-    </Layout>
-  );
-}
-
-export default Blog;
 
 const PaginationList = styled.ul`
   display: flex;

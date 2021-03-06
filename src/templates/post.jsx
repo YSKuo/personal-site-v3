@@ -69,6 +69,28 @@ export default function PostTemplate({ data, pageContext }) {
   );
 }
 
+/* eslint no-undef: "off" */
+export const pageQuery = graphql`
+  query BlogPostBySlug($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      timeToRead
+      excerpt
+      frontmatter {
+        title
+        cover
+        date
+        category
+        tags
+      }
+      fields {
+        slug
+        date
+      }
+    }
+  }
+`;
+
 const Content = styled.div`
   margin-bottom: 2rem;
   font-family: ${(props) => props.theme.typography.fontFamily};
@@ -143,26 +165,4 @@ const Content = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-`;
-
-/* eslint no-undef: "off" */
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      timeToRead
-      excerpt
-      frontmatter {
-        title
-        cover
-        date
-        category
-        tags
-      }
-      fields {
-        slug
-        date
-      }
-    }
-  }
 `;

@@ -17,7 +17,7 @@ export default function CategoryTemplate({ pageContext, data }) {
   const postEdges = data.allMarkdownRemark.edges;
 
   const CategoryTitle = styled(Button)`
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-transform: none;
   `;
 
@@ -25,7 +25,7 @@ export default function CategoryTemplate({ pageContext, data }) {
     <Layout>
       <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
       <SEO />
-      <Container maxWidth="md">
+      <Container>
         <CategoryTitle variant="outlined" startIcon={<FolderOutlinedIcon />}>
           {category}
         </CategoryTitle>
