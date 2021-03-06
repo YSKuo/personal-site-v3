@@ -5,7 +5,7 @@ category: "Algorithm"
 date: "2020-12-06"
 excerpt: "最近聖誕節快到了，每年都有的 AOC 解題活動也開始進行，這次來看一下 Day 6 的內容 Custom Customs。"
 published: true
-featured: true
+featured: false
 tags:
   - self-assessment
   - AdventOfCode

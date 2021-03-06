@@ -5,7 +5,7 @@ category: "JavaScript"
 excerpt: "訓練解題似乎是 junior 到 senior 的必經過程，所以偶爾也來練解題，這次要解的是 LeetCode 的經典入門題：Two-Sum。"
 date: "2020-12-04"
 published: true
-featured: true
+featured: false
 tags:
   - self-assessment
   - LeetCode
