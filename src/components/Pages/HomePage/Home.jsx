@@ -22,8 +22,9 @@ import {
 } from "../../Section/Section";
 import { mediaQueryBreakpoint } from "../../../constants/breakpoint";
 import StyledDivider from "../../StyledDivider";
+import FeaturedPostListing from "../../FeaturedPostListing/FeaturedPostListing";
 
-function About({ config }) {
+function Home({ config, featuredPostEdges }) {
   const {
     userName,
     userEmail,
@@ -40,20 +41,35 @@ function About({ config }) {
         <Intro variant="h1" component="h1">
           I’m Arsene Kuo.
         </Intro>
-        <Typography variant="body1" component="p" gutterBottom>
+        <Paragraph variant="h4" component="p" gutterBottom>
           I'm a frontend designer and developer, passionate about improving user
           experience through design and engineering.
-        </Typography>
+        </Paragraph>
+        <Button
+          href="/about"
+          variant="contained"
+          color="secondary"
+          size="large"
+          endIcon={<ArrowForwardIcon />}
+        >
+          About
+        </Button>
       </Section>
-      <Button
-        href="/about"
-        variant="contained"
-        color="secondary"
-        size="large"
-        endIcon={<ArrowForwardIcon />}
-      >
-        About
-      </Button>
+
+      <StyledDivider yMargin="2rem" />
+      <Section>
+        <SectionTitle>Blog</SectionTitle>
+        <FeaturedPostListing postEdges={featuredPostEdges} />
+        <Button
+          href="/blog"
+          variant="outlined"
+          color="primary"
+          size="large"
+          endIcon={<ArrowForwardIcon />}
+        >
+          More Posts
+        </Button>
+      </Section>
     </Container>
   );
 }
@@ -67,4 +83,11 @@ const Intro = styled(Typography)`
   }
 `;
 
-export default About;
+const Paragraph = styled(Typography)`
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+`;
+
+export default Home;

@@ -14,6 +14,7 @@ const config = {
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 5, // Amount of posts displayed per listing page.
+  featuredPostsLimit: 3, // Amount of featured posts displayed.
   userName: "Yan-Sheng (Arsene) Kuo", // Username to display in the author segment.
   userEmail: "crowley3141@hotmail.com", // Email used for RSS feed's author segment
   userTwitter: "https://twitter.com/ArseneKuo", // Optionally renders "Follow Me" in the UserInfo segment.

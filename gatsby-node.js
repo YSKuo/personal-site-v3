@@ -66,6 +66,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const postPage = path.resolve("src/templates/post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
+  const homePage = path.resolve("./src/templates/home.jsx");
   const blogPage = path.resolve("./src/templates/blog.jsx");
 
   // Get a full list of markdown posts
@@ -117,11 +118,25 @@ exports.createPages = async ({ graphql, actions }) => {
     return 0;
   });
 
+  const { postsPerPage, featuredPostsLimit } = siteConfig;
+
+  // Create home page
+  if (featuredPostsLimit) {
+    createPage({
+      path: `/`,
+      component: homePage,
+      context: {
+        limit: featuredPostsLimit,
+        featured: true,
+      },
+    });
+  }
+
   // Paging
-  const { postsPerPage } = siteConfig;
   if (postsPerPage) {
     const pageCount = Math.ceil(postsEdges.length / postsPerPage);
 
+    // Create blog pages
     [...Array(pageCount)].forEach((_val, pageNum) => {
       createPage({
         path: pageNum === 0 ? `/blog` : `/blog/${pageNum + 1}/`,
