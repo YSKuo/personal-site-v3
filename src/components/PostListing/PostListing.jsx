@@ -12,8 +12,8 @@ import {
   Divider,
 } from "@material-ui/core";
 import PostSecondaryInfo from "../Post/PostSecondaryInfo";
+import StyledDivider from "../StyledDivider";
 import { mediaQueryBreakpoint } from "../../constants/breakpoint";
-import FolderOutlinedIcon from "@material-ui/icons/FolderOutlined";
 
 function PostListing({ postEdges }) {
   const postList = [];
@@ -24,7 +24,7 @@ function PostListing({ postEdges }) {
       cover: postEdge.node.frontmatter.cover,
       title: postEdge.node.frontmatter.title,
       category: postEdge.node.frontmatter.category,
-      date: postEdge.node.fields.date,
+      date: postEdge.node.frontmatter.date || postEdge.node.fields.date,
       slug: postEdge.node.fields.slug,
       excerpt: postEdge.node.fields.excerpt || postEdge.node.excerpt,
       timeToRead: postEdge.node.timeToRead,
@@ -38,7 +38,7 @@ function PostListing({ postEdges }) {
         postList.map((post, index) => {
           return (
             <>
-              {index !== 0 && <StyledDivider />}
+              {index !== 0 && <StyledDivider yMargin="1.5rem" />}
               <Post item component="article" key={post.slug}>
                 <Typography
                   variant="h3"
@@ -100,10 +100,6 @@ const Post = styled(Grid)`
 
 const PostExcerpt = styled(Typography)`
   margin-bottom: 2rem;
-`;
-
-const StyledDivider = styled(Divider)`
-  margin: 1.5rem 0;
 `;
 
 export default PostListing;

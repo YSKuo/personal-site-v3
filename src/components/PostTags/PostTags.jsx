@@ -12,14 +12,7 @@ import {
   Hidden,
   Divider,
 } from "@material-ui/core";
-
-const Tags = styled(Grid)`
-  margin-bottom: 2rem;
-`;
-
-const TagContainer = styled(Grid)`
-  padding: 0.25rem;
-`;
+import { Tags, TagContainer, Tag } from "../Tag/Tag";
 
 function PostTags({ tags }) {
   return (
@@ -27,14 +20,14 @@ function PostTags({ tags }) {
       {tags &&
         tags.map((tag) => (
           <TagContainer item>
-            <Button
+            <Tag
               key={tag}
               href={`/tags/${_.kebabCase(tag)}`}
               variant="contained"
               disableElevation
             >
               #{tag}
-            </Button>
+            </Tag>
           </TagContainer>
         ))}
     </Tags>

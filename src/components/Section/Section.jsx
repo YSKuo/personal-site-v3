@@ -19,31 +19,29 @@ export const Section = styled.section`
   }
 `;
 
-export const SectionTitle = ({ children }) => (
-  <Typography component="h2" variant="h3" gutterBottom>
-    {children}
-  </Typography>
-);
+export const SectionTitle = ({ children }) => {
+  const Title = styled(Typography)`
+    margin-bottom: 2rem;
+  `;
+
+  return (
+    <Title component="h2" variant="h2" gutterBottom>
+      {children}
+    </Title>
+  );
+};
 
 export const SectionSubtitle = ({ children }) => (
-  <Typography component="h3" variant="h4" gutterBottom>
+  <Typography component="h3" variant="h3" gutterBottom>
     {children}
   </Typography>
 );
 
 export const P = ({ children }) => {
-  const Paragraph = styled(Typography)`
-    ${"" /* font-size: 1rem;
-
-    ${mediaQueryBreakpoint("sm")} {
-      font-size: ${(props) => props.theme.typography.body1.fontSize};
-    } */}
-  `;
-
   return (
-    <Paragraph component="p" variant="body1" gutterBottom>
+    <Typography component="p" variant="body1" gutterBottom>
       {children}
-    </Paragraph>
+    </Typography>
   );
 };
 
