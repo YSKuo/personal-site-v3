@@ -103,6 +103,7 @@ const Content = styled.div`
   ${fontSizeRWD("h6", ["md", "lg", "xl"])}
   ${fontSizeRWD("p", ["sm", "md", "lg"])} 
   ${fontSizeRWD("li", ["sm", "md", "lg"])} 
+  ${fontSizeRWD("span", ["sm", "md", "lg"])} 
 
   h1 {
     font-weight: ${(props) => props.theme.typography.h1.fontSize};
@@ -155,10 +156,23 @@ const Content = styled.div`
     text-decoration: none;
   }
 
+  div.deckgo-highlight-code-container {
+  }
+
   code {
     background: #0c1021;
     color: #c5c8c6;
     font-family: "monospace";
+  }
+
+  deckgo-highlight-code {
+    --deckgo-highlight-code-font-size: ${(props) =>
+      props.theme.typography.body1.fontSize};
+  }
+
+  blockquote {
+    color: rgba(117, 117, 117, 1);
+    ${fontSizeRWD("p", ["md", "lg", "xl"])}
   }
 `;
 
