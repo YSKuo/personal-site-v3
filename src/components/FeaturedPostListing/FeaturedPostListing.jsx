@@ -54,7 +54,7 @@ function PostListing({ postEdges }) {
                     {post.title}
                   </Link>
                 </Typography>
-                {/* <PostSecondaryInfo post={post} /> */}
+                <PostSecondaryInfo post={post} />
                 <PostExcerpt
                   variant="body1"
                   component="p"
@@ -79,15 +79,10 @@ const PostList = styled(Grid)`
 const Post = styled(Grid)`
   display: flex;
   flex-direction: column;
-  ${"" /* padding: 0 0.5rem; */}
 `;
 
 const PostExcerpt = styled(Typography)`
   margin-bottom: 2rem;
 `;
-
-// const StyledDivider = styled(Divider)`
-//   margin: 1.5rem 0;
-// `;
 
 export default PostListing;
