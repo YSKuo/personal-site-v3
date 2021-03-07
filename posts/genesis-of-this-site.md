@@ -3,7 +3,7 @@ title: "開站首波"
 cover: ""
 category: "Experience"
 date: "2021-03-07"
-slug: ""
+excerpt: "剛做完這個網站，寫這篇文記錄一下心得。"
 published: true
 featured: true
 tags:
