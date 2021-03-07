@@ -111,7 +111,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: "minimal-ui",
-        icon: `/logos/logo-48.png`,
+        icon: `src/favicon.png`,
         icons: [
           {
             src: "/logos/logo-192.png",
