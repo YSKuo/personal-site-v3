@@ -65,7 +65,7 @@ tags:
 - 點餐 => Request，由 Client 端發送出來的訊息
 - 出餐 => Response，由 Server 端發送出來的訊息
 
-![](https://miro.medium.com/max/633/0*TWJsefyA70etKzrW.png)
+![Request and Response](https://miro.medium.com/max/633/0*TWJsefyA70etKzrW.png)
 
 圖源：Django Request and Response Lifecycle
 
@@ -77,7 +77,7 @@ tags:
 
 在點餐出餐的過程中可能因為兩方表達方式不同而無法互相溝通，舉例說明：
 
-有天小明去一家小店想要點 `法式蒜香雞丁佐羅勒`，但是餐廳服務生覺得小明來亂的，因為他們沒有這種高級料理，那小明就要換個說法和服務生點`鹹酥雞不要辣加蒜頭跟九層塔`，這樣服務生才會知道小明要什麼，也才能正常出餐給他。
+有天小明去一家小店想要點 `法式蒜香雞丁佐羅勒`，但是餐廳服務生覺得小明來亂的，因為他們沒有這種高級料理，那小明就要換個說法和服務生點 `鹹酥雞不要辣加蒜頭跟九層塔`，這樣服務生才會知道小明要什麼，也才能正常出餐給他。
 
 所以客人和店家之間要達成一種默契，就像瀏覽網頁時 Client 端和 Server 端之間存在一種通訊協定（Protocol），而這個通訊協定就是 **HTTP** (HyperText Transfer Protocol)，中文譯作 超文本傳輸協定。
 
@@ -89,7 +89,7 @@ tags:
 
 沒錯喔，兩者確實有差異而且加 s 很重要，就連吳宗憲的兒子都知道。
 
-![](https://miro.medium.com/max/700/0*MAnYLSeG6s0ZKBeX.jpg)
+![鹿希派被吳宗憲痛罵 卻教起英文：who care 要加 s](https://miro.medium.com/max/700/0*MAnYLSeG6s0ZKBeX.jpg)
 
 來源：[鹿希派被吳宗憲痛罵 卻教起英文：who care 要加 s](https://www.youtube.com/watch?v=xJR0kLHRR6g)
 
@@ -163,13 +163,13 @@ Google 的 404 頁面
 
 概念就類似 Client 端和 Server 端都有鑰匙，Client 端先將 Request 資訊加密再發送出來，Server 端收到 Request 再利用鑰匙解密，接著把 Response 加密再發送出來，最後 Client 端再用鑰匙解密。
 
-而如果你用目前新版的 Chrome 來瀏覽網頁，且該網頁只用 HTTP 作為通訊協定，你的網址列就會出現 不安全 的警示。
+而如果你用目前新版的 Chrome 來瀏覽網頁，且該網頁只用 HTTP 作為通訊協定，你的網址列就會出現 `不安全` 的警示。
 
-![](https://miro.medium.com/max/528/1*J3jQUxpq4JHdv0jGJg4jIg.png)
+![搜尋欄警示不安全](https://miro.medium.com/max/528/1*J3jQUxpq4JHdv0jGJg4jIg.png)
 
 甚至會直接在頁面顯示警示來提醒使用者目前通訊狀況不安全
 
-![](https://miro.medium.com/max/700/0*vdvpJVcS_n-5L6Ra.png)
+![頁面警示連線不安全](https://miro.medium.com/max/700/0*vdvpJVcS_n-5L6Ra.png)
 
 簡單來說，如果你用 HTTP 來瀏覽網頁，那就形同裸奔。
 
