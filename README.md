@@ -2,38 +2,41 @@
 
 ### feature
 
-- Primary, Secondary color 重新評估
 - Dark mode
+  - [網頁黑暗模式 Dark Mode 設計技巧](https://jason-memo.dev/posts/dark-mode-tips/)
 - Category & Tag 文章過多時分頁（Blog renderPaging 拉出來）
 - Post page 上下個文章鈕
 - Post page side navbar
+- Post page 的 link 增加一種可以直接開新網頁的方式
 - Blog 的 category 總覽分類頁
 - Work 頁面
 - SEO
 - Index testimonials
 - main container RWD 調整 padding
-- about this site
 - 加 Logo
 - Disqus
 - Post link 後面加一個小 icon
 - 串 IG API
-- post 的圖片置中，若有 caption 的話也置中
+- emoji
 
 #### later
 
 - post 的 featured 和 draft 機制
   - [Creating Markdown Drafts with Gatsby | TinaCMS Blog](https://tina.io/blog/creating-markdown-drafts/)
   - draft 和 archived 文章目前利用 .gitignore 擋掉上傳
-  - featured post 用 GraphQL 篩選出（3/6）
+  - featured post 用 GraphQL 篩選出 (3/6)
+- post 的圖片置中，若有 caption 的話也置中
+  - 圖片置中已解決，caption 未解 (3/7)
 
 #### done
 
 - 加入指定摘要 (3/4)
-- post 裡面加上 PostInfo(date, timeToRead, category)（3/4）
-- RWD Typography（3/5）
+- post 裡面加上 PostInfo(date, timeToRead, category) (3/4)
+- RWD Typography (3/5)
   - [Responsive font sizes - Material-UI](https://material-ui.com/customization/typography/#responsive-font-sizes)
   - [responsiveFontSizes() - Material-UI](https://material-ui.com/customization/theming/#responsivefontsizes-theme-options-theme)
-- 404 Pages（3/6）
+- 404 Pages (3/6)
+- about this site (3/7)
 
 ### bug
 
@@ -47,7 +50,7 @@
 #### later
 
 - post markdown highlight 的文字沒有底色
-  - 暫時用 Content 這個 styled-component 設置風格解決（3/4）
+  - 暫時用 Content 這個 styled-component 設置風格解決 (3/4)
 
 #### done
 
@@ -66,6 +69,8 @@
 
 - Post page url 用 date + file name (3/2)
 - Post 的 code block 字體加大 (3/6)
+- Primary, Secondary color 重新評估 (3/7)
+- lighthouse performance (3/7)
 
 ---
 
