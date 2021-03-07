@@ -156,6 +156,12 @@ const Content = styled.div`
     text-decoration: none;
   }
 
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
   div.deckgo-highlight-code-container {
   }
 
