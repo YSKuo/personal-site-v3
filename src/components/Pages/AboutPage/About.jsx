@@ -1,16 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Container,
-  Toolbar,
-  Grid,
-  Typography,
-  Link,
-  Button,
-  IconButton,
-  Hidden,
-  Divider,
-} from "@material-ui/core";
+import { Container, Grid, Button, IconButton } from "@material-ui/core";
 import {
   Section,
   SectionTitle,
@@ -87,48 +77,63 @@ function About({ config }) {
           <TagsSection userSkills={userSkills} category={"General"} />
         </Grid>
       </Section>
+      <StyledDivider yMargin="2rem" />
+      <Section>
+        <SectionTitle>About this Website</SectionTitle>
+        <P>
+          I built this website with{" "}
+          <A href="https://www.gatsbyjs.com/">Gatsby</A> and{" "}
+          <A href="https://github.com/Vagr9K/gatsby-advanced-starter">
+            Gatsby Advanced Starter
+          </A>
+          . If you want to know more about my configuration, you can visit the{" "}
+          <B>
+            <A href="https://github.com/YSKuo/personal-site-v3">Github repo</A>.
+          </B>
+        </P>
+      </Section>
     </Container>
   );
 }
 
+export default About;
+
+const Tags = styled(Grid)`
+  padding-right: 0rem;
+  margin-bottom: 2rem;
+
+  ${mediaQueryBreakpoint("sm")} {
+    padding-right: 1rem;
+  }
+`;
+
+const TagContainer = styled(Grid)`
+  padding: 0.25rem;
+`;
+
+const DummyButton = styled(Button)`
+  text-transform: none;
+`;
+
+const Tag = ({ tag }) => {
+  return (
+    <TagContainer item>
+      <DummyButton key={tag} variant="contained">
+        {tag}
+      </DummyButton>
+    </TagContainer>
+  );
+};
+
 const TagsSection = ({ category, userSkills }) => {
-  const Tags = styled(Grid)`
-    padding-right: 0rem;
-    margin-bottom: 2rem;
-
-    ${mediaQueryBreakpoint("sm")} {
-      padding-right: 1rem;
-    }
-  `;
-
-  const TagContainer = styled(Grid)`
-    padding: 0.25rem;
-  `;
-
-  const Tag = ({ tag }) => {
-    const FakedButton = styled(Button)`
-      text-transform: none;
-    `;
-
-    return (
-      <TagContainer item>
-        <FakedButton key={tag} variant="contained">
-          {tag}
-        </FakedButton>
-      </TagContainer>
-    );
-  };
-
   return (
     <Grid item xs={12} sm={6}>
       <SectionSubtitle>{category}</SectionSubtitle>
-      <Tags container disableGutters>
-        {userSkills[category.toLowerCase()].map((item) => (
-          <Tag tag={item} />
+      <Tags container>
+        {userSkills[category.toLowerCase()].map((item, index) => (
+          <Tag key={index} tag={item} />
         ))}
       </Tags>
     </Grid>
   );
 };
-
-export default About;
