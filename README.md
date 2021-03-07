@@ -7,15 +7,15 @@
 - Category & Tag 文章過多時分頁（Blog renderPaging 拉出來）
 - Post page 上下個文章鈕
 - Post page side navbar
-- Post page 的 link 增加一種可以直接開新網頁的方式
+- Post page 的 link 增加一種可以直接開新網頁的方式，且後面加一個小 icon
 - Blog 的 category 總覽分類頁
 - Work 頁面
 - SEO
 - Index testimonials
 - main container RWD 調整 padding
-- 加 Logo
 - Disqus
-- Post link 後面加一個小 icon
+- Facebook app id
+- siteRssTitle
 - 串 IG API
 - emoji
 
@@ -37,6 +37,7 @@
   - [responsiveFontSizes() - Material-UI](https://material-ui.com/customization/theming/#responsivefontsizes-theme-options-theme)
 - 404 Pages (3/6)
 - about this site (3/7)
+- 加 Logo (3/8)
 
 ### bug
 
