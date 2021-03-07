@@ -1,7 +1,5 @@
 import React from "react";
 import "./UserLinks.css";
-import styled from "styled-components";
-import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
 import IconButton from "@material-ui/core/IconButton";
 import InstagramIcon from "@material-ui/icons/Instagram";

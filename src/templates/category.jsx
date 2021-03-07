@@ -2,10 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
-import { Container, Grid, Button, IconButton, Hidden } from "@material-ui/core";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import { Container, Button } from "@material-ui/core";
 import FolderOutlinedIcon from "@material-ui/icons/FolderOutlined";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
@@ -15,11 +12,6 @@ import config from "../../data/SiteConfig";
 export default function CategoryTemplate({ pageContext, data }) {
   const { category } = pageContext;
   const postEdges = data.allMarkdownRemark.edges;
-
-  const CategoryTitle = styled(Button)`
-    margin-bottom: 2rem;
-    text-transform: none;
-  `;
 
   return (
     <Layout>
@@ -63,4 +55,9 @@ export const pageQuery = graphql`
       }
     }
   }
+`;
+
+const CategoryTitle = styled(Button)`
+  margin-bottom: 2rem;
+  text-transform: none;
 `;

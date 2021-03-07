@@ -1,25 +1,13 @@
 import React from "react";
 import _ from "lodash";
-import styled from "styled-components";
-import {
-  Container,
-  Toolbar,
-  Grid,
-  Typography,
-  Link,
-  Button,
-  IconButton,
-  Hidden,
-  Divider,
-} from "@material-ui/core";
 import { Tags, TagContainer, Tag } from "../Tag/Tag";
 
 function PostTags({ tags }) {
   return (
-    <Tags container disableGutters>
+    <Tags container>
       {tags &&
-        tags.map((tag) => (
-          <TagContainer item>
+        tags.map((tag, index) => (
+          <TagContainer key={index} item>
             <Tag
               key={tag}
               href={`/tags/${_.kebabCase(tag)}`}

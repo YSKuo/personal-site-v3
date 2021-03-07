@@ -1,18 +1,11 @@
 import React from "react";
 import UserLinks from "../UserLinks/UserLinks";
 import styled from "styled-components";
-import {
-  Container,
-  Toolbar,
-  Grid,
-  Typography,
-  Link,
-  Divider,
-} from "@material-ui/core";
+import { Container, Grid, Typography, Link, Divider } from "@material-ui/core";
 import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 
 function Footer({ config }) {
-  const { siteTitle, userName, userEmail, userResume, copyright } = config;
+  const { userName, userEmail, userResume, copyright } = config;
 
   return (
     <StyledContainer component="footer">

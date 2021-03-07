@@ -3,11 +3,12 @@ import styled from "styled-components";
 import { Divider } from "@material-ui/core";
 import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 
+const DividerSetMargin = styled(Divider)`
+  margin: ${(props) => props.ymargin} 0;
+`;
+
 export const StyledDivider = ({ yMargin }) => {
-  const DividerSetMargin = styled(Divider)`
-    margin: ${yMargin} 0;
-  `;
-  return <DividerSetMargin />;
+  return <DividerSetMargin ymargin={yMargin} />;
 };
 
 export default StyledDivider;

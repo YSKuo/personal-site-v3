@@ -15,7 +15,77 @@ import {
   Container,
   Toolbar,
 } from "@material-ui/core";
-import { mediaQueryBreakpoint } from "../../constants/breakpoint";
+
+function Header({ config, theme }) {
+  const { siteTitle, tabLinks } = config;
+  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
+  return (
+    <>
+      <HideOnScroll>
+        <StyledAppBar color="primary">
+          <Container>
+            <StyledToolbar component="nav" disableGutters>
+              <SiteName
+                color="textPrimary"
+                variant="h5"
+                href="/"
+                underline="none"
+              >
+                {siteTitle}
+              </SiteName>
+
+              <Hidden smUp>
+                <IconButton onClick={toggleDrawer}>
+                  <MenuIcon />
+                </IconButton>
+                <Drawer
+                  anchor="left"
+                  open={isDrawerOpen}
+                  onClose={toggleDrawer}
+                >
+                  {tabLinks &&
+                    tabLinks.map((link) => (
+                      <ListItem button key={link.title}>
+                        <Button
+                          color={isTabActive(link) ? "secondary" : "default"}
+                          variant={isTabActive(link) ? "contained" : "text"}
+                          href={link.url}
+                        >
+                          {link.title}
+                        </Button>
+                      </ListItem>
+                    ))}
+                </Drawer>
+              </Hidden>
+
+              <Hidden xsDown>
+                <Toolbar disableGutters>
+                  <List>
+                    {tabLinks &&
+                      tabLinks.map((link) => (
+                        <NavLink
+                          $active={isTabActive(link)}
+                          key={link.title}
+                          href={link.url}
+                        >
+                          {link.title}
+                        </NavLink>
+                      ))}
+                  </List>
+                </Toolbar>
+              </Hidden>
+            </StyledToolbar>
+          </Container>
+        </StyledAppBar>
+      </HideOnScroll>
+    </>
+  );
+}
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -33,67 +103,9 @@ function isTabActive(link) {
   return false;
 }
 
-function Header({ config, theme }) {
-  const { siteTitle, tabLinks } = config;
-  const [state, setState] = React.useState(false);
-
-  const toggleDrawer = () => {
-    setState(!state);
-  };
-
-  return (
-    <>
-      <HideOnScroll>
-        <StyledAppBar color="primary">
-          <Container>
-            <StyledToolbar component="nav" disableGutters>
-              <Link color="textPrimary" variant="h5" href="/" underline="none">
-                {siteTitle}
-              </Link>
-
-              <Hidden smUp>
-                <IconButton onClick={toggleDrawer}>
-                  <MenuIcon />
-                </IconButton>
-                <Drawer anchor="left" open={state} onClose={toggleDrawer}>
-                  {tabLinks &&
-                    tabLinks.map((link) => (
-                      <ListItem button key={link.title}>
-                        <Button
-                          color={isTabActive(link) ? "secondary" : "default"}
-                          variant={isTabActive(link) ? "contained" : "default"}
-                          href={link.url}
-                        >
-                          {link.title}
-                        </Button>
-                      </ListItem>
-                    ))}
-                </Drawer>
-              </Hidden>
-
-              <Hidden xsDown>
-                <Toolbar disableGutters>
-                  <List>
-                    {tabLinks &&
-                      tabLinks.map((link) => (
-                        <NavLink
-                          isTabActive={isTabActive(link)}
-                          key={link.title}
-                          href={link.url}
-                        >
-                          {link.title}
-                        </NavLink>
-                      ))}
-                  </List>
-                </Toolbar>
-              </Hidden>
-            </StyledToolbar>
-          </Container>
-        </StyledAppBar>
-      </HideOnScroll>
-    </>
-  );
-}
+const SiteName = styled(Link)`
+  color: ${(props) => props.theme.palette.common.white};
+`;
 
 const StyledAppBar = styled(AppBar)`
   border-bottom: 1px solid #dbdbdb;
@@ -118,8 +130,8 @@ const NavLink = styled(Button)`
     margin-left: 1rem;
   }
 
-  color: ${({ theme, isTabActive }) =>
-    isTabActive && theme.palette.common.white};
+  color: ${({ theme, $active }) =>
+    $active ? theme.palette.common.white : theme.palette.secondary.main};
 `;
 
 export default Header;

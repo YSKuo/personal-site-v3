@@ -1,28 +1,11 @@
 import React from "react";
-import styled from "styled-components";
+
 import { Helmet } from "react-helmet";
 import Layout from "../layout";
-import {
-  Container,
-  Toolbar,
-  Grid,
-  Typography,
-  Link,
-  Button,
-  IconButton,
-  Hidden,
-  Divider,
-} from "@material-ui/core";
-import SEO from "../components/SEO/SEO";
+import { Container } from "@material-ui/core";
+
 import config from "../../data/SiteConfig";
-import {
-  Section,
-  SectionTitle,
-  SectionSubtitle,
-  P,
-  B,
-  A,
-} from "../components/Section/Section";
+import { Section, SectionTitle, P, A } from "../components/Section/Section";
 
 function NotFoundPage() {
   return (

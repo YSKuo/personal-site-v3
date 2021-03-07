@@ -1,18 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Container,
-  Toolbar,
-  Grid,
-  Typography,
-  Link,
-  Button,
-  IconButton,
-  Hidden,
-  Divider,
-} from "@material-ui/core";
+import { Grid, Typography, Link, Button } from "@material-ui/core";
 import PostSecondaryInfo from "../Post/PostSecondaryInfo";
-import StyledDivider from "../StyledDivider";
 import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 
 function PostListing({ postEdges }) {
@@ -32,56 +21,53 @@ function PostListing({ postEdges }) {
   });
 
   return (
-    <PostList container direction="column" spacing="8">
+    <PostList container direction="column" spacing={8}>
       {
         /* Your post list here. */
         postList.map((post, index) => {
           return (
-            <>
-              {index !== 0 && <StyledDivider yMargin="1.5rem" />}
-              <Post item component="article" key={post.slug}>
-                <Typography
-                  variant="h3"
-                  component="h1"
-                  display="inline"
-                  gutterBottom
-                >
-                  <Link
-                    color="textPrimary"
-                    href={`/post/${post.path}`}
-                    key={post.title}
-                    underline="none"
-                  >
-                    {post.title}
-                  </Link>
-                </Typography>
-                <PostSecondaryInfo post={post} />
-                <PostExcerpt
-                  variant="body1"
-                  component="p"
+            <Post item component="article" key={post.slug}>
+              <Typography
+                variant="h3"
+                component="h1"
+                display="inline"
+                gutterBottom
+              >
+                <Link
                   color="textPrimary"
-                  paragraph
+                  href={`/post/${post.path}`}
+                  key={post.title}
+                  underline="none"
                 >
-                  {post.excerpt}
-                </PostExcerpt>
-                <Typography
-                  variant="body2"
-                  component="p"
-                  display="inline"
-                  gutterBottom
+                  {post.title}
+                </Link>
+              </Typography>
+              <PostSecondaryInfo post={post} />
+              <PostExcerpt
+                variant="body1"
+                component="p"
+                color="textPrimary"
+                paragraph
+              >
+                {post.excerpt}
+              </PostExcerpt>
+              <Typography
+                variant="body2"
+                component="p"
+                display="inline"
+                gutterBottom
+              >
+                <Button
+                  color="secondary"
+                  href={`/post/${post.path}`}
+                  key={post.title}
+                  variant="contained"
+                  underline="none"
                 >
-                  <Button
-                    color="secondary"
-                    href={`/post/${post.path}`}
-                    key={post.title}
-                    variant="contained"
-                    underline="none"
-                  >
-                    Read more
-                  </Button>
-                </Typography>
-              </Post>
-            </>
+                  Read more
+                </Button>
+              </Typography>
+            </Post>
           );
         })
       }
@@ -96,6 +82,10 @@ const PostList = styled(Grid)`
 const Post = styled(Grid)`
   display: flex;
   flex-direction: column;
+
+  & ~ & {
+    border-top: 1px solid #dbdbdb;
+  }
 `;
 
 const PostExcerpt = styled(Typography)`

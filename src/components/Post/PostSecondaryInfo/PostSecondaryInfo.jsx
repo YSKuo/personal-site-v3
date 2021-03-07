@@ -7,7 +7,7 @@ import FolderOutlinedIcon from "@material-ui/icons/FolderOutlined";
 function PostSecondaryInfo({ post }) {
   return (
     <InfoContainer>
-      <TimeInfo variant="p" component="p" display="inline">
+      <TimeInfo variant="inherit" component="p" display="inline">
         {post.date.slice(0, 10)} · {post.timeToRead} min read
       </TimeInfo>
       {post.category && (

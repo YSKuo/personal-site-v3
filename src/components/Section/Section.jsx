@@ -13,17 +13,21 @@ import {
 } from "@material-ui/core";
 import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 
+const Title = styled(Typography)`
+  margin-bottom: 2rem;
+`;
+
 export const Section = styled.section`
   ${mediaQueryBreakpoint("sm")} {
     padding: 1rem 0;
   }
 `;
 
-export const SectionTitle = ({ children }) => {
-  const Title = styled(Typography)`
-    margin-bottom: 2rem;
-  `;
+const BoldText = styled(Typography)`
+  font-weight: bold;
+`;
 
+export const SectionTitle = ({ children }) => {
   return (
     <Title component="h2" variant="h2" gutterBottom>
       {children}
@@ -46,14 +50,10 @@ export const P = ({ children }) => {
 };
 
 export const B = ({ children }) => {
-  const Bold = styled(Typography)`
-    font-weight: bold;
-  `;
-
   return (
-    <Bold component="b" variant="body1" gutterBottom>
+    <BoldText component="b" variant="body1" gutterBottom>
       {children}
-    </Bold>
+    </BoldText>
   );
 };
 

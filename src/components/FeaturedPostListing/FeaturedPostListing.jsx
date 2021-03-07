@@ -1,16 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Container,
-  Toolbar,
-  Grid,
-  Typography,
-  Link,
-  Button,
-  IconButton,
-  Hidden,
-  Divider,
-} from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import PostSecondaryInfo from "../Post/PostSecondaryInfo";
 import { mediaQueryBreakpoint } from "../../constants/breakpoint";
 
@@ -31,40 +21,37 @@ function PostListing({ postEdges }) {
   });
 
   return (
-    <PostList container direction="column" spacing="2">
+    <PostList container direction="column" spacing={2}>
       {
         /* Your post list here. */
         postList.map((post, index) => {
           return (
-            <>
-              {/* {index !== 0 && <StyledDivider />} */}
-              <Post item component="article" key={post.slug}>
-                <Typography
-                  variant="h3"
-                  component="h1"
-                  display="inline"
-                  gutterBottom
-                >
-                  <Link
-                    color="textPrimary"
-                    href={`/post/${post.path}`}
-                    key={post.title}
-                    underline="none"
-                  >
-                    {post.title}
-                  </Link>
-                </Typography>
-                <PostSecondaryInfo post={post} />
-                <PostExcerpt
-                  variant="body1"
-                  component="p"
+            <Post item component="article" key={post.slug}>
+              <Typography
+                variant="h3"
+                component="h1"
+                display="inline"
+                gutterBottom
+              >
+                <Link
                   color="textPrimary"
-                  paragraph
+                  href={`/post/${post.path}`}
+                  key={post.title}
+                  underline="none"
                 >
-                  {post.excerpt}
-                </PostExcerpt>
-              </Post>
-            </>
+                  {post.title}
+                </Link>
+              </Typography>
+              <PostSecondaryInfo post={post} />
+              <PostExcerpt
+                variant="body1"
+                component="p"
+                color="textPrimary"
+                paragraph
+              >
+                {post.excerpt}
+              </PostExcerpt>
+            </Post>
           );
         })
       }
