@@ -8,18 +8,6 @@ import { fontSizes } from "./font";
 const { xs, sm, md, lg, xl } = breakpoints;
 
 export const theme = {
-  // fontSize: {
-  //   xs: fontSizes["xs"],
-  //   sm: fontSizes["sm"],
-  //   md: fontSizes["md"],
-  //   lg: fontSizes["lg"],
-  //   xl: fontSizes["xl"],
-  //   "2xl": fontSizes["2xl"],
-  //   "3xl": fontSizes["3xl"],
-  //   "4xl": fontSizes["4xl"],
-  //   "5xl": fontSizes["5xl"],
-  //   "6xl": fontSizes["6xl"],
-  // },
   breakpoints: {
     values: {
       xs,
@@ -35,14 +23,14 @@ export const theme = {
       white: "#fff",
     },
     primary: {
-      main: "#90a4ae",
-      light: "#c1d5e0",
-      dark: "#62757f",
+      main: "#01579b ",
+      light: "#4f83cc",
+      dark: "#002f6c",
     },
     secondary: {
-      main: "#0097a7",
-      light: "#56c8d8",
-      dark: "#006978",
+      main: "#00b8d4",
+      light: "#62ebff",
+      dark: "#0088a3",
     },
   },
   typography: {
