@@ -96,7 +96,6 @@ const config = {
     ],
     general: ["Web Application", "RWD", "Interaction Design", "Scrum"],
   },
-
   copyright: `Copyright © Arsene Kuo 2019 - ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#01579b", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
