@@ -13,11 +13,13 @@
 - SEO
 - Index testimonials
 - main container RWD 調整 padding
-- Disqus
 - Facebook app id
 - siteRssTitle
 - 串 IG API
 - emoji
+- Google Analytics
+  - [Not updated for New Google Analytics · Issue #27627 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/27627)
+  - [Support for App + Web property Google Analytics Measurement ID in gatsby-plugin-google-tagmanager · Issue #25359 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/25359)
 
 #### later
 
@@ -38,6 +40,7 @@
 - 404 Pages (3/6)
 - about this site (3/7)
 - 加 Logo (3/8)
+- Disqus (3/11)
 
 ### bug
 

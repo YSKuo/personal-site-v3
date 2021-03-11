@@ -9,6 +9,7 @@ featured: true
 tags:
   - 中文
   - Front-end
+  - 轉職工程師
 ---
 
 同步發佈於個人 Medium [半年學習成為前端工程師](https://crowley3141.medium.com/%E5%8D%8A%E5%B9%B4%E5%AD%B8%E7%BF%92%E6%88%90%E7%82%BA%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB-4b1c7349147f)。

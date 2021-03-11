@@ -1,8 +1,8 @@
 import React from "react";
-import UserLinks from "../UserLinks/UserLinks";
 import styled from "styled-components";
 import { Container, Grid, Typography, Link, Divider } from "@material-ui/core";
 import { mediaQueryBreakpoint } from "../../constants/breakpoint";
+import UserLinks from "../UserLinks/UserLinks";
 
 function Footer({ config }) {
   const { userName, userEmail, userResume, copyright } = config;
@@ -29,8 +29,15 @@ function Footer({ config }) {
             {copyright}
           </Typography>
           <Typography component="p" variant="body2" color="inherit">
-            Powered by <Link href="https://www.gatsbyjs.com/">Gatsby</Link> and{" "}
-            <Link href="https://github.com/Vagr9K/gatsby-advanced-starter">
+            Powered by{" "}
+            <Link href="https://www.gatsbyjs.com/" target="_blank">
+              Gatsby
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="https://github.com/Vagr9K/gatsby-advanced-starter"
+              target="_blank"
+            >
               Gatsby Advanced Starter
             </Link>
             .

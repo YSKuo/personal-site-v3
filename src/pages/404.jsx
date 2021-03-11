@@ -15,7 +15,7 @@ function NotFoundPage() {
         <Section>
           <SectionTitle>Content not found.</SectionTitle>
           <P>
-            404. That’s an error. Let go <A href="/">Home</A> .
+            404. That’s an error. Let go <A href="/">Home</A>.
           </P>
         </Section>
       </Container>

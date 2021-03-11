@@ -13,6 +13,25 @@ import "./normalize.css";
 import "./index.css";
 import { mediaQueryBreakpoint } from "../constants/breakpoint";
 
+export default function MainLayout({ children }) {
+  return (
+    <>
+      <MaterialThemeProvider theme={CustomMuiTheme}>
+        <ThemeProvider theme={theme}>
+          <Helmet>
+            <meta name="description" content={config.siteDescription} />
+            <html />
+          </Helmet>
+          <GlobalStyle />
+          <Header config={config} />
+          <Main>{children}</Main>
+          <Footer config={config} />
+        </ThemeProvider>
+      </MaterialThemeProvider>
+    </>
+  );
+}
+
 const GlobalStyle = createGlobalStyle`
 ${"" /* 待調整 */}
   html {    
@@ -33,27 +52,11 @@ ${"" /* 待調整 */}
     width: inherit;
   }
 
+  * {
+    font-family: ${(props) => props.theme.typography.fontFamily} 
+  }
 `;
 
 const Main = styled.main`
   padding: 3rem 0;
 `;
-
-export default function MainLayout({ children }) {
-  return (
-    <>
-      <MaterialThemeProvider theme={CustomMuiTheme}>
-        <ThemeProvider theme={theme}>
-          <Helmet>
-            <meta name="description" content={config.siteDescription} />
-            <html />
-          </Helmet>
-          <GlobalStyle />
-          <Header config={config} />
-          <Main>{children}</Main>
-          <Footer config={config} />
-        </ThemeProvider>
-      </MaterialThemeProvider>
-    </>
-  );
-}
