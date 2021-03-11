@@ -49,7 +49,7 @@ export default function PostTemplate({ data, pageContext }) {
         {/* eslint-disable-next-line react/no-danger */}
         <Content dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <PostTags tags={post.tags} />
-        {/* {isShowDisqus ? (
+        {isShowDisqus ? (
           <Disqus postNode={postNode} />
         ) : (
           <ButtonContainer>
@@ -63,7 +63,7 @@ export default function PostTemplate({ data, pageContext }) {
               Disqus
             </Button>
           </ButtonContainer>
-        )} */}
+        )}
       </Container>
     </Layout>
   );

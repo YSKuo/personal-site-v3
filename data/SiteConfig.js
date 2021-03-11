@@ -1,16 +1,16 @@
 const config = {
   siteTitle: "Arsene's Alibi", // Site title.
   siteTitleShort: "Arsene", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
+  siteTitleAlt: "", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://keen-swanson-8a9a21.netlify.app/", // Domain of your website without pathPrefix.
+  siteUrl: "https://arsenekuo.com/", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "Share some thoughts.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Share something about Web dev, learning and life style.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
-  disqusShortname: "", // Disqus shortname.
+  disqusShortname: process.env.GATSBY_DISQUS_NAME, // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 5, // Amount of posts displayed per listing page.
