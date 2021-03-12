@@ -8,8 +8,8 @@ const config = {
   siteDescription: "Share something about Web dev, learning and life style.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteRssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
-  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
-  googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
+  siteFBAppID: "", // FB Application ID for using app insights
+  googleAnalyticsID: "xxx", // GA tracking ID.
   disqusShortname: process.env.GATSBY_DISQUS_NAME, // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.

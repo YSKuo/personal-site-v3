@@ -5,6 +5,46 @@ const config = require("./data/SiteConfig");
 // Make sure that pathPrefix is not empty
 const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
 
+/**
+ * The currently active environment.
+ * This is used to set the corresponding Tag Manager environment config.
+ */
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+console.log(`Using environment config: '${activeEnv}'`);
+
+// The Tag Manager Container ID.
+const gtmContainerId = "GTM-M983SZZ";
+
+/**
+ * Tag Manager Environment values to configure gatsby-plugin-google-tagmanager.
+ * null values will cause the default (live/production) snippet to load.
+ */
+const gtmEnv = {
+  // If tag manager plugin is configured with includeInDevelopment set to
+  // true then you should create a corresponding Development environment in
+  // Tag Manager and replace the null values with the container environment
+  // auth and preview values. Otherwise the production snippet will load.
+  development: {
+    gtmAuth: null,
+    gtmPreview: null,
+  },
+
+  staging: {
+    gtmAuth: "yQr8vR0IvgHAlDxqMhMSWQ",
+    gtmPreview: "env-3",
+  },
+
+  // According to GTM docs you should use standard tag for prod so we'll set to null.
+  production: {
+    gtmAuth: null,
+    gtmPreview: null,
+  },
+};
+
+// When running gatsby develop or gatsby serve the environment is development.
+// When running gatsby build the environment is production.
+
 module.exports = {
   pathPrefix: validatedPathPrefix,
   siteMetadata: {
@@ -22,6 +62,17 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: gtmContainerId,
+        includeInDevelopment: false,
+
+        // GTM environment details.
+        gtmAuth: gtmEnv[activeEnv].gtmAuth,
+        gtmPreview: gtmEnv[activeEnv].gtmPreview,
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
