@@ -37,8 +37,8 @@ const gtmEnv = {
 
   // According to GTM docs you should use standard tag for prod so we'll set to null.
   production: {
-    gtmAuth: null,
-    gtmPreview: null,
+    gtmAuth: process.env.GTM_AUTH_STRING,
+    gtmPreview: process.env.GTM_PREVIEW_NAME,
   },
 };
 
