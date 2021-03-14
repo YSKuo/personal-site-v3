@@ -166,8 +166,8 @@ const Content = styled.div`
   }
 
   code {
-    background: #0c1021;
-    color: #c5c8c6;
+    background: rgba(117, 117, 117, 1);
+    color: rgba(242, 242, 242, 1);
     font-family: "monospace";
   }
 
