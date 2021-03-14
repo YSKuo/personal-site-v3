@@ -9,6 +9,8 @@ featured: true
 tags:
   - 中文
   - Internet
+  - 網路安全
+  - 資訊安全
 ---
 
 ## 先打預防針
