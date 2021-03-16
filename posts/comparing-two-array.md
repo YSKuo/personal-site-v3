@@ -36,37 +36,37 @@ tags:
 
 ```js
 handleAddTag = (id) => (e) => {
-  const list = this.state.tagData;
+  const currentTagNameList = this.state.tagData;
 
   // 把每個 tag 弄成 object，並把頭尾空白去掉
-  let newTagList = list.map((t) => {
+  let newTagDataList = currentTagNameList.map((t) => {
     return { name: t.trim() };
   });
 
   // 把更新後的 new tag list 傳遞出去
-  this.props.editProfile(id, newTagList);
+  this.props.editProfile(id, newTagDataList);
 };
 ```
 
-這個錯誤的原因就是沒有把舊 tag list 的資料給拿來處理，以下只探討怎麼確認新舊資料是否吻合，並將舊的詳細資料塞進 newTagList。
+這個錯誤的原因就是沒有把舊 tag list 的資料給拿來處理，以下只探討怎麼確認新舊資料是否吻合，並將舊的詳細資料塞進 newTagDataList。
 
 ## 解法
 
 ### 最先想到的解法
 
 ```js
-const list = this.state.tagData;
+const currentTagNameList = this.state.tagData;
 
 // 把舊資料拿出來並 parse JSON
-const prevTagData = JSON.parse(this.state.prevTagData);
+const prevTagDataList = JSON.parse(this.state.prevTagData);
 // 做成一個新的 list 但只有 tag 的名字
-const prevTagName = prevTagData.map((item) => item.name);
+const prevTagNameList = prevTagDataList.map((tag) => tag.name);
 
 // map 的時候新舊兩相對照，
 // 如果在新的 list 裡發現和舊的 tag 名字一樣，那就把舊的詳細資料塞進來
-let newTagList = list.map((t) => {
-  if (prevTagName.includes(t)) {
-    return prevTagData.find((item) => item.name === t);
+let newTagDataList = currentTagNameList.map((t) => {
+  if (prevTagNameList.includes(t)) {
+    return prevTagDataList.find((tag) => tag.name === t);
   }
   return { name: t.trim() };
 });
@@ -79,22 +79,24 @@ let newTagList = list.map((t) => {
 最近在看演算法的內容，學到了如果排序不是重點的話，用 object 來處理資料會是比較好的做法，所以就從這個方向來改。
 
 ```js
-const list = this.state.tagData;
+const currentTagNameList = this.state.tagData;
 
 // 一樣拿舊資料出來
 const prevTagDataList = JSON.parse(this.state.prevTagData);
-// 建立一個可以比對舊 tag list 的 tag name 和 index 的 object
-let prevTagName = {};
-prevTagDataList.forEach((tag, index) => (prevTagName[tag.name] = index));
+// 建立一個可以比對舊 tag list 的 tag name 和 index 的 Map
+let prevTagNameIndexMap = {};
+prevTagDataList.forEach(
+  (tag, index) => (prevTagNameIndexMap[tag.name] = index)
+);
 
-let newTagList = list.map((t) => {
+let newTagDataList = currentTagNameList.map((t) => {
   const tagName = t.trim();
   // 如果新的 tag list 裡的 tag 可以在舊的 list 找到，那就把舊的資料塞進來
-  if (tagName in prevTagName) {
-    return prevTagDataList[prevTagName[tagName]];
+  if (tagName in prevTagNameIndexMap) {
+    return prevTagDataList[prevTagNameIndexMap[tagName]];
   }
   return { name: tagName };
 });
 ```
 
-這邊優化的重點在於將 tag name 當作 key 而 index 當作 value，所以要從舊資料找特定 tag 時可以直接用 index 去 access，這樣優化過後就變成 O(n)。
+這邊優化的重點在於將 tag name 當作 key 而 index 當作 value 做出一個可以舊資料的 Map，所以要從舊資料找特定 tag 時可以直接用 index 去 access，這樣優化過後就變成 O(n)。

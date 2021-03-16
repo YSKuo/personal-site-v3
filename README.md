@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1451682c-2b8c-4e35-ba38-d599ba7f3fb4/deploy-status)](https://app.netlify.com/sites/arsenekuo/deploys)
+
 ## Todo
 
 ### feature
@@ -17,30 +19,33 @@
 - siteRssTitle
 - 串 IG API
 - emoji
-- Google Analytics
-  - [Not updated for New Google Analytics · Issue #27627 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/27627)
-  - [Support for App + Web property Google Analytics Measurement ID in gatsby-plugin-google-tagmanager · Issue #25359 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/25359)
 
 #### later
 
 - post 的 featured 和 draft 機制
   - [Creating Markdown Drafts with Gatsby | TinaCMS Blog](https://tina.io/blog/creating-markdown-drafts/)
   - draft 和 archived 文章目前利用 .gitignore 擋掉上傳
-  - featured post 用 GraphQL 篩選出 (3/6)
+  - featured post 用 GraphQL 篩選出 (2021/03/06)
 - post 的圖片置中，若有 caption 的話也置中
-  - 圖片置中已解決，caption 未解 (3/7)
+  - 圖片置中已解決，caption 未解 (2021/03/07)
 
 #### done
 
-- 加入指定摘要 (3/4)
-- post 裡面加上 PostInfo(date, timeToRead, category) (3/4)
-- RWD Typography (3/5)
+- 加入指定摘要 (2021/03/04)
+- post 裡面加上 PostInfo(date, timeToRead, category) (2021/03/04)
+- RWD Typography (2021/03/05)
   - [Responsive font sizes - Material-UI](https://material-ui.com/customization/typography/#responsive-font-sizes)
   - [responsiveFontSizes() - Material-UI](https://material-ui.com/customization/theming/#responsivefontsizes-theme-options-theme)
-- 404 Pages (3/6)
-- about this site (3/7)
-- 加 Logo (3/8)
-- Disqus (3/11)
+- 404 Pages (2021/03/06)
+- about this site (2021/03/07)
+- 加 Logo (2021/03/08)
+- Disqus (2021/03/11)
+- Google Analytics (2021/03/12)
+  - [Not updated for New Google Analytics · Issue #27627 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/27627)
+  - [Support for App + Web property Google Analytics Measurement ID in gatsby-plugin-google-tagmanager · Issue #25359 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/25359)
+  - [Adding Google Tag Manager and Google Analytics to a Gatsby site | Aj](https://www.articlejobber.com/enable-google-tag-manager-google-analytics-for-gatsby-site)
+
+---
 
 ### bug
 
@@ -50,15 +55,18 @@
 - Post page 裡的 table 隔線
   - [HTML Table 表格邊框顏色與樣式設計 - Wibibi](https://www.wibibi.com/info.php?tid=441)
 - 手機看網頁有 cache
+- Disqus 失效
 
 #### later
 
 - post markdown highlight 的文字沒有底色
-  - 暫時用 Content 這個 styled-component 設置風格解決 (3/4)
+  - 暫時用 Content 這個 styled-component 設置風格解決 (2021/03/04)
 
 #### done
 
 - category 產生的問題： JavaScript 會生產 java-script 的 category
+
+---
 
 ### others
 
@@ -71,10 +79,10 @@
 
 #### done
 
-- Post page url 用 date + file name (3/2)
-- Post 的 code block 字體加大 (3/6)
-- Primary, Secondary color 重新評估 (3/7)
-- lighthouse performance (3/7)
+- Post page url 用 date + file name (2021/03/02)
+- Post 的 code block 字體加大 (2021/03/06)
+- Primary, Secondary color 重新評估 (2021/03/07)
+- lighthouse performance (2021/03/07)
 
 ---
 
