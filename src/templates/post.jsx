@@ -80,6 +80,11 @@ export default function PostTemplate({ data, pageContext }) {
             <div></div>
           )}
         </PostButtonContainer>
+        <Typography variant="h3" component="h3">
+          Comment
+        </Typography>
+        <Disqus postNode={postNode} />
+        {/* 
         {isShowDisqus ? (
           <Disqus postNode={postNode} />
         ) : (
@@ -94,7 +99,7 @@ export default function PostTemplate({ data, pageContext }) {
               Disqus
             </Button>
           </DisqusButtonContainer>
-        )}
+        )} */}
       </Container>
     </Layout>
   );
