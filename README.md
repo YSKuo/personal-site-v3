@@ -7,7 +7,6 @@
 - Dark mode
   - [網頁黑暗模式 Dark Mode 設計技巧](https://jason-memo.dev/posts/dark-mode-tips/)
 - Category & Tag 文章過多時分頁（Blog renderPaging 拉出來）
-- Post page 上下個文章鈕
 - Post page side navbar
 - Post page 的 link 增加一種可以直接開新網頁的方式，且後面加一個小 icon
 - Blog 的 category 總覽分類頁
@@ -44,6 +43,7 @@
   - [Not updated for New Google Analytics · Issue #27627 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/27627)
   - [Support for App + Web property Google Analytics Measurement ID in gatsby-plugin-google-tagmanager · Issue #25359 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/25359)
   - [Adding Google Tag Manager and Google Analytics to a Gatsby site | Aj](https://www.articlejobber.com/enable-google-tag-manager-google-analytics-for-gatsby-site)
+- Post page 上下個文章鈕 (2021/04/04)
 
 ---
 

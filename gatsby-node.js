@@ -166,8 +166,8 @@ exports.createPages = async ({ graphql, actions }) => {
     }
 
     // Create post pages
-    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
-    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
+    const nextID = index + 1 < postsEdges.length ? index + 1 : null;
+    const prevID = index - 1 >= 0 ? index - 1 : null;
     const nextEdge = postsEdges[nextID];
     const prevEdge = postsEdges[prevID];
 
@@ -176,10 +176,10 @@ exports.createPages = async ({ graphql, actions }) => {
       component: postPage,
       context: {
         slug: edge.node.fields.slug,
-        nexttitle: nextEdge.node.frontmatter.title,
-        nextslug: nextEdge.node.fields.slug,
-        prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug,
+        nexttitle: nextEdge?.node.frontmatter.title,
+        nextslug: nextEdge?.node.fields.slug,
+        prevtitle: prevEdge?.node.frontmatter.title,
+        prevslug: prevEdge?.node.fields.slug,
       },
     });
   });

@@ -13,6 +13,8 @@ import {
   Hidden,
   Divider,
 } from "@material-ui/core";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import CommentIcon from "@material-ui/icons/Comment";
 import Layout from "../layout";
 import fontSizeRWD from "../utils/fontSizeRWD";
@@ -21,11 +23,14 @@ import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
 import PostSecondaryInfo from "../components/Post/PostSecondaryInfo";
 import config from "../../data/SiteConfig";
+
+import { mediaQueryBreakpoint } from "../constants/breakpoint";
+
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
 
 export default function PostTemplate({ data, pageContext }) {
-  const { slug } = pageContext;
+  const { slug, nexttitle, nextslug, prevtitle, prevslug } = pageContext;
   const postNode = data.markdownRemark;
   const post = postNode.frontmatter;
   if (!post.id) {
@@ -49,10 +54,36 @@ export default function PostTemplate({ data, pageContext }) {
         {/* eslint-disable-next-line react/no-danger */}
         <Content dangerouslySetInnerHTML={{ __html: postNode.html }} />
         <PostTags tags={post.tags} />
+        <PostButtonContainer>
+          {prevslug ? (
+            <PrePostButton
+              href={`/post/${prevslug}`}
+              color="primary"
+              size="large"
+              startIcon={<ArrowBackIosIcon />}
+            >
+              Previous: {prevtitle}
+            </PrePostButton>
+          ) : (
+            <div></div>
+          )}
+          {nextslug ? (
+            <NextPostButton
+              href={`/post/${nextslug}`}
+              color="primary"
+              size="large"
+              endIcon={<ArrowForwardIosIcon />}
+            >
+              {nexttitle}
+            </NextPostButton>
+          ) : (
+            <div></div>
+          )}
+        </PostButtonContainer>
         {isShowDisqus ? (
           <Disqus postNode={postNode} />
         ) : (
-          <ButtonContainer>
+          <DisqusButtonContainer>
             <Button
               variant="contained"
               color="secondary"
@@ -62,7 +93,7 @@ export default function PostTemplate({ data, pageContext }) {
             >
               Disqus
             </Button>
-          </ButtonContainer>
+          </DisqusButtonContainer>
         )}
       </Container>
     </Layout>
@@ -182,7 +213,45 @@ const Content = styled.div`
   }
 `;
 
-const ButtonContainer = styled.div`
+const PostButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  ${mediaQueryBreakpoint("sm")} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+const PostButton = styled(Button)`
+  display: flex;
+  justify-content: center;
+  text-transform: none;
+
+  ${mediaQueryBreakpoint("sm")} {
+    max-width: 50%;
+    justify-content: space-between;
+  }
+`;
+
+const PrePostButton = styled(PostButton)`
+  margin-bottom: 1rem;
+
+  ${mediaQueryBreakpoint("sm")} {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+`;
+
+const NextPostButton = styled(PostButton)`
+  ${mediaQueryBreakpoint("sm")} {
+    justify-content: flex-end;
+  }
+`;
+
+const DisqusButtonContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
