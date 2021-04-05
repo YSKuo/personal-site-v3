@@ -10,7 +10,7 @@ tags:
   - 中文
   - Front-end
   - Gatsby
-  - own-site-builder
+  - Own-Site-Builder
 ---
 
 ## 前言

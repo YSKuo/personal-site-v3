@@ -3,7 +3,7 @@ title: "JavaScript - 為什麼 ES6 總是特別拿出來提？"
 cover: ""
 category: "JavaScript"
 date: "2020-06-26"
-excerpt: ""
+excerpt: "這篇簡述為什麼 ES6 在 JavaScript 這個程式語言如此重要。"
 published: true
 featured: true
 tags:
@@ -14,6 +14,7 @@ tags:
 ## 前言
 
 身為一個 JavaScript 初學者，總會看到各種教材會特別把 ES6 拿出來獨立當一個章節，甚至去求職網上看網頁工程師的職缺，許多對於求職者的要求條件也會寫上要會 ES6 語法。
+
 那 ES6 是什麼意思？先來了解一下。
 
 ---
