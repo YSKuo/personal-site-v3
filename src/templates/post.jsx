@@ -202,9 +202,9 @@ const Content = styled.div`
   }
 
   code {
-    background: rgba(117, 117, 117, 1);
-    color: rgba(242, 242, 242, 1);
-    font-family: "monospace";
+    background: rgba(242, 242, 242, 1);
+    font-family: 'Menlo, Monaco, "Courier New", Courier, monospace';
+    font-size: 90%;
   }
 
   deckgo-highlight-code {
