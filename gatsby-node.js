@@ -176,10 +176,10 @@ exports.createPages = async ({ graphql, actions }) => {
       component: postPage,
       context: {
         slug: edge.node.fields.slug,
-        nexttitle: nextEdge?.node.frontmatter.title,
-        nextslug: nextEdge?.node.fields.slug,
-        prevtitle: prevEdge?.node.frontmatter.title,
-        prevslug: prevEdge?.node.fields.slug,
+        nexttitle: nextEdge ? nextEdge.node.frontmatter.title : undefined,
+        nextslug: nextEdge ? nextEdge.node.fields.slug : undefined,
+        prevtitle: prevEdge ? prevEdge.node.frontmatter.title : undefined,
+        prevslug: prevEdge ? prevEdge.node.fields.slug : undefined,
       },
     });
   });
