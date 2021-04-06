@@ -83,8 +83,6 @@ export default function PostTemplate({ data, pageContext }) {
         <Typography variant="h3" component="h3">
           Comment
         </Typography>
-        <Disqus postNode={postNode} />
-        {/* 
         {isShowDisqus ? (
           <Disqus postNode={postNode} />
         ) : (
@@ -99,7 +97,7 @@ export default function PostTemplate({ data, pageContext }) {
               Disqus
             </Button>
           </DisqusButtonContainer>
-        )} */}
+        )}
       </Container>
     </Layout>
   );
@@ -194,8 +192,12 @@ const Content = styled.div`
 
   img {
     display: block;
-    margin: 0 auto;
     max-width: 100%;
+    margin: 2rem auto;
+
+    ${mediaQueryBreakpoint("sm")} {
+      margin: 4rem auto;
+    }
   }
 
   div.deckgo-highlight-code-container {
