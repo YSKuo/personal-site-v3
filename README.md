@@ -11,7 +11,6 @@
 - Post page 的 link 增加一種可以直接開新網頁的方式，且後面加一個小 icon
 - Blog 的 category 總覽分類頁
 - Work 頁面
-- SEO
 - Index testimonials
 - main container RWD 調整 padding
 - Facebook app id
@@ -27,6 +26,7 @@
   - featured post 用 GraphQL 篩選出 (2021/03/06)
 - post 的圖片置中，若有 caption 的話也置中
   - 圖片置中已解決，caption 未解 (2021/03/07)
+- SEO
 
 #### done
 
@@ -54,8 +54,7 @@
   - [DeckDeckGo | Documentation](https://docs.deckdeckgo.com/components/code/)
 - Post page 裡的 table 隔線
   - [HTML Table 表格邊框顏色與樣式設計 - Wibibi](https://www.wibibi.com/info.php?tid=441)
-- 手機看網頁有 cache
-- Disqus 失效
+- 手機看網頁有 cache?
 
 #### later
 
@@ -65,6 +64,7 @@
 #### done
 
 - category 產生的問題： JavaScript 會生產 java-script 的 category
+- Disqus 失效 (2021/04/06)
 
 ---
 
@@ -75,7 +75,6 @@
 - About page 的 tag 抽出來當 component 讓 Post page 可用
 - Header 拿不到 globalThis.location
   - [Location Data from Props | Gatsby](https://www.gatsbyjs.com/docs/location-data-from-props/)
-- 相容不同瀏覽器的字型
 
 #### done
 
@@ -83,6 +82,7 @@
 - Post 的 code block 字體加大 (2021/03/06)
 - Primary, Secondary color 重新評估 (2021/03/07)
 - lighthouse performance (2021/03/07)
+- 相容不同瀏覽器的字型
 
 ---
 
