@@ -125,7 +125,7 @@ Medium 呈現程式碼的方式不是很理想，雖然可在文章顯示 code b
 
 ##### 其他優點
 
-我使用 CoderBridge 的時間並不長，所以不是非常了解這個平台，所幸網路上還有其他介紹這平台的文章，像 Huli 寫的 [寫技術部落格不需要那麼大費周章](https://hulitw.medium.com/tech-blog-coderbridge-to-the-rescue-2ba5b52d8bcd#a879) 就把 CoderBridge 介紹得很好，而且也有評比技術部落格的選擇，起初我也是透過他的推薦而使用 CoderBridge 的。
+我使用 CoderBridge 的時間並不長，所以不是非常了解這個平台，所幸網路上還有其他介紹這平台的文章，像是引我入門的資深工程師 Huli，他寫的文章 [寫技術部落格不需要那麼大費周章](https://hulitw.medium.com/tech-blog-coderbridge-to-the-rescue-2ba5b52d8bcd#a879) 就把 CoderBridge 介紹得很好，而且也有評比技術部落格的選擇，起初我也是透過他的推薦而使用 CoderBridge 的。
 
 #### 小結
 
@@ -163,19 +163,23 @@ Hexo 是個部落格框架，我並不算是真的有使用過，只有嘗試在
 
 ![](https://i.imgur.com/ymIcqhq.png)
 
+前面說到的資深工程師 Huli，他自己也有用 Hexo 架設 [技術部落格](https://blog.huli.tw/)；此外，近幾年熱門的前端框架之一 Vue 的 [官網](https://vuejs.org/)，同樣是用 Hexo 建立的。
+
+如果想了解更多範例，可以看官方 repo 的 [showcases](https://github.com/hexojs/awesome-hexo#showcases)。
+
 #### 小結
 
-Hexo 這邊沒寫缺點不是因為沒缺點，只是我不算真的有使用過這個框架才寫不出什麼缺點來。
+Hexo 這邊沒寫缺點並不是因為沒缺點，只是我不算真的有使用它來寫個人部落格才寫不出什麼缺點來。
 
-簡單來說，最後沒有使用它的原因是因為 Gatsby 的應用更廣更全面，Hexo 比起來就較局限於部落格功能，如果只是想建立個人部落格且不想依賴在其他平台的話，我想 Hexo 是絕對足夠也最方便的！
+簡單來說，最後沒有使用它的原因是 Gatsby 的應用更全面，Hexo 比起來就較局限於部落格功能，如果只是想建立個人部落格且不想依賴在其他平台的話，我想 Hexo 是絕對足夠也最方便的！
 
-若有興趣嘗試用 Hexo 建立個人部落格的話，這篇文章 [如何搭建個人 Blog 使用 Hexo + Gitpage](https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db) 有非常完整卻簡易的教學，可能只要稍微懂得下 command line 就順利建置了。
+若有興趣嘗試用 Hexo 建立個人部落格的話，這篇文章 [如何搭建個人 Blog 使用 Hexo + Gitpage](https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db) 有非常完整卻簡易的教學，或許你只要稍微懂得下 command line 就可順利用 Hexo 來建立個人部落格了。
 
 ---
 
 ### [Gatsby](https://www.gatsbyjs.com/)
 
-再來就介紹我選擇的方式，我最終選擇使用 Gatsby 來架設自己的網站， 這邊節錄五倍紅寶石的文章 [快打造靜態網站的利器？Gatsby！](https://5xruby.tw/posts/static-site-generator-gastbyjs)介紹：
+再來就介紹我選擇的方式，我最終選擇使用 Gatsby 來架設自己的網站， 這邊節錄五倍紅寶石的文章 [快打造靜態網站的利器？Gatsby！](https://5xruby.tw/posts/static-site-generator-gastbyjs) 的介紹：
 
 > GatsbyJS 是一套靜態網站生成器，主要使用程式語言 JavaScript 的開源專案。前端框架則使用了時下熱門的 ReactJS。靜態網站生成器的工具通常會提供樣版設置的地方，可以快下載樣板後速進行套版。同時也會在本機運行一個伺服器即時對網頁的變動，編譯後反應內容讓我們可以看到變動後的內容。
 
