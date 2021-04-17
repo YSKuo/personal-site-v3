@@ -9,6 +9,8 @@ featured: true
 tags:
   - 中文
   - Frontend
+  - ES6
+  - JavsScript-History
 ---
 
 ## 前言
