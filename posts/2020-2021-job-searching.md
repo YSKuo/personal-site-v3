@@ -8,7 +8,7 @@ published: true
 featured: false
 tags:
   - 中文
-  - Front-end
+  - Frontend
   - job-searching
   - 面試心得
 ---

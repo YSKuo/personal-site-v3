@@ -8,9 +8,9 @@ published: true
 featured: true
 tags:
   - 中文
-  - Front-end
+  - Frontend
   - Gatsby
-  - Own-Site-Builder
+  - own-site-builder
 ---
 
 ## 前言

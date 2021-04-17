@@ -8,7 +8,7 @@ published: true
 featured: true
 tags:
   - 中文
-  - Front-end
+  - Frontend
   - 轉職工程師
 ---
 

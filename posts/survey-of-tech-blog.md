@@ -8,7 +8,7 @@ published: true
 featured: true
 tags:
   - 中文
-  - Own-Site-Builder
+  - own-site-builder
   - Writing
   - Blogging
 ---
