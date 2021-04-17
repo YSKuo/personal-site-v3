@@ -7,11 +7,10 @@ excerpt: "最近和公司的設計師組了小型的內部讀書會，我負責�
 published: true
 featured: false
 tags:
-  - 中文
+  - 讀書心得
   - Designing-with-Data
   - Data
   - Reading
-  - Reflection
 ---
 
 ## 前言
