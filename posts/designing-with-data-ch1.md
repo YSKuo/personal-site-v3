@@ -17,7 +17,7 @@ tags:
 
 最近和我們公司的設計師組了小型的內部讀書會，我負責分享的是由碁峰資訊翻譯的 `Designing with Data｜善用數據幫你打造好設計` 這本書。
 
-接下來會以這本書的各章節摘要及心得為內容來寫一系列的文章，想直接參考這系列所有文章請看 [系列文連結](/tags/Designing-with-Data)。
+接下來會以這本書的各章節摘要及心得為內容來寫一系列的文章，想直接參考這系列所有文章請看 [系列文連結](/tags/designing-with-data)。
 
 ![Designing with Data](https://learning.oreilly.com/library/cover/9781449334925/250w/)
 
