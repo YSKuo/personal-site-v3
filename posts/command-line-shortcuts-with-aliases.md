@@ -7,8 +7,7 @@ excerpt: "看到有人在 terminal 輸入短短幾個字就完成本來要輸很
 published: true
 featured: false
 tags:
-  - 中文
-  - command-line
+  - command line
 ---
 
 ## alias 是什麼？

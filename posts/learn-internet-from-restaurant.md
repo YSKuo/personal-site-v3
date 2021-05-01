@@ -7,7 +7,6 @@ date: "2020-08-20"
 published: true
 featured: true
 tags:
-  - 中文
   - Internet
   - 網路安全
   - 資訊安全

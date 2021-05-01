@@ -7,9 +7,8 @@ excerpt: "工作上遇到的問題，討探比對兩個 array 該怎樣做才有
 published: true
 featured: false
 tags:
-  - 中文
   - 演算法
-  - real-case
+  - Real Case
 ---
 
 ## 問題描述

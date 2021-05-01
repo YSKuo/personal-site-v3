@@ -7,10 +7,9 @@ excerpt: "剛做完這個網站，寫這篇文記錄一下心得。"
 published: true
 featured: true
 tags:
-  - 中文
   - Frontend
   - Gatsby
-  - own-site-builder
+  - Own Site Builder
 ---
 
 ## 前言

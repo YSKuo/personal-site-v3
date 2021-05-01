@@ -7,9 +7,8 @@ date: "2020-12-04"
 published: true
 featured: false
 tags:
-  - self-assessment
+  - Self Assessment
   - LeetCode
-  - 中文
 ---
 
 ## 前言

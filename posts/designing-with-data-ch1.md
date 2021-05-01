@@ -3,15 +3,14 @@ title: "Designing with Data - 第一章 數據思維入門"
 cover: ""
 category: "Design"
 date: "2021-04-13"
-excerpt: "最近和公司的設計師組了小型的內部讀書會，我負責分享 `Designing with Data`。"
+excerpt: "最近和公司的設計師組了小型的內部讀書會，我負責分享 Designing with Data，接下來會以這本書的各章節摘要及心得為內容來寫一系列的文章。"
 published: true
 featured: false
 tags:
   - 讀書心得
-  - Designing-with-Data
+  - Designing with Data
   - Data
   - Reading
-  - 中文
 ---
 
 ## 前言
@@ -38,7 +37,7 @@ tags:
 
 ## 思考數據的方式
 
- 關於數據，本書介紹三種不同的思考方式：
+關於數據，本書介紹三種不同的思考方式：
 
 - 數據驅動（Data Driven）
 - 數據啟示（Data Informed）
@@ -121,6 +120,6 @@ Data Aware 的思考方式表示在收集數據之前，已經要考慮到需要
 
 不過書裡也引述 Google 的沈浸式設計部門總監 Jon Wiley 的話：
 
-> 指標・數據和 A/B Test 都是重要的工具，但他們絕對不是唯一做決策的機制。
+> 指標、數據和 A/B Test 都是重要的工具，但他們絕對不是唯一做決策的機制。
 
 這句話提醒了我，數據很重要，但更重要的是運用它而非被數據綁死。

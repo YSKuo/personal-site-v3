@@ -7,9 +7,8 @@ excerpt: "2020 年底到 2021 年初的求職經驗，包括投遞履歷、面�
 published: true
 featured: false
 tags:
-  - 中文
   - Frontend
-  - job-searching
+  - Job Searching
   - 面試心得
 ---
 

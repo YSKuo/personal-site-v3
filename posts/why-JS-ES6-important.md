@@ -7,10 +7,9 @@ excerpt: "這篇簡述為什麼 ES6 在 JavaScript 這個程式語言如此重�
 published: true
 featured: true
 tags:
-  - 中文
   - Frontend
   - ES6
-  - JavsScript-History
+  - JavsScript history
 ---
 
 ## 前言

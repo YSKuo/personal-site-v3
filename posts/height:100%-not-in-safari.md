@@ -7,10 +7,9 @@ excerpt: "以這篇文章作為開始，隨意記錄開發時遇到的坑。"
 published: true
 featured: false
 tags:
-  - 中文
   - CSS
   - UI
-  - real-case
+  - Real Case
 ---
 
 ## 前言

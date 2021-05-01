@@ -7,8 +7,7 @@ excerpt: "來說說為什麼我用 Gatsby 來建個人網站。"
 published: true
 featured: true
 tags:
-  - 中文
-  - own-site-builder
+  - Own Site Builder
   - Writing
   - Blogging
 ---

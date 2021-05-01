@@ -7,7 +7,6 @@ date: "2021-01-24"
 published: true
 featured: true
 tags:
-  - 中文
   - Frontend
   - 轉職工程師
 ---

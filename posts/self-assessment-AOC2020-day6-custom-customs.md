@@ -7,9 +7,8 @@ excerpt: "最近聖誕節快到了，每年都有的 AOC 解題活動也開始�
 published: true
 featured: false
 tags:
-  - self-assessment
+  - Self Assessment
   - AdventOfCode
-  - 中文
 ---
 
 ## 前言
