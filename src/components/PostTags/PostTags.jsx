@@ -10,7 +10,7 @@ function PostTags({ tags }) {
           <TagContainer key={index} item>
             <Tag
               key={tag}
-              href={`/tags/${tag}`}
+              href={`/tags/${_.kebabCase(tag)}`}
               variant="contained"
               disableElevation
             >

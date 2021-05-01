@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import _ from "lodash";
 import { Typography, Button } from "@material-ui/core";
 import { mediaQueryBreakpoint } from "../../../constants/breakpoint";
 import FolderOutlinedIcon from "@material-ui/icons/FolderOutlined";
@@ -14,7 +15,7 @@ function PostSecondaryInfo({ post }) {
         <CategoryLink
           variant="outlined"
           startIcon={<FolderOutlinedIcon />}
-          href={`/categories/${post.category}`}
+          href={`/categories/${_.kebabCase(post.category)}`}
         >
           {post.category}
         </CategoryLink>

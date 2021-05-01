@@ -187,7 +187,7 @@ exports.createPages = async ({ graphql, actions }) => {
   //  Create tag pages
   tagSet.forEach((tag) => {
     createPage({
-      path: `/tags/${tag}/`,
+      path: `/tags/${_.kebabCase(tag)}/`,
       component: tagPage,
       context: { tag },
     });
@@ -196,7 +196,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create category pages
   categorySet.forEach((category) => {
     createPage({
-      path: `/categories/${category}/`,
+      path: `/categories/${_.kebabCase(category)}/`,
       component: categoryPage,
       context: { category },
     });
