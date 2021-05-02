@@ -72,8 +72,10 @@ function About({ config }) {
       <Section>
         <SectionTitle>Skills</SectionTitle>
         <Grid container>
-          <TagsSection userSkills={userSkills} category={"Design"} />
           <TagsSection userSkills={userSkills} category={"Development"} />
+          <TagsSection userSkills={userSkills} category={"Frontend"} />
+          <TagsSection userSkills={userSkills} category={"Backend"} />
+          <TagsSection userSkills={userSkills} category={"Design"} />
           <TagsSection userSkills={userSkills} category={"General"} />
         </Grid>
       </Section>
