@@ -28,7 +28,7 @@ function Home({ config, featuredPostEdges }) {
               I’m Arsene Kuo.
             </Intro>
             <Paragraph variant="h5" component="p" gutterBottom>
-              I'm a frontend designer and developer, passionate about improving
+              I'm a frontend developer and designer, passionate about improving
               user experience through design and engineering.
             </Paragraph>
           </TextBlock>
