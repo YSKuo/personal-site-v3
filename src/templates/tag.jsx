@@ -47,8 +47,9 @@ export const pageQuery = graphql`
           fields {
             slug
             date
+            excerpt
           }
-          excerpt
+          excerpt(pruneLength: 300)
           timeToRead
           frontmatter {
             title

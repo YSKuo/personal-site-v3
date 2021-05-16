@@ -8,10 +8,12 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import renderPaging from "../utils/renderPaging";
 
-export default function CategoryTemplate({ pageContext, data }) {
+export default function CategoryTemplate({ pageContext, data, location }) {
   const { category } = pageContext;
   const postEdges = data.allMarkdownRemark.edges;
+  // console.log(pageContext);
 
   return (
     <Layout>
@@ -22,6 +24,7 @@ export default function CategoryTemplate({ pageContext, data }) {
           {category}
         </CategoryTitle>
         <PostListing postEdges={postEdges} />
+        {/* {renderPaging("category", pageContext, location)} */}
       </Container>
     </Layout>
   );
@@ -41,8 +44,9 @@ export const pageQuery = graphql`
           fields {
             slug
             date
+            excerpt
           }
-          excerpt
+          excerpt(pruneLength: 300)
           timeToRead
           frontmatter {
             title

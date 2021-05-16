@@ -45,59 +45,61 @@ export default function PostTemplate({ data, pageContext }) {
       </Helmet>
       <SEO postPath={slug} postNode={postNode} postSEO />
       <Container>
-        <Typography variant="h1" component="h1" gutterBottom>
-          {post.title}
-        </Typography>
-        <PostSecondaryInfo
-          post={{ timeToRead: postNode.timeToRead, ...post }}
-        />
-        {/* eslint-disable-next-line react/no-danger */}
-        <Content dangerouslySetInnerHTML={{ __html: postNode.html }} />
-        <PostTags tags={post.tags} />
-        <PostButtonContainer>
-          {prevslug ? (
-            <PrePostButton
-              href={`/post/${prevslug}`}
-              color="primary"
-              size="large"
-              startIcon={<ArrowBackIosIcon />}
-            >
-              Previous: {prevtitle}
-            </PrePostButton>
+        <article>
+          <Typography variant="h1" component="h1" gutterBottom>
+            {post.title}
+          </Typography>
+          <PostSecondaryInfo
+            post={{ timeToRead: postNode.timeToRead, ...post }}
+          />
+          {/* eslint-disable-next-line react/no-danger */}
+          <Content dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          <PostTags tags={post.tags} />
+          <PostButtonContainer>
+            {prevslug ? (
+              <PrePostButton
+                href={`/post/${prevslug}`}
+                color="primary"
+                size="large"
+                startIcon={<ArrowBackIosIcon />}
+              >
+                {prevtitle}
+              </PrePostButton>
+            ) : (
+              <div></div>
+            )}
+            {nextslug ? (
+              <NextPostButton
+                href={`/post/${nextslug}`}
+                color="primary"
+                size="large"
+                endIcon={<ArrowForwardIosIcon />}
+              >
+                {nexttitle}
+              </NextPostButton>
+            ) : (
+              <div></div>
+            )}
+          </PostButtonContainer>
+          <Typography variant="h3" component="h3">
+            Comment
+          </Typography>
+          {isShowDisqus ? (
+            <Disqus postNode={postNode} />
           ) : (
-            <div></div>
+            <DisqusButtonContainer>
+              <Button
+                variant="contained"
+                color="secondary"
+                size="large"
+                startIcon={<CommentIcon />}
+                onClick={() => setIsShowDisqus(true)}
+              >
+                Disqus
+              </Button>
+            </DisqusButtonContainer>
           )}
-          {nextslug ? (
-            <NextPostButton
-              href={`/post/${nextslug}`}
-              color="primary"
-              size="large"
-              endIcon={<ArrowForwardIosIcon />}
-            >
-              {nexttitle}
-            </NextPostButton>
-          ) : (
-            <div></div>
-          )}
-        </PostButtonContainer>
-        <Typography variant="h3" component="h3">
-          Comment
-        </Typography>
-        {isShowDisqus ? (
-          <Disqus postNode={postNode} />
-        ) : (
-          <DisqusButtonContainer>
-            <Button
-              variant="contained"
-              color="secondary"
-              size="large"
-              startIcon={<CommentIcon />}
-              onClick={() => setIsShowDisqus(true)}
-            >
-              Disqus
-            </Button>
-          </DisqusButtonContainer>
-        )}
+        </article>
       </Container>
     </Layout>
   );
@@ -125,7 +127,7 @@ export const pageQuery = graphql`
   }
 `;
 
-const Content = styled.div`
+const Content = styled.section`
   margin-bottom: 2rem;
   font-family: ${(props) => props.theme.typography.fontFamily};
 
