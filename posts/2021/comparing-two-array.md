@@ -8,7 +8,7 @@ published: true
 featured: false
 tags:
   - 演算法
-  - Real Case
+  - Real-World Case
 ---
 
 ## 問題描述
