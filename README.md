@@ -17,6 +17,8 @@
 - siteRssTitle
 - 串 IG API
 - emoji
+- 時間軸（展示網站歷程和文章列表）
+- [[CSS] 使用 scroll-behavior 達成免用 js 的平滑滾動效果 | DeTools 工具死神](https://tools.wingzero.tw/article/sn/224?fbclid=IwAR3oqPU-JZcC-ifIGxQuaHOazuTtgDnyidY8ew6uJ-61gkq1aCa_TPrFLW4)
 
 #### later
 
@@ -27,6 +29,12 @@
 - post 的圖片置中，若有 caption 的話也置中
   - 圖片置中已解決，caption 未解 (2021/03/07)
 - SEO
+  - 移除未使用的 JavaScript
+  - robot.txt
+  - XML Sitemap
+  - Google mobile friendly test tool + Google Search Console 行動裝置可用性
+  - GA：全站網頁平均下載速度（standard: PC 8 sec, mobile 5 sec）
+  - Schema.org
 
 #### done
 
@@ -44,6 +52,7 @@
   - [Support for App + Web property Google Analytics Measurement ID in gatsby-plugin-google-tagmanager · Issue #25359 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/25359)
   - [Adding Google Tag Manager and Google Analytics to a Gatsby site | Aj](https://www.articlejobber.com/enable-google-tag-manager-google-analytics-for-gatsby-site)
 - Post page 上下個文章鈕 (2021/04/04)
+- modify Post HMTL tag to be semantic (2021/05/16)
 
 ---
 
@@ -83,6 +92,7 @@
 - Primary, Secondary color 重新評估 (2021/03/07)
 - lighthouse performance (2021/03/07)
 - 相容不同瀏覽器的字型
+- tag, category 都改成轉小寫 (2021/05/01)
 
 ---
 
@@ -93,9 +103,12 @@
 - Front-end
 - Back-end
 - JavaScript
+- Python
 - Web
 - React
 - Algorithm
+- Data-Structure
 - Learning
+- Design
 - Experience
 - Others
