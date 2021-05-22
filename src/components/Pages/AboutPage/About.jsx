@@ -36,7 +36,7 @@ function About({ config }) {
       <Section>
         <SectionTitle>About Me</SectionTitle>
         <P>
-          Hi, there! I'm <B>{userName}</B>, a frontend designer and developer
+          Hi, there! I'm <B>{userName}</B>, a frontend developer and designer
           living in {userLocation}. After finishing my master's degree in
           mechanical engineering, I acquired extensive experience in a patent
           firm and also the high-tech manufacturing industry.
