@@ -87,9 +87,20 @@ const config = {
       "Webpack",
       "Babel",
       "Gulp",
+      "Mocha",
+      "Chai",
+      "Enzyme",
+      "Sinon",
     ],
     backend: ["Node.js", "Django", "MySQL"],
-    general: ["Web Application", "RWD", "Interaction Design", "Scrum", "SEO"],
+    general: [
+      "Web Application",
+      "RWD",
+      "Interaction Design",
+      "Scrum",
+      "SEO",
+      "Unit Test",
+    ],
   },
   copyright: `Copyright © Arsene Kuo 2019 - ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#01579b", // Used for setting manifest and progress theme colors.
