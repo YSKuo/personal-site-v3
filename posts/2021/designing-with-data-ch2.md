@@ -16,7 +16,7 @@ tags:
 
 ## 前言
 
-如 [前篇文章](/post/2021/04/12/designing-with-data-ch-1) 所述，最近我在讀 `Designing with Data｜善用數據幫你打造好設計` 這本書，想直接參考這系列所有文章請看 [系列文連結](/tags/designing-with-data)。
+最近我在讀 `Designing with Data｜善用數據幫你打造好設計` 這本書，因此有一系列的記錄，想直接參考這系列所有文章請看[系列文連結](/tags/designing-with-data)。
 
 ## 章節簡介
 

@@ -16,9 +16,9 @@ tags:
 
 ## 前言
 
-如 [前篇文章](/post/2021/04/12/designing-with-data-ch-1) 所述，最近我在讀 `Designing with Data｜善用數據幫你打造好設計` 這本書，想直接參考這系列所有文章請看 [系列文連結](/tags/designing-with-data)。
+最近我在讀 `Designing with Data｜善用數據幫你打造好設計` 這本書，因此有一系列的記錄，想直接參考這系列所有文章請看[系列文連結](/tags/designing-with-data)。
 
-這一章剛好有官方的線上資源可以參考，連結 [在這](https://www.oreilly.com/library/view/designing-with-data/9781449334925/ch04.html)。
+這一章剛好有官方的線上資源可以參考，連結[在這](https://www.oreilly.com/library/view/designing-with-data/9781449334925/ch04.html)。
 
 ## 章節簡介
 
