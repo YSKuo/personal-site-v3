@@ -99,7 +99,7 @@ const config = {
       "Interaction Design",
       "Scrum",
       "SEO",
-      "Unit Test",
+      "Unit Testing",
     ],
   },
   copyright: `Copyright © Arsene Kuo 2019 - ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.
