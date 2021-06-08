@@ -8,6 +8,10 @@ published: true
 featured: false
 tags:
   - command line
+  - alias
+  - terminal
+  - git
+  - shell
 ---
 
 ## alias 是什麼？
@@ -36,7 +40,9 @@ git commit -a -m 'message'
 
 我本來就是用 `zsh` 所以不用再跑安裝這個步驟，然後查了一些資料都指出安裝 `zsh` 後，會有一個文件裡面存放設定好的 alias，這個文件是 `~/.oh-my-zsh/plugins/git/git.plugin.zsh`。
 
-我用 termianl 輸入指令
+我用 terminal
+
+- 輸入指令
 
 ```
 open ~/.oh-my-zsh/plugins/git/
