@@ -82,6 +82,22 @@ source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 
 之後關掉 terminal 再重開就可以使用 zsh 內建的 alias 了。
 
+**==更正===**
+
+感謝網友 [gqqnb2005](https://www.coderbridge.com/series/e6ca520d20de4f8497e17d1a8d95245f/posts/902f2d4597c94c269b1ffb7ec66e229a#article-comment-wrapper) 指正
+
+> git.plugin.zsh 是 plugin，要用启用 plugin 的方法令 alias 變成有效指令，而不是 source 单独的文件。
+> 在.zshrc 里找到 plugins=(...) ，加入 git。
+
+所以在 .zshrc 的 plugins 加入 `git` 即可，例如
+
+```
+plugins=(
+  git
+  ...
+)
+```
+
 ---
 
 ## 常用的 alias
