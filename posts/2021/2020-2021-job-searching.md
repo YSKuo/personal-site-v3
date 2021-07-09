@@ -16,7 +16,7 @@ tags:
 
 2020 年 6 月中左右參加了 [Lidemy 程式導師計畫](https://github.com/lidemy/mentor-program-4th)，前陣子結業後順利找到前端工程師的正職，因此想分享一些心得。這篇先分享求職心得，後續再分享結業心得。
 
-中間會有一大段面試心得，想看總結和要點可點擊 [求職總結](https://crowley3141.medium.com/2020%E6%9C%AB2021%E5%88%9D-junior-%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%AB%E6%B1%82%E8%81%B7%E5%BF%83%E5%BE%97-cccab500a75b#76a5)。
+中間會有一大段面試心得，想看總結和要點可點擊 [求職總結](/post/2021/01/15/2020-2021-job-searching#求職總結)。
 
 ---
 
