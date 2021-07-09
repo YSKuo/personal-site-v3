@@ -64,6 +64,7 @@
 - Post page 裡的 table 隔線
   - [HTML Table 表格邊框顏色與樣式設計 - Wibibi](https://www.wibibi.com/info.php?tid=441)
 - 手機看網頁有 cache?
+- local dev 時 url 日期和文章日期不同
 
 #### later
 
