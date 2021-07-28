@@ -333,15 +333,39 @@ return str;
 因為上面這題我用了 react hook 的 useState，他就接著問我實作一個 useState 的 function
 
 ```js
-const [getA, setA] = init(50)
-const [getB, setB] = init(100)getA() // 50
-getB() // 100
-setA(25)
-getA() // 25
-getB() // 100
+const [getA, setA] = init(50);
+const [getB, setB] = init(100);
+getA(); // 50
+getB(); // 100
+setA(25);
+getA(); // 25
+getB(); // 100
 ```
 
-這邊我用 closure 解啦，他說可以。
+這邊我用 closure 解啦，我的解法如下，他說可以。
+
+```js
+function init(param) {
+  const getParam = () => {
+    return param;
+  };
+
+  const setParam = (num) => {
+    param = num;
+  };
+
+  return [getParam, setParam];
+}
+
+const [getA, setA] = init(50);
+const [getB, setB] = init(100);
+
+console.log(getA()); // 50
+console.log(getB()); // 100
+setA(25);
+console.log(getA()); // 25
+console.log(getB()); // 100
+```
 
 白板題之後他就開始介紹公司的事情了，說公司有分三大主要業務，分別是電商平台、倉儲管理系統還有 POS 系統。
 
