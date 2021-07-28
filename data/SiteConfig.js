@@ -20,7 +20,7 @@ const config = {
   userTwitter: "https://twitter.com/ArseneKuo", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Taipei, Taiwan", // User location to display in the author segment.
   userResume:
-    "https://drive.google.com/file/d/1HTimaKo2zLBpZcGWh7PufG3inxR59zWG/view",
+    "https://drive.google.com/file/d/1dhQxH2l2zC5rxhzzmzvPZHOyFTHfOxW0/view?usp=sharing",
   userAvatar: "", // User avatar to display in the author segment.
   userDescription: "", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
