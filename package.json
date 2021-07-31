@@ -50,6 +50,8 @@
     "url-join": "^4.0.0"
   },
   "devDependencies": {
+    "babel-jest": "^27.0.6",
+    "babel-preset-gatsby": "^0.12.2",
     "cli-glob": "^0.1.0",
     "env-cmd": "^10.1.0",
     "eslint": "^7.9.0",
@@ -61,7 +63,10 @@
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^3.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
     "prettier": "^2.1.2",
+    "react-test-renderer": "^17.0.2",
     "remark-cli": "^9.0.0",
     "remark-preset-lint-recommended": "^5.0.0",
     "stylelint": "^13.8.0",
@@ -76,6 +81,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "test": "jest",
     "develop": "npx env-cmd -f .env gatsby develop",
     "dev": "npm run develop",
     "serve": "gatsby serve",
