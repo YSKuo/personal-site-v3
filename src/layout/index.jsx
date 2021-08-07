@@ -15,20 +15,18 @@ import { mediaQueryBreakpoint } from "../constants/breakpoint";
 
 export default function MainLayout({ children }) {
   return (
-    <>
-      <MaterialThemeProvider theme={CustomMuiTheme}>
-        <ThemeProvider theme={theme}>
-          <Helmet>
-            <meta name="description" content={config.siteDescription} />
-            <html />
-          </Helmet>
-          <GlobalStyle />
-          <Header config={config} />
-          <Main>{children}</Main>
-          <Footer config={config} />
-        </ThemeProvider>
-      </MaterialThemeProvider>
-    </>
+    <MaterialThemeProvider theme={CustomMuiTheme}>
+      <ThemeProvider theme={theme}>
+        <Helmet>
+          <meta name="description" content={config.siteDescription} />
+          <html lang="en" />
+        </Helmet>
+        <GlobalStyle />
+        <Header config={config} />
+        <Main>{children}</Main>
+        <Footer config={config} />
+      </ThemeProvider>
+    </MaterialThemeProvider>
   );
 }
 

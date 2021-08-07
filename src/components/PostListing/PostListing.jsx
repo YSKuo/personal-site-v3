@@ -29,7 +29,7 @@ function PostListing({ postEdges }) {
             <Post item component="article" key={post.slug}>
               <Typography
                 variant="h3"
-                component="h1"
+                component="h3"
                 display="inline"
                 gutterBottom
               >
@@ -51,22 +51,15 @@ function PostListing({ postEdges }) {
               >
                 {post.excerpt}
               </PostExcerpt>
-              <Typography
-                variant="body2"
-                component="p"
-                display="inline"
-                gutterBottom
+              <StyledButton
+                color="secondary"
+                href={`/post/${post.path}`}
+                key={post.title}
+                variant="contained"
+                underline="none"
               >
-                <Button
-                  color="secondary"
-                  href={`/post/${post.path}`}
-                  key={post.title}
-                  variant="contained"
-                  underline="none"
-                >
-                  Read more
-                </Button>
-              </Typography>
+                Read more
+              </StyledButton>
             </Post>
           );
         })
@@ -90,6 +83,10 @@ const Post = styled(Grid)`
 
 const PostExcerpt = styled(Typography)`
   margin-bottom: 2rem;
+`;
+
+const StyledButton = styled(Button)`
+  width: fit-content;
 `;
 
 export default PostListing;

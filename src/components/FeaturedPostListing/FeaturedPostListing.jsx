@@ -29,7 +29,7 @@ function PostListing({ postEdges }) {
             <Post item component="article" key={post.slug}>
               <Typography
                 variant="h3"
-                component="h1"
+                component="h3"
                 display="inline"
                 gutterBottom
               >

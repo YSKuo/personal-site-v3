@@ -25,65 +25,57 @@ function Header({ config, theme }) {
   };
 
   return (
-    <>
-      <HideOnScroll>
-        <StyledAppBar color="primary">
-          <Container>
-            <StyledToolbar component="nav" disableGutters>
-              <SiteName
-                color="textPrimary"
-                variant="h5"
-                href="/"
-                underline="none"
-              >
-                {siteTitle}
-              </SiteName>
+    <HideOnScroll>
+      <StyledAppBar color="primary">
+        <Container>
+          <StyledToolbar component="nav" disableGutters>
+            <SiteName
+              color="textPrimary"
+              variant="h5"
+              href="/"
+              underline="none"
+            >
+              {siteTitle}
+            </SiteName>
 
-              <Hidden smUp>
-                <IconButton onClick={toggleDrawer}>
-                  <MenuIcon />
-                </IconButton>
-                <Drawer
-                  anchor="left"
-                  open={isDrawerOpen}
-                  onClose={toggleDrawer}
-                >
-                  {tabLinks &&
-                    tabLinks.map((link) => (
-                      <ListItem button key={link.title}>
-                        <Button
-                          color={isTabActive(link) ? "secondary" : "default"}
-                          variant={isTabActive(link) ? "contained" : "text"}
-                          href={link.url}
-                        >
-                          {link.title}
-                        </Button>
-                      </ListItem>
-                    ))}
-                </Drawer>
-              </Hidden>
+            <Hidden smUp>
+              <IconButton onClick={toggleDrawer}>
+                <MenuIcon />
+              </IconButton>
+              <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer}>
+                {tabLinks &&
+                  tabLinks.map((link) => (
+                    <ListItem button key={link.title}>
+                      <Button
+                        color={isTabActive(link) ? "secondary" : "default"}
+                        variant={isTabActive(link) ? "contained" : "text"}
+                        href={link.url}
+                      >
+                        {link.title}
+                      </Button>
+                    </ListItem>
+                  ))}
+              </Drawer>
+            </Hidden>
 
-              <Hidden xsDown>
-                <Toolbar disableGutters>
-                  <List>
-                    {tabLinks &&
-                      tabLinks.map((link) => (
-                        <NavLink
-                          $active={isTabActive(link)}
-                          key={link.title}
-                          href={link.url}
-                        >
-                          {link.title}
-                        </NavLink>
-                      ))}
-                  </List>
-                </Toolbar>
-              </Hidden>
-            </StyledToolbar>
-          </Container>
-        </StyledAppBar>
-      </HideOnScroll>
-    </>
+            <Hidden xsDown>
+              <Toolbar disableGutters>
+                {tabLinks &&
+                  tabLinks.map((link) => (
+                    <NavLink
+                      $active={isTabActive(link)}
+                      key={link.title}
+                      href={link.url}
+                    >
+                      {link.title}
+                    </NavLink>
+                  ))}
+              </Toolbar>
+            </Hidden>
+          </StyledToolbar>
+        </Container>
+      </StyledAppBar>
+    </HideOnScroll>
   );
 }
 
@@ -104,7 +96,7 @@ function isTabActive(link) {
 }
 
 const SiteName = styled(Link)`
-  color: ${(props) => props.theme.palette.common.white};
+  color: ${(props) => props.theme?.palette?.common.white};
 `;
 
 const StyledAppBar = styled(AppBar)`
@@ -131,7 +123,7 @@ const NavLink = styled(Button)`
   }
 
   color: ${({ theme, $active }) =>
-    $active ? theme.palette.common.white : theme.palette.secondary.main};
+    $active ? theme.palette.common.white : theme.palette.secondary.light};
 `;
 
 export default Header;
