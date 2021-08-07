@@ -11,7 +11,7 @@ function Footer({ config }) {
     <StyledContainer component="footer">
       <Grid container justify="space-between">
         <PersonalInfoContainer item xs={12} sm={6}>
-          <Typography component="p" variant="h5" color="inherit" gutterBottom>
+          <Typography component="h1" variant="h5" color="inherit" gutterBottom>
             {userName}
           </Typography>
           <Link href={`mailto:${userEmail}`}>{userEmail}</Link>

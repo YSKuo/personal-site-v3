@@ -66,7 +66,7 @@ function renderPaging(pageName, pageContext, location) {
               if (pageNum === currentPage + 2 || pageNum === currentPage - 2) {
                 return (
                   <PaginationNumber key={`${pageName}-page-${pageNum}`}>
-                    <IconButton disabled>
+                    <IconButton title="ellipsis" disabled>
                       <MoreHorizIcon />
                     </IconButton>
                   </PaginationNumber>

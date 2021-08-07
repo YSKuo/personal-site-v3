@@ -9,11 +9,16 @@ function UserLinks({ config, labeled }) {
     const { userLinks } = config;
 
     return userLinks.map((link) => (
-      <Link href={link.url} key={link.label} target="_blank">
-        <IconButton color="secondary" aria-label={link.label}>
-          {iconMapTable[link.label]}
-        </IconButton>
-      </Link>
+      <IconButton
+        color="secondary"
+        aria-label={link.label}
+        title={link.label}
+        href={link.url}
+        key={link.label}
+        target="_blank"
+      >
+        {iconMapTable[link.label]}
+      </IconButton>
     ));
   }
 
