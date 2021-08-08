@@ -30,13 +30,18 @@ function Footer({ config }) {
           </Typography>
           <Typography component="p" variant="body2" color="inherit">
             Powered by{" "}
-            <Link href="https://www.gatsbyjs.com/" target="_blank">
+            <Link
+              href="https://www.gatsbyjs.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               Gatsby
             </Link>{" "}
             and{" "}
             <Link
               href="https://github.com/Vagr9K/gatsby-advanced-starter"
               target="_blank"
+              rel="noreferrer noopener"
             >
               Gatsby Advanced Starter
             </Link>
@@ -46,7 +51,7 @@ function Footer({ config }) {
         <Grid item>
           <Typography component="p" variant="body2">
             Download{" "}
-            <Link target="_blank" href={userResume}>
+            <Link target="_blank" href={userResume} rel="noreferrer noopener">
               Resume
             </Link>
           </Typography>
