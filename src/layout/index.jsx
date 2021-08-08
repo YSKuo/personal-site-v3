@@ -19,7 +19,7 @@ export default function MainLayout({ children }) {
       <ThemeProvider theme={theme}>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
-          <html lang="en" />
+          <html lang="zh-TW" />
         </Helmet>
         <GlobalStyle />
         <Header config={config} />
