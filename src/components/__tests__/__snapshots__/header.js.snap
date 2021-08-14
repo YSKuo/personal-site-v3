@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot at lg screen width 1`] = `
+<header
+  class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary sc-gsTCUz lbsyTM mui-fixed MuiPaper-elevation4"
+  style="webkit-transform: none; transform: none; webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms; transition: transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
+>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <nav
+      class="MuiToolbar-root MuiToolbar-regular sc-dlfnbm cZnpQH"
+    >
+      <a
+        class="MuiTypography-root MuiLink-root MuiLink-underlineNone sc-bdfBwQ HrXuG MuiTypography-h5 MuiTypography-colorTextPrimary"
+        href="/"
+      >
+        Arsene's Alibi
+      </a>
+      <div
+        class="MuiToolbar-root MuiToolbar-regular"
+      >
+        <a
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text sc-hKgILt xTIhp"
+          href="/"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Home
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text sc-hKgILt blgYtI"
+          href="/about"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            About
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+        <a
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text sc-hKgILt blgYtI"
+          href="/blog"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Blog
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+`;
