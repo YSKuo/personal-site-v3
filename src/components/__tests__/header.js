@@ -6,11 +6,7 @@ import config from "../../../data/SiteConfig";
 import { render } from "../../utils/test-utils";
 
 function renderHeader(props) {
-  const utils = render(
-    <div style={{ height: "1000px" }}>
-      <Header config={config} />
-    </div>
-  );
+  const utils = render(<Header config={config} />);
 
   const header = utils.getByRole("banner");
   return { ...utils, header };
