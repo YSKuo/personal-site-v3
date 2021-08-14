@@ -16,6 +16,7 @@ function UserLinks({ config, labeled }) {
         href={link.url}
         key={link.label}
         target="_blank"
+        rel="noreferrer noopener"
       >
         {iconMapTable[link.label]}
       </IconButton>

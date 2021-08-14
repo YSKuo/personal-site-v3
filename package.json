@@ -50,6 +50,10 @@
     "url-join": "^4.0.0"
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
     "babel-jest": "^27.0.6",
     "babel-preset-gatsby": "^0.12.2",
     "cli-glob": "^0.1.0",

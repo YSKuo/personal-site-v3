@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/styles";
 import { Helmet } from "react-helmet";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
-import { ThemeProvider as MaterialThemeProvider } from "@material-ui/styles";
-import Container from "@material-ui/core/Container";
-import SEO from "../components/SEO/SEO";
 import { theme, CustomMuiTheme } from "../constants/theme";
 import config from "../../data/SiteConfig";
 import Header from "../components/Header";
@@ -15,18 +12,18 @@ import { mediaQueryBreakpoint } from "../constants/breakpoint";
 
 export default function MainLayout({ children }) {
   return (
-    <MaterialThemeProvider theme={CustomMuiTheme}>
+    <MuiThemeProvider theme={CustomMuiTheme}>
       <ThemeProvider theme={theme}>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
-          <html lang="en" />
+          <html lang="zh-TW" />
         </Helmet>
         <GlobalStyle />
         <Header config={config} />
         <Main>{children}</Main>
         <Footer config={config} />
       </ThemeProvider>
-    </MaterialThemeProvider>
+    </MuiThemeProvider>
   );
 }
 

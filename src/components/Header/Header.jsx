@@ -9,7 +9,6 @@ import {
   useScrollTrigger,
   IconButton,
   Hidden,
-  List,
   ListItem,
   Drawer,
   Container,
@@ -96,7 +95,7 @@ function isTabActive(link) {
 }
 
 const SiteName = styled(Link)`
-  color: ${(props) => props.theme?.palette?.common.white};
+  color: ${(props) => props.theme?.palette?.common?.white};
 `;
 
 const StyledAppBar = styled(AppBar)`
@@ -123,7 +122,7 @@ const NavLink = styled(Button)`
   }
 
   color: ${({ theme, $active }) =>
-    $active ? theme.palette.common.white : theme.palette.secondary.light};
+    $active ? theme.palette?.common?.white : theme?.palette?.secondary?.light};
 `;
 
 export default Header;
