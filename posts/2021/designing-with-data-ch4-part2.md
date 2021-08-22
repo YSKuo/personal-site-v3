@@ -4,6 +4,7 @@ cover: ""
 category: "Design"
 date: "2021-05-30"
 excerpt: "在試驗框架中的定義階段，我們會框定試驗的目標以及發想測試中使用的假設。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

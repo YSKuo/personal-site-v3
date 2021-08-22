@@ -4,6 +4,7 @@ cover: ""
 category: "Experience"
 date: "2021-03-07"
 excerpt: "剛做完這個網站，寫這篇文記錄一下心得。"
+language: "zh_Hant"
 published: true
 featured: true
 tags:

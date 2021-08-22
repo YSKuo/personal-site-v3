@@ -43,7 +43,9 @@ function renderPaging(pageName, pageContext, location) {
                 pageNum === pageCount ||
                 pageNum === currentPage ||
                 pageNum === currentPage + 1 ||
-                pageNum === currentPage - 1
+                pageNum === currentPage - 1 ||
+                pageNum === currentPage + 2 ||
+                pageNum === currentPage - 2
               ) {
                 return (
                   <PaginationNumber key={`${pageName}-page-${pageNum}`}>
@@ -63,7 +65,7 @@ function renderPaging(pageName, pageContext, location) {
                   </PaginationNumber>
                 );
               }
-              if (pageNum === currentPage + 2 || pageNum === currentPage - 2) {
+              if (pageNum === currentPage + 3 || pageNum === currentPage - 3) {
                 return (
                   <PaginationNumber key={`${pageName}-page-${pageNum}`}>
                     <IconButton title="ellipsis" disabled>
@@ -101,7 +103,9 @@ const PaginationList = styled.ul`
   align-items: center;
   list-style: none;
 `;
+
 const PaginationNumber = styled.li``;
+
 const PaginationLink = styled(Button)`
   height: 2rem;
   width: 2rem;

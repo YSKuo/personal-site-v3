@@ -1,59 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer snapshot render 1`] = `
+exports[`Footer snapshot at lg screen width 1`] = `
 <footer
-  className="MuiContainer-root sc-bdfBwQ icruZb MuiContainer-maxWidthLg"
+  class="MuiContainer-root sc-bdfBwQ icruZb MuiContainer-maxWidthLg"
 >
   <div
-    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between"
+    class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between"
   >
     <div
-      className="MuiGrid-root sc-gsTCUz egUoRK MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      class="MuiGrid-root sc-gsTCUz egUoRK MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
     >
       <h1
-        className="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit MuiTypography-gutterBottom"
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-colorInherit MuiTypography-gutterBottom"
       >
         Yan-Sheng (Arsene) Kuo
       </h1>
       <a
-        className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
         href="mailto:crowley3141@hotmail.com"
-        onBlur={[Function]}
-        onFocus={[Function]}
       >
         crowley3141@hotmail.com
       </a>
     </div>
     <nav
-      className="MuiGrid-root sc-dlfnbm dMlzcG MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+      class="MuiGrid-root sc-dlfnbm dMlzcG MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
     >
       <a
-        aria-disabled={false}
+        aria-disabled="false"
         aria-label="GitHub"
-        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
         href="https://github.com/YSKuo"
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
         rel="noreferrer noopener"
-        tabIndex={0}
+        tabindex="0"
         target="_blank"
         title="GitHub"
       >
         <span
-          className="MuiIconButton-label"
+          class="MuiIconButton-label"
         >
           <svg
-            aria-hidden={true}
-            className="MuiSvgIcon-root"
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -62,34 +49,26 @@ exports[`Footer snapshot render 1`] = `
             />
           </svg>
         </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </a>
       <a
-        aria-disabled={false}
+        aria-disabled="false"
         aria-label="Twitter"
-        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
         href="https://twitter.com/ArseneKuo"
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
         rel="noreferrer noopener"
-        tabIndex={0}
+        tabindex="0"
         target="_blank"
         title="Twitter"
       >
         <span
-          className="MuiIconButton-label"
+          class="MuiIconButton-label"
         >
           <svg
-            aria-hidden={true}
-            className="MuiSvgIcon-root"
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -98,34 +77,26 @@ exports[`Footer snapshot render 1`] = `
             />
           </svg>
         </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </a>
       <a
-        aria-disabled={false}
+        aria-disabled="false"
         aria-label="Instagram"
-        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
         href="https://www.instagram.com/arsene_alibi/"
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
         rel="noreferrer noopener"
-        tabIndex={0}
+        tabindex="0"
         target="_blank"
         title="Instagram"
       >
         <span
-          className="MuiIconButton-label"
+          class="MuiIconButton-label"
         >
           <svg
-            aria-hidden={true}
-            className="MuiSvgIcon-root"
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -134,34 +105,26 @@ exports[`Footer snapshot render 1`] = `
             />
           </svg>
         </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </a>
       <a
-        aria-disabled={false}
+        aria-disabled="false"
         aria-label="LinkedIn"
-        className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary"
         href="https://www.linkedin.com/in/yanshengkuo/"
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
         rel="noreferrer noopener"
-        tabIndex={0}
+        tabindex="0"
         target="_blank"
         title="LinkedIn"
       >
         <span
-          className="MuiIconButton-label"
+          class="MuiIconButton-label"
         >
           <svg
-            aria-hidden={true}
-            className="MuiSvgIcon-root"
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
             focusable="false"
             viewBox="0 0 24 24"
           >
@@ -170,33 +133,34 @@ exports[`Footer snapshot render 1`] = `
             />
           </svg>
         </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
       </a>
     </nav>
   </div>
   <hr
-    className="MuiDivider-root sc-eCssSg ittpIq"
+    class="MuiDivider-root sc-eCssSg ittpIq"
   />
   <div
-    className="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between"
+    class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between"
   >
     <div
-      className="MuiGrid-root sc-hKgILt jOJUsX MuiGrid-item"
+      class="MuiGrid-root sc-hKgILt jOJUsX MuiGrid-item"
     >
       <p
-        className="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom"
       >
         Copyright © Arsene Kuo 2019 - 2021
       </p>
       <p
-        className="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-colorInherit"
       >
         Powered by
          
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
           href="https://www.gatsbyjs.com/"
-          onBlur={[Function]}
-          onFocus={[Function]}
           rel="noreferrer noopener"
           target="_blank"
         >
@@ -206,10 +170,8 @@ exports[`Footer snapshot render 1`] = `
         and
          
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
           href="https://github.com/Vagr9K/gatsby-advanced-starter"
-          onBlur={[Function]}
-          onFocus={[Function]}
           rel="noreferrer noopener"
           target="_blank"
         >
@@ -219,18 +181,16 @@ exports[`Footer snapshot render 1`] = `
       </p>
     </div>
     <div
-      className="MuiGrid-root MuiGrid-item"
+      class="MuiGrid-root MuiGrid-item"
     >
       <p
-        className="MuiTypography-root MuiTypography-body2"
+        class="MuiTypography-root MuiTypography-body2"
       >
         Download
          
         <a
-          className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
           href="https://drive.google.com/file/d/1OdNg980V-9H4kksJgmXNlRqpd2KLgupI/view?usp=sharing"
-          onBlur={[Function]}
-          onFocus={[Function]}
           rel="noreferrer noopener"
           target="_blank"
         >

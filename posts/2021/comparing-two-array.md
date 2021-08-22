@@ -4,6 +4,7 @@ cover: ""
 category: "Algorithm"
 date: "2021-03-14"
 excerpt: "工作上遇到的問題，討探比對兩個 array 該怎樣做才有比較好的效率。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

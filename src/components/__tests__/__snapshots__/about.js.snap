@@ -1,0 +1,771 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutPage snapshot at lg screen width 1`] = `
+<main>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <section
+      class="sc-gsTCUz cqEcIX"
+    >
+      <h2
+        class="MuiTypography-root sc-bdfBwQ kKxBbl MuiTypography-h2 MuiTypography-gutterBottom"
+      >
+        About Me
+      </h2>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        Hi, there! I'm 
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          Yan-Sheng (Arsene) Kuo
+        </b>
+        , a frontend developer and designer living in 
+        Taipei, Taiwan
+        . After finishing my master's degree in mechanical engineering, I acquired extensive experience in a patent firm and also the high-tech manufacturing industry.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        Gaining a glimpse of user-centered methodologies from my experience in the manufacturing industry, I am eager to encourage interactions among people through digital products. Therefore, I've worked hard to improve my coding and design skills, which allow me to create websites that are intuitive and aesthetically balanced.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        In my spare time, I like to indulge myself in 
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          music
+        </b>
+        , broaden my horizons with 
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          travel
+        </b>
+        , document my journey by 
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          photographs
+        </b>
+        , cultivate my taste in 
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          denim
+        </b>
+         and 
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          heritage menswear
+        </b>
+        , and feed my imagination of impossibilities with 
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          video games
+        </b>
+         and
+         
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          films
+        </b>
+        .
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        You may also know more about me through my
+         
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          <a
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="https://www.linkedin.com/in/yanshengkuo/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </b>
+         
+        or
+         
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+           
+          <a
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="https://www.instagram.com/arsene_alibi/"
+            target="_blank"
+          >
+            Instagram
+          </a>
+        </b>
+        .
+      </p>
+    </section>
+    <hr
+      class="MuiDivider-root sc-hKgILt hCVDlJ"
+      ymargin="2rem"
+    />
+    <section
+      class="sc-gsTCUz cqEcIX"
+    >
+      <h2
+        class="MuiTypography-root sc-bdfBwQ kKxBbl MuiTypography-h2 MuiTypography-gutterBottom"
+      >
+        Skills
+      </h2>
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+          >
+            Development
+          </h3>
+          <div
+            class="MuiGrid-root sc-eCssSg fpZtJM MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  JavaScript (ES6+)
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  HTML
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  CSS
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  PHP
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Python
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Git
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+          >
+            Frontend
+          </h3>
+          <div
+            class="MuiGrid-root sc-eCssSg fpZtJM MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  React.js
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Redux
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Gatsby.js
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  jQuery
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Webpack
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Babel
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Gulp
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+          >
+            Backend
+          </h3>
+          <div
+            class="MuiGrid-root sc-eCssSg fpZtJM MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Node.js
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Django
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  MySQL
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  GraphQL
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+          >
+            Design
+          </h3>
+          <div
+            class="MuiGrid-root sc-eCssSg fpZtJM MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Sketch
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Photoshop
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Figma
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Zeplin
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Wireframing
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Prototyping
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-gutterBottom"
+          >
+            General
+          </h3>
+          <div
+            class="MuiGrid-root sc-eCssSg fpZtJM MuiGrid-container"
+          >
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Web Application
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  RWD
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Interaction Design
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Scrum
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  SEO
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root sc-jSgupP lnWsvc MuiGrid-item"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained sc-gKsewC ktDEMV"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Unit Testing
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr
+      class="MuiDivider-root sc-hKgILt hCVDlJ"
+      ymargin="2rem"
+    />
+    <section
+      class="sc-gsTCUz cqEcIX"
+    >
+      <h2
+        class="MuiTypography-root sc-bdfBwQ kKxBbl MuiTypography-h2 MuiTypography-gutterBottom"
+      >
+        About this Website
+      </h2>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        I built this website with
+         
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="https://www.gatsbyjs.com/"
+          target="_blank"
+        >
+          Gatsby
+        </a>
+         and
+         
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="https://github.com/Vagr9K/gatsby-advanced-starter"
+          target="_blank"
+        >
+          Gatsby Advanced Starter
+        </a>
+        . If you want to know more about my configuration, you can visit the
+         
+        <b
+          class="MuiTypography-root sc-dlfnbm koWLPh MuiTypography-body1 MuiTypography-gutterBottom"
+        >
+          <a
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="https://github.com/YSKuo/personal-site-v3"
+            target="_blank"
+          >
+            Github repo
+          </a>
+          .
+        </b>
+      </p>
+    </section>
+  </div>
+</main>
+`;

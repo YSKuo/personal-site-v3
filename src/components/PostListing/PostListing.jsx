@@ -17,6 +17,8 @@ function PostListing({ postEdges }) {
       slug: postEdge.node.fields.slug,
       excerpt: postEdge.node.fields.excerpt || postEdge.node.excerpt,
       timeToRead: postEdge.node.timeToRead,
+      language: postEdge.node.frontmatter.language,
+      featured: postEdge.node.frontmatter.featured,
     });
   });
 

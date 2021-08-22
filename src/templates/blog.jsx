@@ -49,6 +49,8 @@ export const blogQuery = graphql`
             cover
             date
             category
+            language
+            featured
           }
         }
       }

@@ -4,6 +4,7 @@ cover: ""
 category: "Design"
 date: "2021-07-04"
 excerpt: "專注討論如何「設計」假設，將我們定義並選擇的假設打造成試驗項目。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

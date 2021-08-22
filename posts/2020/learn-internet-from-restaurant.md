@@ -2,8 +2,9 @@
 title: "如何以餐廳為例來了解網路基礎概念"
 cover: "https://miro.medium.com/max/700/0*OugsE36Gqa-MEU_d"
 category: "Web"
-excerpt: "用一些生活例子來讓大家更了解網路知識。"
 date: "2020-08-20"
+excerpt: "用一些生活例子來讓大家更了解網路知識。"
+language: "zh_Hant"
 published: true
 featured: true
 tags:

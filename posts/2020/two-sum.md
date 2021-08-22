@@ -2,8 +2,9 @@
 title: "菜雞自評 - 解 Two Sum"
 cover: "Algorithm"
 category: "JavaScript"
-excerpt: "訓練解題似乎是 junior 到 senior 的必經過程，所以偶爾也來練解題，這次要解的是 LeetCode 的經典入門題：Two-Sum。"
 date: "2020-12-04"
+excerpt: "訓練解題似乎是 junior 到 senior 的必經過程，所以偶爾也來練解題，這次要解的是 LeetCode 的經典入門題：Two-Sum。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

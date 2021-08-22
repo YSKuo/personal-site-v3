@@ -1,12 +1,17 @@
 import React from "react";
-import renderer from "react-test-renderer";
 
+import { render } from "../../utils/test-utils";
 import Footer from "../Footer";
 import config from "../../../data/SiteConfig";
 
-describe("Footer snapshot", () => {
-  it("render", () => {
-    const tree = renderer.create(<Footer config={config} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+function renderFooter(props) {
+  const utils = render(<Footer config={config} />);
+
+  const footer = utils.getByRole("contentinfo");
+  return { ...utils, footer };
+}
+
+test("Footer snapshot at lg screen width", () => {
+  const { footer } = renderFooter();
+  expect(footer).toMatchSnapshot();
 });

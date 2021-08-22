@@ -4,6 +4,7 @@ cover: ""
 category: "JavaScript"
 date: "2020-06-26"
 excerpt: "這篇簡述為什麼 ES6 在 JavaScript 這個程式語言如此重要。"
+language: "zh_Hant"
 published: true
 featured: true
 tags:
