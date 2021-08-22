@@ -118,13 +118,13 @@ In addistion to make our pages more accessible, semantic tags can improve search
 
 ##### An example from Google Web Developer Guides
 
-```htmlembedded
+```html
 <li tabindex="0" class="checkbox" checked>
   Receive promotional offers
 </li>
 ```
 
-```htmlembedded
+```html
 <li tabindex="0" class="checkbox" role="checkbox" checked aria-checked="true">
   Receive promotional offers
 </li>
@@ -167,7 +167,7 @@ This issue is raised because of the low-contrast text on my header navigation, a
 
 This issue is also simple, we just need to put `lan` attribute on `<html>` tag.
 
-```htmlembedded
+```html
 <html lang="en" />
 ```
 

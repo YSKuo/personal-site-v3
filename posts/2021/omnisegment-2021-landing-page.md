@@ -84,7 +84,9 @@ function breakpointAt(size) {
 }
 
 const Container = styled.div`
-  ... ${breakpointAt("md")} {
+  ... 
+  
+  ${breakpointAt("md")} {
     flex-direction: row-reverse;
     padding: 0 1.5rem 0rem;
     margin-bottom: 0;
