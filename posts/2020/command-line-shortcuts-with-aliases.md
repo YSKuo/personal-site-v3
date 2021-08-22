@@ -4,6 +4,7 @@ cover: ""
 category: "Others"
 date: "2020-06-27"
 excerpt: "看到有人在 terminal 輸入短短幾個字就完成本來要輸很多字的指令，這篇就來研究一下怎麼達到這樣的效果。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

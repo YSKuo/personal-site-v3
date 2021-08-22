@@ -4,6 +4,7 @@ cover: ""
 category: "Front-end"
 date: "2021-07-09"
 excerpt: "Recently, I took the job of renewing our corp landing page, and I think there are something deserved to be recorded at this moment."
+language: "en"
 published: true
 featured: true
 tags:
@@ -83,9 +84,7 @@ function breakpointAt(size) {
 }
 
 const Container = styled.div`
-  ...
-
-  ${breakpointAt("md")} {
+  ... ${breakpointAt("md")} {
     flex-direction: row-reverse;
     padding: 0 1.5rem 0rem;
     margin-bottom: 0;
@@ -130,7 +129,7 @@ For example, when we use [Semantic UI's Image](https://semantic-ui.com/elements/
 .ui.image {
   max-width: 100%;
 
-  ...
+  ...;
 }
 ```
 

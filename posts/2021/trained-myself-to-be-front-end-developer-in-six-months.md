@@ -3,6 +3,7 @@ title: "半年學習成為前端工程師"
 cover: ""
 category: "Experience"
 excerpt: "描述自己的狀況還有主觀的想法，讓所有學習程式語言或網頁開發的人更了解無經驗學程式的心路歷程。"
+language: "zh_Hant"
 date: "2021-01-24"
 published: true
 featured: true

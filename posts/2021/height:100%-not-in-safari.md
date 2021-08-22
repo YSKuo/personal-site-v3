@@ -4,6 +4,7 @@ cover: ""
 category: "Front-end"
 date: "2021-03-11"
 excerpt: "以這篇文章作為開始，隨意記錄開發時遇到的坑。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

@@ -4,6 +4,7 @@ cover: ""
 category: "Design"
 date: "2021-05-02"
 excerpt: "這一章節介紹試驗的基本原則，並深入介紹 A/B Test 的字彙及概念。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

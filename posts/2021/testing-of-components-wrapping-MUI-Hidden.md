@@ -4,6 +4,7 @@ cover: ""
 category: "Front-end"
 date: "2021-08-14"
 excerpt: "最近開始花心思研究前端測試，於是拿我的個人網站動手寫測試，這次文章描述的狀況是關於 Snapshot Testing。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

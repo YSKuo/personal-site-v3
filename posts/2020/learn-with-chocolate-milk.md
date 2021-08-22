@@ -4,6 +4,7 @@ cover: ""
 category: "Learning"
 date: "2020-06-12"
 excerpt: "很多人應該有過設定目標後，因為偷懶找各種原因推託最後擱置計畫的經驗，這篇分享一個我的經驗還有處理拖延症的例子。"
+language: "zh_Hant"
 published: true
 featured: true
 tags:

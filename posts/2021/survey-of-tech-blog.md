@@ -4,6 +4,7 @@ cover: ""
 category: "Experience"
 date: "2021-04-07"
 excerpt: "來說說為什麼我用 Gatsby 來建個人網站。"
+language: "zh_Hant"
 published: true
 featured: true
 tags:

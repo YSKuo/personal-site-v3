@@ -4,6 +4,7 @@ cover: ""
 category: "Design"
 date: "2021-04-13"
 excerpt: "最近和公司的設計師組了小型的內部讀書會，我負責分享 Designing with Data，接下來會以這本書的各章節摘要及心得為內容來寫一系列的文章。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

@@ -4,6 +4,7 @@ cover: ""
 category: "Experience"
 date: "2021-01-16"
 excerpt: "2020 年底到 2021 年初的求職經驗，包括投遞履歷、面試到選擇 offer 的記錄。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

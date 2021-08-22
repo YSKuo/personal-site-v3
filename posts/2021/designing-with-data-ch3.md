@@ -4,6 +4,7 @@ cover: ""
 category: "Design"
 date: "2021-05-05"
 excerpt: "這一章節簡單介紹實務上的作法，實務上會運用框架來進行收集數據並分析。"
+language: "zh_Hant"
 published: true
 featured: false
 tags:

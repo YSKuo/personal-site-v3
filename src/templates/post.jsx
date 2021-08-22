@@ -44,7 +44,7 @@ export default function PostTemplate({ data, pageContext }) {
         <title>{`${post.title} | ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postPath={slug} postNode={postNode} postSEO />
-      <Container>
+      <Container lang={post.language}>
         <article>
           <Typography variant="h1" component="h1" gutterBottom>
             {post.title}
@@ -118,6 +118,8 @@ export const pageQuery = graphql`
         date
         category
         tags
+        featured
+        language
       }
       fields {
         slug
