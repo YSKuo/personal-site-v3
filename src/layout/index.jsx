@@ -16,7 +16,7 @@ export default function MainLayout({ children }) {
       <ThemeProvider theme={theme}>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
-          <html lang="zh-TW" />
+          <html lang="zh_Hant" />
         </Helmet>
         <GlobalStyle />
         <Header config={config} />
