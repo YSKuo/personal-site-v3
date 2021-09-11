@@ -58,7 +58,7 @@ export const B = ({ children }) => {
 };
 
 export const A = ({ children, href }) => (
-  <Link href={href} target="_blank">
+  <Link href={href} target="_blank" rel="noreferrer noopener">
     {children}
   </Link>
 );
