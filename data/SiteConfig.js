@@ -91,6 +91,7 @@ const config = {
       "Scrum",
       "SEO",
       "Unit Testing",
+      "Web Accessibility",
     ],
   },
   copyright: `Copyright © Arsene Kuo 2019 - ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.

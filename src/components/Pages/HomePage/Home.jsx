@@ -25,7 +25,7 @@ function Home({ config, featuredPostEdges }) {
           <TextBlock>
             <P>Hello!</P>
             <Intro variant="h1" component="h1">
-              I’m Arsene Kuo.
+              I am Arsene Kuo.
             </Intro>
             <Paragraph variant="h5" component="p" gutterBottom>
               I'm a frontend developer and designer, passionate about improving
