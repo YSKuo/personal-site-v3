@@ -9,9 +9,7 @@ published: true
 featured: true
 tags:
   - Data Structure
-  - 資料結構
-  - OOP
-  - 物件導向
+  - OOP物件導向
   - JavaScript
   - 以 JavaScript 學習演算法與資料結構
 ---
@@ -55,7 +53,7 @@ Singly Linked List 具有：
 - tail node
 - length
 
-因此可以用 OOP 物件導向的方式來定義他們：
+接著我們用 OOP 物件導向的方式來定義他們：
 
 ```js
 class Node {
@@ -88,9 +86,19 @@ Singly Linked List 具有以下 method：
 - [Remove](#remove)
 - [Reverse](#reverse)
 
+下面會在各個 method 裡
+
+1. 講述該 method 會達到的功能
+2. 附上 pseudocode
+3. 附上 solution
+
+讀者可以在這過程裡自己練習，可以先看看功能然後思考怎麼達成，如果沒有想法可以再看看 pseudocode，再不行可以參考 solution。
+
 ### Pushing
 
-push 即增加一個 node 到 list 裡，定義 function 的步驟：
+> push 即增加一個 node 到 list 的最後
+
+Pseudocode：
 
 1. function 要接收一個 value
 2. 利用 function 接收的 value 來建立一個新的 node
@@ -129,9 +137,54 @@ class SinglyLinkedList {
 }
 ```
 
+寫完之後也可以自己測試一下功能是否有達成，例如：
+
+```js
+var list = new SinglyLinkedList();
+list.push(0);
+list.push(1);
+list.push(2);
+list.push(3);
+```
+
+#### 補充
+
+可以額外定義一個 print 來方便我們檢視整個 list 的排列狀況
+
+```js
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+
+class SinglyLinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+
+  ...
+
+  print() {
+    var arr = [];
+    var current = this.head;
+    while (current) {
+      arr.push(current.val);
+      current = current.next;
+    }
+    console.log(arr);
+  }
+}
+```
+
 ### Popping
 
-pop 是將 list 的最後一個 node 移除，定義 function：
+> pop 是將 list 的最後一個 node 移除
+
+Pseudocode：
 
 1. 如果 list 裡沒有 node，則 return undefined
 2. 如果 list 有 node 則 loop 整個 list，直到找到 tail node
@@ -179,7 +232,9 @@ class SinglyLinkedList {
 
 ### Shifting
 
-pop 是將 list 的第一個 node 移除，定義 function：
+> shift 是將 list 的第一個 node 移除
+
+Pseudocode：
 
 1. 若 list 沒有 node 則 return undefined
 2. 將 head node 存在一個變數中
@@ -206,20 +261,22 @@ class SinglyLinkedList {
 
   shift() {
     if (this.length === 0) return undefined;
-    let removedNode = this.head;
-    this.head = removedNode.next;
+    let shiftedNode = this.head;
+    this.head = shiftedNode.next;
     this.length--;
     if (this.length === 0) {
       this.tail = null;
     }
-    return removedNode;
+    return shiftedNode;
   }
 }
 ```
 
 ### Unshifting
 
-unshift 是在 list 的最前面加入新的 node：
+> unshift 是在 list 的最前面加入新的 node
+
+Pseudocode：
 
 1. function 要接收一個 value
 2. 由傳入的 value 來建立一個新 node
@@ -263,7 +320,9 @@ class SinglyLinkedList {
 
 ### Get
 
-get 是用來取得 list 裡位於某個 index 的 node：
+> get 是用來取得 list 裡位於某個 index 的 node
+
+Pseudocode：
 
 1. function 接收一個 index
 2. 如果輸入的 index 小於 0 或大於等於 list 的 length，則 return null
@@ -301,7 +360,9 @@ class SinglyLinkedList {
 
 ### Set
 
-set 用來在 list 中改變特定 index 的 node 值
+> set 用來在 list 中改變特定 index 的 node 值
+
+Pseudocode：
 
 1. function 會接收一個 value 和一個 index
 2. 使用 get 這個 function 去找到特定 index 的 node
@@ -336,11 +397,13 @@ class SinglyLinkedList {
 
 ### Insert
 
-insert 是在特定 index 插入一個新的 node：
+> insert 是在特定 index 插入一個新的 node
+
+Pseudocode：
 
 1. function 接收一個 index 和一個 value
 2. 如果 index 小於 0 或大於 list 的 length，則 return false
-3. 如果 index 等於 length ，則使用 push 加入新 node 到 list 的最後面
+3. 如果 index 等於 length，則使用 push 加入新 node 到 list 的最後面
 4. 如果 index 為 0，則使用 unshift 增加新 node 到 list 的最前面
 5. 若非上面兩種情況，則使用 get 取得 index - 1 的 node
 6. 將該 node 的 next 設為新加入的 node
@@ -410,11 +473,13 @@ class SinglyLinkedList {
 
 ### Remove
 
-remove 可用來刪除特定 index 的 node：
+> remove 可用來刪除特定 index 的 node
+
+Pseudocode：
 
 1. function 接收一個 index
-2. 如果 index 小於 0 或大於 list 的 length，則 return undefined
-3. 如果 index 等於 length ，則使用 pop
+2. 如果 index 小於 0 或大於等於 list 的 length，則 return undefined
+3. 如果 index 等於 length - 1，則使用 pop
 4. 如果 index 為 0，則使用 shift
 5. 若非上面兩種情況，則使用 get 取得 index - 1 的 node
 6. 將該 node 的 next 設為目標 index 的 next
@@ -453,7 +518,9 @@ class SinglyLinkedList {
 
 ### Reverse
 
-reverse 可將整個 list 的順序調換：
+> reverse 可將整個 list 的順序調換
+
+Pseudocode：
 
 1. 定義一個變數 next
 2. 定義一個變數 prev 為 null
@@ -554,13 +621,13 @@ class SinglyLinkedList {
 
   shift() {
     if (this.length === 0) return undefined;
-    let removedNode = this.head;
-    this.head = removedNode.next;
+    let shiftedNode = this.head;
+    this.head = shiftedNode.next;
     this.length--;
     if (this.length === 0) {
       this.tail = null;
     }
-    return removedNode;
+    return shiftedNode;
   }
 
   unshift(val) {
@@ -651,11 +718,17 @@ class SinglyLinkedList {
 - Searching - O(N)
 - Access - O(N)
 
-假設儲存於 list 的資料有 n 個，而存取資料時必須從 list 的最前端開始（線性搜尋），那最差的情況就是 O(n) 的時間。
-
 追加和刪除資料則只需改變兩個指標的指向，如果都是在最前端和最尾端增加資料，時間是 O(1)。
 
 但刪除資料就不一樣，在最前端刪除資料只要改變 head 至其下一個 node，所以是 O(1)；在最尾端刪除資料則要取得最尾端的前一個 node，將之設為新的 tail 並將其 next 指標設為 null，所以會是 O(n)。
+
+假設儲存於 list 的資料有 n 個，而存取資料時必須從 list 的最前端開始（線性搜尋），那最差的情況就是 O(n) 的時間。
+
+### 重點
+
+- 和 Array 相比，Singly Linked List 在資料結構中最前面的位置插入或移除資料都會更有效率
+- Array 裡面的資料有 index，而 List 沒有
+- 了解 List 是由 node 所組成的，這樣的概念將有助於理解其他資料結構，如 Stack 和 Queue
 
 ##### Ref
 
