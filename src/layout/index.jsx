@@ -16,6 +16,9 @@ export default function MainLayout({ children }) {
       <ThemeProvider theme={theme}>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
+          <meta httpEquiv="cache-control" content="no-cache" />
+          <meta httpEquiv="pragma" content="no-cache" />
+          <meta httpEquiv="expires" content="0" />
           <html lang="zh_Hant" />
         </Helmet>
         <GlobalStyle />
