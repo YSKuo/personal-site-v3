@@ -14,12 +14,16 @@ tags:
   - 以 JavaScript 學習演算法與資料結構
 ---
 
-最近開始複習演算法與資料結構，所以會將一系列我的筆記作為文章發表於此，又因為我主要使用的程式語言是 JavaScript，所以文章內容也是基於 JS 來撰寫，本系列主要參考自以下資料：
+最近開始複習演算法與資料結構，所以會將一系列我的筆記作為文章發表於此，又因為我主要使用的程式語言是 JavaScript，所以文章內容也是基於 JS 來撰寫，有興趣了解[以 JavaScript 學習演算法與資料結構](/tags/以-java-script-學習演算法與資料結構)。
+
+本系列主要參考自以下資料：
 
 - _石田保輝_ 和 _宮崎修一_ 的 **演算法圖鑑**
 - _Colt Steele_ 的 **JavaScript Algorithms and Data Structures Masterclass**
 
 這些資料對我理解演算法與資料結構幫助很大，沒業配純推薦。
+
+此外，如果想以圖像的方式了解資料結構及演算法，也很推薦參考 [VisuAlgo - Linked List (Single, Doubly), Stack, Queue, Deque](https://visualgo.net/en/list)。
 
 ## 預備知識
 
@@ -29,6 +33,11 @@ tags:
 - 物件導向觀念
 - Big O Notation
 - 資料結構的基礎理解
+
+以上內容不會在本文說明，如果想了解
+
+- JavaScript Class 語法，可參考 [[教學] 深入淺出 JavaScript ES6 Class (類別) | Shubo 的程式教學筆記](https://shubo.io/javascript-class/)
+- Big O Notation，可參考[【演算法】時間複雜度與空間複雜度 Time & Space Complexity - Jason Chen's Blog](https://jason-chen-1992.weebly.com/home/time-space-complexity)
 
 ## 什麼是 Singly Linked List？
 
@@ -718,9 +727,12 @@ class SinglyLinkedList {
 - Searching - O(N)
 - Access - O(N)
 
-追加和刪除資料則只需改變兩個指標的指向，如果都是在最前端和最尾端增加資料，時間是 O(1)。
+追加資料只需改變兩個指標的指向，如果都是在最前端和最尾端增加資料，時間是 O(1)。
 
-但刪除資料就不一樣，在最前端刪除資料只要改變 head 至其下一個 node，所以是 O(1)；在最尾端刪除資料則要取得最尾端的前一個 node，將之設為新的 tail 並將其 next 指標設為 null，所以會是 O(n)。
+刪除資料也是改變兩個指標的指向，但在最前端和最尾端的複雜度不一樣，
+
+- 在最前端刪除資料只要改變 head 至其下一個 node，所以是 O(1)
+- 在最尾端刪除資料則要取得最尾端的前一個 node，將之設為新的 tail 並將其 next 指標設為 null，所以會是 O(n)
 
 假設儲存於 list 的資料有 n 個，而存取資料時必須從 list 的最前端開始（線性搜尋），那最差的情況就是 O(n) 的時間。
 
