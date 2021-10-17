@@ -8,13 +8,13 @@ language: "zh_Hant"
 published: true
 featured: true
 tags:
-  - Data Structure
+  - 資料結構
   - OOP物件導向
   - JavaScript
   - 以 JavaScript 學習演算法與資料結構
 ---
 
-最近開始複習演算法與資料結構，所以會將一系列我的筆記作為文章發表於此，又因為我主要使用的程式語言是 JavaScript，所以文章內容也是基於 JS 來撰寫，有興趣了解[以 JavaScript 學習演算法與資料結構](/tags/以-java-script-學習演算法與資料結構)。
+最近開始複習演算法與資料結構，所以會將一系列我的筆記作為文章發表於此，又因為我主要使用的程式語言是 JavaScript，所以文章內容也是基於 JS 來撰寫，有興趣請參考系列文章 [以 JavaScript 學習演算法與資料結構](/tags/以-java-script-學習演算法與資料結構)。
 
 本系列主要參考自以下資料：
 
@@ -23,7 +23,7 @@ tags:
 
 這些資料對我理解演算法與資料結構幫助很大，沒業配純推薦。
 
-此外，如果想以圖像的方式了解資料結構及演算法，也很推薦參考 [VisuAlgo - Linked List (Single, Doubly), Stack, Queue, Deque](https://visualgo.net/en/list)。
+此外，如果想以圖像的方式了解資料結構及演算法，也很推薦參考 [VisuAlgo](https://visualgo.net/en/list)。
 
 ## 預備知識
 
