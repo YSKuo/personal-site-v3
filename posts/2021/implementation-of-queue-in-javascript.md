@@ -33,6 +33,16 @@ tags:
 - 物件導向觀念
 - Big O Notation
 - 資料結構的基礎理解
+- 資料結構 Singly Linked List
+
+以上內容不會在本文說明，如果想了解可以參考以下外部連結
+
+- JavaScript Class 語法，可參考 [[教學] 深入淺出 JavaScript ES6 Class (類別) | Shubo 的程式教學筆記](https://shubo.io/javascript-class/)
+- Big O Notation，可參考[【演算法】時間複雜度與空間複雜度 Time & Space Complexity - Jason Chen's Blog](https://jason-chen-1992.weebly.com/home/time-space-complexity)
+
+另外我有寫過 Singly Linked List 的文章，可以參考
+
+- [Singly Linked List](/post/2021/10/11/implementation-of-singly-linked-list-in-javascript)
 
 ## 什麼是 Queue？
 
