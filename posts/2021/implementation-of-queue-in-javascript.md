@@ -1,9 +1,9 @@
 ---
-title: "用 JavaScript 實作堆疊（Stack）"
+title: "用 JavaScript 實作佇列（Queue）"
 cover: ""
 category: "Data-Structure"
-date: "2021-11-21"
-excerpt: "介紹資料結構的堆疊（Stack），並以 JavaScript 來實作。"
+date: "2021-12-11"
+excerpt: "介紹資料結構的佇列（Queue），並以 JavaScript 來實作。"
 language: "zh_Hant"
 published: true
 featured: false
@@ -42,14 +42,14 @@ tags:
 
 - [Singly Linked List](/post/2021/10/11/implementation-of-singly-linked-list-in-javascript)
 
-## 什麼是 Stack？
+## 什麼是 Queue？
 
-資料像紙本文件由下往上堆疊一樣，只能從最新追加的資料開始存取。
+資料像排隊一樣，在隊伍（Queue）中，最晚到的會排在最後面，處理資料則會從最先排入的開始進行。
 
-後追加的數據先取出的特性是 **「後進先出」**，即`「Last In First Out」`縮寫「LIFO」。
+先追加的數據先處理的特性是 **「先進先出」**，即`「First In First Out」`縮寫「FIFO」。
 
-![Stack](https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png)
-source: [Stack (abstract data type) - Wikipedia](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)
+![Queue](http://www.fgchen.com/wp/wp-content/uploads/2016/12/120116_0009_Queue1.png)
+source: http://www.fgchen.com
 
 ---
 
@@ -57,39 +57,40 @@ source: [Stack (abstract data type) - Wikipedia](<https://en.wikipedia.org/wiki/
 
 ### 應用
 
-Stack 的特性就是取得最新的資料，所以有這種需求的應用會適合用 Stack 來處理，例如：
+Queue 的特性就是依序處理資料，舊的資料優先處理是很直觀的事情，使用情境如：
 
-- 瀏覽器的 call stack
-- Undo / Redo 功能
-- 歷史紀錄
+- 背景執行的工作
+- 上傳資料
+- 列印
+- 注重先後順序的待辦事項
 
 ### 實作
 
-JavaScript 本來就具有 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 這個 data type，其實就可以直接拿來實現 Stack，像是利用 array 的 push 放入 data 到最後一個 index，要取出時用 pop 就可取出最新的 data。
+JavaScript 本來就具有 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 這個 data type，其實就可以直接拿來實現 Queue，像是利用 array 的 push 放入 data 到最後一個 index，要取出資料時用 shift 就可取出之前最先加入的 data。
 
 ```js
-let stack = [];
-stack.push(0);
-stack.push(1);
-stack.push(2);
+let queue = [];
+queue.push(1);
+queue.push(2);
+queue.push(3);
 
-stack.pop();
+queue.shift();
 ```
 
-由於 push 和 pop 兩個 method 都是變動 array 最後面的元素，不會改變 array 裡其他元素的順序，因此 Big O 是 O(1)。
+push 這個 method 的 Big O 是 O(1)，但是 shift 這個 method 會改變 array 裡其他元素的順序，因此 Big O 是 O(n)。
 
 ---
 
 ## Object Property
 
-這部分用物件導向的方式來實作，一個 stack 由數個 node 組成，他們各自是一種 object。
+這部分用物件導向的方式來實作，一個 queue 由數個 node 組成，他們各自是一種 object。
 
 node 具有：
 
 - value
 - pointer to next node（指向下一個 node 或 null）
 
-Stack 具有：
+Queue 具有：
 
 - first node
 - last node
@@ -105,7 +106,7 @@ class Node {
   }
 }
 
-class Stack {
+class Queue {
   constructor() {
     this.first = null;
     this.last = null;
@@ -118,22 +119,22 @@ class Stack {
 
 Doubly Linked List 具有以下 method：
 
-- [Pushing](#pushing)
-- [Popping](#popping)
+- [Enqueue](#enqueue)
+- [Dequeue](#dequeue)
 
-### Pushing
+### Enqueue
 
-> push 即增加一個 node 到 stack 的最前面的位置
+> enqueue 是增加 node 到 queue 的最前面
 
 Pseudocode：
 
 1. function 要接收一個 value
 2. 利用 function 接收的 value 來建立一個新的 node
-3. 如果 stack 沒有 node，則把 first 與 last 都設為剛建立的新 node
-4. 如果 stack 裡有 node 的話
-   - 新 node 的 next 設為 first
-   - 把 first 設為新 node
-5. 將 stack 的 size 增加 1
+3. 如果 queue 沒有 node，則把 first 與 last 都設為剛建立的新 node
+4. 如果 queue 裡有 node 的話
+   - last 的 next 設為新 node
+   - 把 last 設為新 node
+5. 將 queue 的 size 增加 1
 
 ```js
 class Node {
@@ -143,35 +144,35 @@ class Node {
   }
 }
 
-class Stack {
+class Queue {
   constructor() {
     this.first = null;
     this.last = null;
     this.size = 0;
   }
 
-  push(val) {
-    var newNode = new Node(val);
+  enqueue(val) {
+    const newNode = new Node(val);
     if (this.size === 0) {
       this.first = newNode;
       this.last = newNode;
     } else {
-      newNode.next = this.first;
-      this.first = newNode;
+      this.last.next = newNode;
+      this.last = newNode;
     }
     this.size++;
   }
 }
 ```
 
-### Popping
+### Dequeue
 
-> pop 是將 stack 最後一個加入的 node 拿出來
+> dequeue 是將 queue 最前面的 node 取出
 
 Pseudocode：
 
-1. 如果 stack 沒有 node，則 return null
-2. 如果 stack 有 node
+1. 如果 queue 沒有 node，則 return null
+2. 如果 queue 有 node
    - 把 first 放入一個新變數 target node
    - 如果 first 和 last 是同一個 node，則設 last 為 null
    - 將 target node 的 next 設為新的 first
@@ -186,7 +187,7 @@ class Node {
   }
 }
 
-class Stack {
+class Queue {
   constructor() {
     this.first = null;
     this.last = null;
@@ -195,11 +196,11 @@ class Stack {
 
   ...
 
-  pop() {
+  dequeue() {
     if (this.size === 0) return null;
     const targetNode = this.first;
     if (this.first === this.last) {
-      this.last === null;
+      this.last = null;
     }
     this.first = targetNode.next;
     this.size--;
@@ -212,7 +213,7 @@ class Stack {
 
 ## 總結
 
-最終關於 Stack 的定義會是這樣：
+最終關於 Queue 的定義會是這樣：
 
 ```js
 class Node {
@@ -222,30 +223,30 @@ class Node {
   }
 }
 
-class Stack {
+class Queue {
   constructor() {
     this.first = null;
     this.last = null;
     this.size = 0;
   }
 
-  push(val) {
+  enqueue(val) {
     const newNode = new Node(val);
     if (this.size === 0) {
       this.first = newNode;
       this.last = newNode;
     } else {
-      newNode.next = this.first;
-      this.first = newNode;
+      this.last.next = newNode;
+      this.last = newNode;
     }
     this.size++;
   }
 
-  pop() {
+  dequeue() {
     if (this.size === 0) return null;
     const targetNode = this.first;
     if (this.first === this.last) {
-      this.last === null;
+      this.last = null;
     }
     this.first = targetNode.next;
     this.size--;
@@ -254,18 +255,16 @@ class Stack {
 }
 ```
 
-### Stack 的 Big O
+### Queue 的 Big O
 
 - Insertion - O(1)
 - Removal - O(1)
 - Searching - O(N)
-- Access - O(N)
+- Access - O(N
 
-Stack 的追加和刪除資料都是從 first 開始處理，只要處理兩個 node 之間的關聯即可，效率很高是 O(1)。
-
-但存取資料就不是 stack 的強項，如果要搜尋某個 node，就需要像 [Singly Linked List](/post/2021/10/11/implementation-of-singly-linked-list-in-javascript) 從頭開始一個接一個的 next 下去，所以若有這種功能的需求，應該優先考慮其他種資料結構。
+和 Stack 一樣，Queue 的追加和刪除資料 O(1)，因為這兩個 method 都只要處理兩個 node 之間的關聯。
 
 ##### Ref
 
 - [JavaScript (JS) Algorithms and Data Structures Masterclass | Udemy](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)
-- [Stack (abstract data type) - Wikipedia](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)
+- [【資料結構】佇列(Queue)介紹與使用 – 程式設計教育農場 by 陳富國](https://fgchen.com/wp/%E3%80%90%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B%E3%80%91%E4%BD%87%E5%88%97queue%E4%BB%8B%E7%B4%B9%E8%88%87%E4%BD%BF%E7%94%A8/)
