@@ -268,4 +268,4 @@ Stack 的追加和刪除資料都是從 first 開始處理，只要處理兩個 
 ##### Ref
 
 - [JavaScript (JS) Algorithms and Data Structures Masterclass | Udemy](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)
-- [Stack (abstract data type) - Wikipedia](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)
+- [堆疊 - 維基百科，自由的百科全書](https://zh.wikipedia.org/wiki/%E5%A0%86%E6%A0%88)
