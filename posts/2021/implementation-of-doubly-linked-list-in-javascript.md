@@ -6,7 +6,7 @@ date: "2021-10-17"
 excerpt: "介紹資料結構的雙向鏈接串列（Doubly Linked List），並以 JavaScript 來實作。"
 language: "zh_Hant"
 published: true
-featured: false
+featured: true
 tags:
   - 資料結構
   - OOP物件導向
