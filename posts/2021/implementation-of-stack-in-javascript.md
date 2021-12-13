@@ -21,8 +21,6 @@ tags:
 - _石田保輝_ 和 _宮崎修一_ 的 **演算法圖鑑**
 - _Colt Steele_ 的 **JavaScript Algorithms and Data Structures Masterclass**
 
-這些資料對我理解演算法與資料結構幫助很大，沒業配純推薦。
-
 此外，如果想以圖像的方式了解資料結構及演算法，也很推薦參考 [VisuAlgo](https://visualgo.net/en/list)。
 
 ## 預備知識

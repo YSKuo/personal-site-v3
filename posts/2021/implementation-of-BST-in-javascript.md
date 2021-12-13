@@ -14,14 +14,12 @@ tags:
   - 以 JavaScript 學習演算法與資料結構
 ---
 
-最近開始複習演算法與資料結構，所以會將一系列我的筆記作為文章發表於此，又因為我主要使用的程式語言是 JavaScript，所以文章內容也是基於 JS 來撰寫，有興趣請參考系列文章 [以 JavaScript 學習演算法與資料結構](/tags/以-java-script-學習演算法與資料結構)。
+如先前文章所言，本系列文章會[以 JavaScript 學習演算法與資料結構](/tags/以-java-script-學習演算法與資料結構)為主題來撰寫。
 
 本系列主要參考自以下資料：
 
 - _石田保輝_ 和 _宮崎修一_ 的 **演算法圖鑑**
 - _Colt Steele_ 的 **JavaScript Algorithms and Data Structures Masterclass**
-
-這些資料對我理解演算法與資料結構幫助很大，沒業配純推薦。
 
 此外，如果想以圖像的方式了解資料結構及演算法，也很推薦參考 [VisuAlgo](https://visualgo.net/en/list)。
 
@@ -34,8 +32,6 @@ tags:
 - Big O Notation
 - 資料結構的基礎理解
 - 遞迴
-- 資料結構 Singly Linked List
-- 資料結構 Stack 與 Queue
 - 資料結構 Tree
 
 以上內容不會在本文說明，如果想了解可以參考以下內容
@@ -44,11 +40,8 @@ tags:
 - Big O Notation：[【演算法】時間複雜度與空間複雜度 Time & Space Complexity - Jason Chen's Blog](https://jason-chen-1992.weebly.com/home/time-space-complexity)
 - JavaScript 的遞迴：[JavaScript Recursion (with Examples)](https://www.programiz.com/javascript/recursion)
 
-另外我有寫過 Singly Linked List、Stack、Queue 與 Tree 的文章，可以參考這些文章
+另外我有寫過 Tree 的文章，可以參考
 
-- [Singly Linked List](/post/2021/10/11/implementation-of-singly-linked-list-in-javascript)
-- [Stack](/post/2021/11/21/implementation-of-stack-in-javascript)
-- [Queue](/post/2021/12/11/implementation-of-queue-in-javascript)
 - [Tree](/post/2021/12/12/introduction-to-tree)
 
 ## 什麼是 Binary Search Tree？
@@ -117,13 +110,13 @@ Pseudocode：
 3. 如果 tree 沒有 root，則讓 newNode 成為 root
 4. 如果 tree 有 root，則以這個 root 為起始的對手 node 開始比較兩個 node 的值
    - 如果新 node 的值比較小
-      - 確認對手 node 是否有左側的 child node
-          - 如果有左側的 child，則其設為新的對手 node，並重複上述比較步驟
-          - 如果沒有左側的 child，則將新 node 設為左側的 child
+     - 確認對手 node 是否有左側的 child node
+       - 如果有左側的 child，則其設為新的對手 node，並重複上述比較步驟
+       - 如果沒有左側的 child，則將新 node 設為左側的 child
    - 如果新 node 的值比較大
-      - 確認對手 node 是否有右側的 child node
-          - 如果有右側的 child，則其設為新的對手 node，並重複上述比較步驟
-          - 如果沒有右側的 child，則將新 node 設為右側的 child
+     - 確認對手 node 是否有右側的 child node
+       - 如果有右側的 child，則其設為新的對手 node，並重複上述比較步驟
+       - 如果沒有右側的 child，則將新 node 設為右側的 child
 
 #### 迭代解
 
@@ -240,13 +233,13 @@ Pseudocode：
 2. 如果 tree 沒有 root，則搜尋結束 return false
 3. 如果 tree 有 root，則以這個 root 為起始的對手 node 開始比較值
    - 如果輸入值比較小
-      - 確認對手 node 是否有左側的 child node
-          - 如果有右側的 child，則其設為新的對手 node，並重複上述比較步驟
-          - 如果沒有右側的 child，則搜尋結束 return false
+     - 確認對手 node 是否有左側的 child node
+       - 如果有右側的 child，則其設為新的對手 node，並重複上述比較步驟
+       - 如果沒有右側的 child，則搜尋結束 return false
    - 如果輸入值比較大
-      - 確認對手 node 是否有右側的 child node
-          - 如果有右側的 child，則其設為新的對手 node，並重複上述比較步驟
-          - 如果沒有右側的 child，則搜尋結束 return false
+     - 確認對手 node 是否有右側的 child node
+       - 如果有右側的 child，則其設為新的對手 node，並重複上述比較步驟
+       - 如果沒有右側的 child，則搜尋結束 return false
    - 如果對手 node 的值與輸入值相等，則此對手 node 為搜尋目標，return 此 node
 
 #### 迭代解
@@ -322,6 +315,7 @@ class BinarySearchTree {
 > 在 BST 中移除具有目標值的 node
 
 Remove 的實作比較難，主要有以下幾種情況要注意：
+
 - 刪除的 node 沒有 children，那刪除 node 完就可以了
 - 刪除的 node 只有一個 child，那刪除完 node 之後要把 child 移上來
 - 刪除的 node 有兩個 children，在刪除完 node 之後從右側 children 裡找出值最小的 node 移上來（也可以找左側 children 中值最大的 node）
@@ -335,12 +329,12 @@ Pseudocode：
    - 若 value 大於當前 node 值時，往該 node 的 right child 接著尋找
 4. 當 value 等於當前 node 值
    - 當前 node 即為目標，這邊稱之為 removedNode
-      - 如果 removedNode 沒有 children，則移除 removedNode 即可
-      - 如果 removedNode 只有一個 child，則讓該 child 取代 removedNode
-      - 如果 removedNode 有兩個 children
-          - 找 removedNode 右側 children 裡值最小的 node，這邊稱之為 successor node（在 `removedNode 有兩個 children` 的情況，也可以找左側 children 裡值最大的 node 來處理）
-          - 將 successor 的值取代 removedNode 的值
-          - 移除 successor，此時原先 successor 的位置空了，重複以上移除步驟
+     - 如果 removedNode 沒有 children，則移除 removedNode 即可
+     - 如果 removedNode 只有一個 child，則讓該 child 取代 removedNode
+     - 如果 removedNode 有兩個 children
+       - 找 removedNode 右側 children 裡值最小的 node，這邊稱之為 successor node（在 `removedNode 有兩個 children` 的情況，也可以找左側 children 裡值最大的 node 來處理）
+       - 將 successor 的值取代 removedNode 的值
+       - 移除 successor，此時原先 successor 的位置空了，重複以上移除步驟
 
 #### 遞迴解
 

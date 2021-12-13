@@ -6,7 +6,7 @@ date: "2021-12-12"
 excerpt: "介紹資料結構領域的樹（Tree）。"
 language: "zh_Hant"
 published: true
-featured: true
+featured: false
 tags:
   - 資料結構
   - 以 JavaScript 學習演算法與資料結構
@@ -18,7 +18,9 @@ tags:
 
 ## 什麼是 Tree？
 
-Tree 可看作是 Graph 的其中一種形式，是一種具有多個 node 資料結構，且這些 node 之間有 **parent / child** 關係。
+Tree 是 Graph 的其中一種形式，是一種具有多個 node 資料結構，且這些 node 之間有 **parent / child** 關係。
+
+有關於 Graph 的更詳細的內容，之後會寫在另一篇文章介紹。
 
 ![Tree](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Treedatastructure.png/300px-Treedatastructure.png)
 source: [樹 (資料結構) - 維基百科](<https://zh.wikipedia.org/wiki/%E6%A0%91_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)>)
@@ -55,10 +57,10 @@ Tree 的例子包含但不限於：
 接下來會用
 
 - [Binary Tree](#binary-tree)
-- Binary Search Tree
+- [Binary Search Tree](/post/2021/12/13/implementation-of-bst-in-javascript)
 - Binary Heap
 
-Binary Search Tree 和 Binary Heap 這兩種樹，我會在之後寫成另篇文章來介紹。
+Binary Heap 的部分，之後會寫成另篇文章來介紹。
 
 ### Binary Tree
 
