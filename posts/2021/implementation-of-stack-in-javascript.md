@@ -57,7 +57,7 @@ source: [Stack (abstract data type) - Wikipedia](<https://en.wikipedia.org/wiki/
 
 ### 應用
 
-Stack 的特性就是取得最新的資料，所以有這種需求的應用會適合用 Stack 來處理，例如：
+Stack 的特性就是取得最新的資料，所以有這種需求的應用會適合用 stack 來處理，例如：
 
 - 瀏覽器的 call stack
 - Undo / Redo 功能
@@ -65,7 +65,7 @@ Stack 的特性就是取得最新的資料，所以有這種需求的應用會�
 
 ### 實作
 
-JavaScript 本來就具有 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 這個 data type，其實就可以直接拿來實現 Stack，像是利用 array 的 push 放入 data 到最後一個 index，要取出時用 pop 就可取出最新的 data。
+JavaScript 本來就具有 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 這個 data type，其實就可以直接拿來實現 stack，像是利用 array 的 push 放入 data 到最後一個 index，要取出時用 pop 就可取出最新的 data。
 
 ```js
 let stack = [];

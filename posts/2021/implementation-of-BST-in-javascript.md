@@ -40,13 +40,13 @@ tags:
 - Big O Notation：[【演算法】時間複雜度與空間複雜度 Time & Space Complexity - Jason Chen's Blog](https://jason-chen-1992.weebly.com/home/time-space-complexity)
 - JavaScript 的遞迴：[JavaScript Recursion (with Examples)](https://www.programiz.com/javascript/recursion)
 
-另外我有寫過 Tree 的文章，可以參考
+另外我有寫過 tree 的文章，可以參考
 
 - [Tree](/post/2021/12/12/introduction-to-tree)
 
 ## 什麼是 Binary Search Tree？
 
-Binary Search Tree（以下簡稱 BST）顧名思義也是 Tree 一種類型，它具有以下特徵：
+Binary Search Tree（以下簡稱 BST）顧名思義也是 tree 一種類型，它具有以下特徵：
 
 - 每個 parent node 最多只有兩個 children nodes，且每一個 node 的值都不重複（這點是 Binary Tree 的特徵）
 - 左側每個 children nodes 的值都小於它的 parent node 的值

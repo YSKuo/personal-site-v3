@@ -66,7 +66,7 @@ Queue 的特性就是依序處理資料，舊的資料優先處理是很直觀�
 
 ### 實作
 
-JavaScript 本來就具有 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 這個 data type，其實就可以直接拿來實現 Queue，像是利用 array 的 push 放入 data 到最後一個 index，要取出資料時用 shift 就可取出之前最先加入的 data。
+JavaScript 本來就具有 [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 這個 data type，其實就可以直接拿來實現 queue，像是利用 array 的 push 放入 data 到最後一個 index，要取出資料時用 shift 就可取出之前最先加入的 data。
 
 ```js
 let queue = [];
@@ -262,7 +262,7 @@ class Queue {
 - Searching - O(N)
 - Access - O(N
 
-和 Stack 一樣，Queue 的追加和刪除資料 O(1)，因為這兩個 method 都只要處理兩個 node 之間的關聯。
+和 stack 一樣，queue 的追加和刪除資料 O(1)，因為這兩個 method 都只要處理兩個 node 之間的關聯。
 
 ##### Ref
 

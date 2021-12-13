@@ -14,13 +14,13 @@ tags:
 
 如先前文章所言，本系列文章會[以 JavaScript 學習演算法與資料結構](/tags/以-java-script-學習演算法與資料結構)為主題來撰寫。
 
-這篇會講解 Tree 這種資料結構，然後因為 Tree 的類型有很多種，所以實作部分會在之後的文章進行。
+這篇會講解 tree 這種資料結構，然後因為 tree 的類型有很多種，所以實作部分會在之後的文章進行。
 
 ## 什麼是 Tree？
 
-Tree 是 Graph 的其中一種形式，是一種具有多個 node 資料結構，且這些 node 之間有 **parent / child** 關係。
+Tree 是 graph 的其中一種形式，是一種具有多個 node 資料結構，且這些 node 之間有 **parent / child** 關係。
 
-有關於 Graph 的更詳細的內容，之後會寫在另一篇文章介紹。
+有關於 graph 的更詳細的內容，之後會寫在另一篇文章介紹。
 
 ![Tree](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Treedatastructure.png/300px-Treedatastructure.png)
 source: [樹 (資料結構) - 維基百科](<https://zh.wikipedia.org/wiki/%E6%A0%91_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)>)
