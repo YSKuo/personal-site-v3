@@ -72,11 +72,9 @@ function About({ config }) {
       <Section>
         <SectionTitle>Skills</SectionTitle>
         <Grid container>
-          <TagsSection userSkills={userSkills} category={"Development"} />
-          <TagsSection userSkills={userSkills} category={"Frontend"} />
-          <TagsSection userSkills={userSkills} category={"Backend"} />
-          <TagsSection userSkills={userSkills} category={"Design"} />
-          <TagsSection userSkills={userSkills} category={"General"} />
+          {Object.entries(userSkills).map((keyValuePair, idx) => (
+            <TagsSection key={idx} keyValuePair={keyValuePair} />
+          ))}
         </Grid>
       </Section>
       <StyledDivider yMargin="2rem" />
@@ -127,13 +125,27 @@ const Tag = ({ tag }) => {
   );
 };
 
-const TagsSection = ({ category, userSkills }) => {
+const TagsSection = ({ keyValuePair }) => {
+  const [type, list] = keyValuePair;
+  let category = `${type.slice(0, 1).toUpperCase()}${type.slice(1)}`; // capitalize
+  switch (type) {
+    case "programmingLan":
+      category = "Programming Languages";
+      break;
+    case "backend":
+    case "frontend":
+      category = `${category.slice(0, -3)}-${category.slice(-3)}`;
+      break;
+    default:
+      break;
+  }
+
   return (
     <Grid item xs={12} sm={6}>
       <SectionSubtitle>{category}</SectionSubtitle>
       <Tags container>
-        {userSkills[category.toLowerCase()].map((item, index) => (
-          <Tag key={index} tag={item} />
+        {list.map((skill, idx) => (
+          <Tag key={idx} tag={skill} />
         ))}
       </Tags>
     </Grid>
