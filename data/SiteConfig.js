@@ -83,7 +83,7 @@ const config = {
     design: ["Figma", "Wireframing", "Prototyping", "Interaction design"],
     development: ["Web application", "RWD", "Git", "Agile", "Unit testing"],
   },
-  copyright: `Copyright © Arsene Kuo 2019 - ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.
+  copyright: `Copyright © Arsene Kuo 2020 - ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#01579b", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0", // Used for setting manifest background color.
 };
