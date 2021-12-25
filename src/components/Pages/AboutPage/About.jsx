@@ -72,8 +72,8 @@ function About({ config }) {
       <Section>
         <SectionTitle>Skills</SectionTitle>
         <Grid container>
-          {Object.entries(userSkills).map((item, idx) => (
-            <TagsSection key={idx} item={item} />
+          {Object.entries(userSkills).map((keyValuePair, idx) => (
+            <TagsSection key={idx} keyValuePair={keyValuePair} />
           ))}
         </Grid>
       </Section>
@@ -125,8 +125,8 @@ const Tag = ({ tag }) => {
   );
 };
 
-const TagsSection = ({ item }) => {
-  const [type, list] = item;
+const TagsSection = ({ keyValuePair }) => {
+  const [type, list] = keyValuePair;
   let category = `${type.slice(0, 1).toUpperCase()}${type.slice(1)}`; // capitalize
   switch (type) {
     case "programmingLan":
