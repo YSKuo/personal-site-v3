@@ -20,7 +20,7 @@ const config = {
   userTwitter: "https://twitter.com/ArseneKuo", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Taipei, Taiwan", // User location to display in the author segment.
   userResume:
-    "https://drive.google.com/file/d/1OdNg980V-9H4kksJgmXNlRqpd2KLgupI/view?usp=sharing",
+    "https://docs.google.com/document/d/18ASSmVnMz2kiN3NFxoN6EZEVv33ytBHiGYO5mspWSDI/edit?usp=sharing",
   userAvatar: "", // User avatar to display in the author segment.
   userDescription: "", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
@@ -65,34 +65,23 @@ const config = {
     },
   ],
   userSkills: {
-    design: [
-      "Sketch",
-      "Photoshop",
-      "Figma",
-      "Zeplin",
-      "Wireframing",
-      "Prototyping",
-    ],
-    development: ["JavaScript (ES6+)", "HTML", "CSS", "PHP", "Python", "Git"],
+    programmingLan: ["JavaScript", "Python", "PHP"],
     frontend: [
       "React.js",
       "Redux",
-      "Gatsby.js",
-      "jQuery",
+      "Jest",
+      "Testing Library",
+      "HTML",
+      "CSS",
       "Webpack",
       "Babel",
       "Gulp",
+      "Gatsby.js",
     ],
-    backend: ["Node.js", "Django", "MySQL", "GraphQL"],
-    general: [
-      "Web Application",
-      "RWD",
-      "Interaction Design",
-      "Scrum",
-      "SEO",
-      "Unit Testing",
-      "Web Accessibility",
-    ],
+    backend: ["Django", "GraphQL"],
+    database: ["MySQL"],
+    design: ["Figma", "Wireframing", "Prototyping", "Interaction design"],
+    development: ["Web application", "RWD", "Git", "Agile", "Unit testing"],
   },
   copyright: `Copyright © Arsene Kuo 2019 - ${new Date().getFullYear()}`, // Copyright string for the footer of the website and RSS feed.
   themeColor: "#01579b", // Used for setting manifest and progress theme colors.
