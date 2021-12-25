@@ -6,7 +6,7 @@ date: "2021-12-13"
 excerpt: "介紹資料結構的二元搜尋樹（Binary Search Tree），並以 JavaScript 來實作。"
 language: "zh_Hant"
 published: true
-featured: true
+featured: false
 tags:
   - 資料結構
   - OOP物件導向
