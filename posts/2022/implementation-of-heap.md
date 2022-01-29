@@ -48,10 +48,10 @@ tags:
 
 ## 什麼是 Heap？
 
-Heap 是一種 tree，常用來實現 Priority Queue（後續會再另篇文章分享），每個 node 最多具有兩個 children，和 Binary Search Tree 很類似，差別在於 Binary Heap 的 parent 和 child 數值具有額外的規則，分有兩種：
+Heap 是一種 tree，常用來實現 Priority Queue（後續於另篇文章分享），每個 node 最多具有兩個 children，和 Binary Search Tree 很類似，差別在於 heap 的 parent 和 child 數值具有額外的規則，分有兩種：
 
-- Max Binary Heap：parent 的值大於 children 的值
-- Min Binary Heap：parent 的值小於 children 的值
+- Max Heap：parent 的值大於 children 的值
+- Min Heap：parent 的值小於 children 的值
 
 由此可知，heap 的結構會比起 binary search tree 還簡潔，因為 parent 一定會被調整成為值比 children 還要小（或大），這樣就不會產生 binary search tree 結構一直往單支發展的樣子，此外在加入 node 時會先往 left 加入。
 
@@ -88,7 +88,7 @@ Heap 具有以下 method：
 
 > 在 heap 上加入一個新的值。
 
-首先會在尾端加入 node，然後這個新加入的值會和 parent 的值比較，如果大於 parent 則交換位置（這個動作稱為 Bubble Up），直到整個 heap 的狀態符合 parent 大於 children 的情況。
+首先會在尾端加入 node，然後這個新加入的值會和 parent 的值比較，如果大於 parent 則交換位置（這個動作稱為 bubble up），直到整個 heap 的狀態符合 parent 大於 children 的情況。
 
 1. function 接收一個 value
 2. 將 value 給 push 進 heap
