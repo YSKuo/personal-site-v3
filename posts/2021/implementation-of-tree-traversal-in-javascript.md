@@ -6,7 +6,7 @@ date: "2021-12-25"
 excerpt: "介紹樹的遍歷（Tree Traversal），並以 JavaScript 來實作。"
 language: "zh_Hant"
 published: true
-featured: true
+featured: false
 tags:
   - 演算法
   - 資料結構
