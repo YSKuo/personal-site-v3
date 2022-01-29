@@ -6,7 +6,7 @@ date: "2021-09-11"
 excerpt: "從設計師轉換到工程師，嘗試結合兩邊的觀點來分享產品設計流程。"
 language: "zh_Hant"
 published: true
-featured: true
+featured: false
 tags:
   - UX/UI
   - Flowchart
