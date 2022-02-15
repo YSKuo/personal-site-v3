@@ -48,9 +48,6 @@ tags:
 
 先追加的數據先處理的特性是 **「先進先出」**，即`「First In First Out」`縮寫「FIFO」。
 
-![Queue](http://www.fgchen.com/wp/wp-content/uploads/2016/12/120116_0009_Queue1.png)
-source: http://www.fgchen.com
-
 ---
 
 ## 解說

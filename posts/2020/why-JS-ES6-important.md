@@ -10,7 +10,7 @@ featured: true
 tags:
   - Frontend
   - ES6
-  - JavsScript history
+  - JavaScript history
 ---
 
 ## 前言
@@ -101,15 +101,14 @@ ES3 推出之後，ECMAScript 大約有整整十年時間沒有官方更動。�
 
 ---
 
-參考資料：
+##### ref
 
-1. [Brief History of JavaScript](https://roadmap.sh/guides/history-of-javascript)
-2. [ECMA International - Wikipedia](https://zh.wikipedia.org/wiki/Ecma%E5%9B%BD%E9%99%85)
-3. [Polyfills — MDN](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill)
-4. [什麼是 Polyfills？](https://medium.com/@tsoen/%E4%BB%80%E9%BA%BC%E6%98%AF-polyfills-89f98f45caf5)
-5. [前端“黑話”polyfill](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/29473/)
-6. [ES6 new features](http://es6-features.org/#Constants)
-7. [Transpiling](https://riptutorial.com/zh-TW/javascript/topic/3778/transpiling)
-8. [語法糖 — Wikipedia](https://zh.wikipedia.org/wiki/%E8%AF%AD%E6%B3%95%E7%B3%96)
-9. [[译] TC39，ECMAScript 和 JavaScript 的未来（Part 1）](https://medium.com/@justjavac/tc39-ecmascript-proposals-future-of-javascript-386b12149880)
-10. [ECMAScript 6 会重蹈 ECMAScript 4 的覆辙吗？](https://www.zhihu.com/question/24715618)
+- [Brief History of JavaScript](https://roadmap.sh/guides/history-of-javascript)
+- [ECMA International - Wikipedia](https://zh.wikipedia.org/wiki/Ecma%E5%9B%BD%E9%99%85)
+- [Polyfills — MDN](https://developer.mozilla.org/en-US/docs/Glossary/Polyfill)
+- [什麼是 Polyfills？](https://medium.com/@tsoen/%E4%BB%80%E9%BA%BC%E6%98%AF-polyfills-89f98f45caf5)
+- [前端“黑話”polyfill](https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/29473/)
+- [Transpiling](https://riptutorial.com/zh-TW/javascript/topic/3778/transpiling)
+- [語法糖 — Wikipedia](https://zh.wikipedia.org/wiki/%E8%AF%AD%E6%B3%95%E7%B3%96)
+- [[译] TC39，ECMAScript 和 JavaScript 的未来（Part 1）](https://medium.com/@justjavac/tc39-ecmascript-proposals-future-of-javascript-386b12149880)
+- [ECMAScript 6 会重蹈 ECMAScript 4 的覆辙吗？](https://www.zhihu.com/question/24715618)
