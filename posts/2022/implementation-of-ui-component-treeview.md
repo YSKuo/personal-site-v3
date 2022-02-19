@@ -169,5 +169,5 @@ const TreeView = ({ tree }) => (
 
 如果讀者有興趣了解其他演算法及資料結構內容，歡迎閱讀我寫的系列文章：
 
-- [Algo](/categories/algorithm)
-- [Data Structure](/categories/data-structure)
+- [演算法](/categories/algorithm)
+- [資料結構](/categories/data-structure)
