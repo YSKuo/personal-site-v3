@@ -10,7 +10,6 @@ const config = {
   siteRssTitle: "Gatsby Advanced Starter RSS feed", // Title of the RSS feed
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "xxx", // GA tracking ID.
-  disqusShortname: process.env.GATSBY_DISQUS_NAME, // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 5, // Amount of posts displayed per listing page.
@@ -29,10 +28,10 @@ const config = {
       label: "GitHub",
       url: "https://github.com/YSKuo",
     },
-    {
-      label: "Twitter",
-      url: "https://twitter.com/ArseneKuo",
-    },
+    // {
+    //   label: "Twitter",
+    //   url: "https://twitter.com/ArseneKuo",
+    // },
     {
       label: "Instagram",
       url: "https://www.instagram.com/arsene_alibi/",
@@ -67,18 +66,16 @@ const config = {
   userSkills: {
     programmingLan: ["JavaScript", "Python", "PHP"],
     frontend: [
-      "React.js",
+      "React",
       "Redux",
       "Jest",
       "Testing Library",
       "HTML",
       "CSS",
       "Webpack",
-      "Babel",
-      "Gulp",
-      "Gatsby.js",
+      "Gatsby",
     ],
-    backend: ["Django", "GraphQL"],
+    backend: ["Django", "GraphQL", "Node", "Express"],
     database: ["MySQL"],
     design: ["Figma", "Wireframing", "Prototyping", "Interaction design"],
     development: ["Web application", "RWD", "Git", "Agile", "Unit testing"],
