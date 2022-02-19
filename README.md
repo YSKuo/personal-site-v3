@@ -19,8 +19,6 @@
 - emoji
 - 時間軸（展示網站歷程和文章列表）
 - [[CSS] 使用 scroll-behavior 達成免用 js 的平滑滾動效果 | DeTools 工具死神](https://tools.wingzero.tw/article/sn/224?fbclid=IwAR3oqPU-JZcC-ifIGxQuaHOazuTtgDnyidY8ew6uJ-61gkq1aCa_TPrFLW4)
-- 評論系統更換為 utterances？
-
 #### later
 
 - post 的 featured 和 draft 機制
@@ -53,8 +51,9 @@
   - [Support for App + Web property Google Analytics Measurement ID in gatsby-plugin-google-tagmanager · Issue #25359 · gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby/issues/25359)
   - [Adding Google Tag Manager and Google Analytics to a Gatsby site | Aj](https://www.articlejobber.com/enable-google-tag-manager-google-analytics-for-gatsby-site)
 - Post page 上下個文章鈕 (2021/04/04)
-- modify Post HMTL tag to be semantic (2021/05/16)
+- modify Post HTML tag to be semantic (2021/05/16)
 - tests (2021/07/31)
+- 評論系統從 Disqus 更換為 utterances (2022/02/19)
 
 ---
 
