@@ -1,9 +1,9 @@
 ---
-title: "運用資料結構/演算法的實作 Tree View"
+title: "運用演算法與資料結構的 Tree 及 DFS 來實作 Tree View"
 cover: ""
 category: "Front-end"
-date: "2022-02-20"
-excerpt: "用資料結構與演算法的概念來實作常見 UI Component: Tree View。"
+date: "2022-02-19"
+excerpt: "前端工程師學資料結構與演算法到底能幹嘛？這篇文章會用相關知識來實作常見 UI Component: Tree View。"
 language: "zh_Hant"
 published: true
 featured: true
@@ -29,9 +29,9 @@ tags:
 
 近年來有許多人轉職當軟體工程師，其中網頁前端又是最熱門的選項，而前端工程師的工作內容多是處理 UI 切版、串 API 以及優化效能等等，所以有許多人認為前端不需要懂演算法與資料結構。
 
-我在自學演算法與資料結構原先也覺得這只是用來面試的知識，直到最近在處理工作上的事情時實際運用到相關內容，這才了解到學習演算法與資料結構的優點。
+我在自學演算法與資料結構時，原先也覺得這只是用來面試的知識，直到最近在工作上實際運用到相關內容，這才了解到學習演算法與資料結構的好處。
 
-這篇文章會實作一種常見的 UI Component: Tree View，藉此來分享如何將電腦科學的基礎知識實際運用在實務上。
+這篇文章會實作一種常見的 UI Component: Tree View，藉此來分享如何將電腦科學的基礎知識運用在實務上。
 
 ## Tree View 介紹
 
@@ -45,7 +45,7 @@ tags:
 - 每一個節點的值都是字串
 - 若字串結尾有 `/` 則稱為類別節點
 - 若不是類別節點的話，則稱之為單位節點
-- 若有一個節點的字串內容為某類別節點的內容和其他內容的組合，則視此節點為該類別節點的子節點
+- 若有一個節點的字串內容為某類別節點和其他內容的組合，則視此節點為該類別節點的子節點
 - 點擊類別時可以收攏或展開其底下所有的子節點
 
 舉例說明：
@@ -68,7 +68,9 @@ Sample/C      -> 單位節點
 
 ### 前置作業
 
-把上述例子的字串整理成一個 node layer 的 hash table 出來，用來表明各個節點底下一層的子節點，整理完會像這樣：
+把上述例子的字串整理成一個 node layer 的 hash table，用來表明各個節點底下一層的子節點。
+
+這個 table 將有利於建立 tree 時處理下一層的子節點，整理完會像這樣：
 
 ```js
 const nodeLayers = {
@@ -95,7 +97,7 @@ class Node {
 }
 
 class Tree {
-  constructor(topNode, nodeLayers = {}) {
+  constructor(topNode, nodeLayers) {
     this.root = new Node(topNode);
     this.dfs(this.root, nodeLayers);
   }
@@ -117,15 +119,7 @@ class Tree {
 定義完 object 之後就來實際建立 UI component，這邊我用 React 的語法來寫，並省去樣式設定以及一些 function 等細節。
 
 ```js
-const tree = new Tree("Sample/", {
-  "Sample/": ["Sample/A/", "Sample/B/", "Sample/A", "Sample/B", "Sample/C"],
-  "Sample/A/": ["Sample/A/A"],
-  "Sample/B/": ["Sample/B/B"],
-  "Sample/B/B": [],
-  "Sample/A": [],
-  "Sample/B": [],
-  "Sample/C": [],
-});
+const tree = new Tree("Sample/", nodeLayers);
 
 const TreeNode = ({ node }) => {
   const [isShow, setIsShow] = useState(true);
@@ -161,13 +155,13 @@ const TreeView = ({ tree }) => (
 );
 ```
 
-其中 `TreeNode` 這個 component 一樣是運用 DFS 的概念，以便長出節點底下的 children，並用 `isShow` 這個狀態來處理類別節點收攏/展開子節點的狀況，如此一來就完成 Tree View 的實作了。
+其中 `TreeNode` 這個 component 一樣是運用 DFS 的概念，以便 render 出節點底下的 children，並用 `isShow` 這個狀態來處理類別節點收攏/展開子節點的狀況，如此一來就完成 Tree View 的實作了。
 
-## 結論
+## 結語
 
-在實作這個需求之後，讓我覺得演算法/資料結構更有趣了，畢竟誰不希望自己所學的東西是真的有所運用呢？
+在實作這個需求之後，讓我覺得演算法/資料結構更有趣了，畢竟誰不希望自己所學的東西是真的有機會運用呢？
 
-如果讀者有興趣了解其他演算法及資料結構內容，歡迎閱讀我寫的系列文章：
+如果讀者有興趣了解其他演算法及資料結構內容，歡迎閱讀我寫的其他文章：
 
 - [演算法](/categories/algorithm)
 - [資料結構](/categories/data-structure)
