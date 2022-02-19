@@ -1,24 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
-import {
-  Container,
-  Toolbar,
-  Grid,
-  Typography,
-  Link,
-  Button,
-  IconButton,
-  Hidden,
-  Divider,
-} from "@material-ui/core";
+import { Container, Typography, Button } from "@material-ui/core";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import CommentIcon from "@material-ui/icons/Comment";
+
 import Layout from "../layout";
 import fontSizeRWD from "../utils/fontSizeRWD";
-import Disqus from "../components/Disqus/Disqus";
+import Comments from "../components/Comments/Comments";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
 import PostSecondaryInfo from "../components/Post/PostSecondaryInfo";
@@ -36,7 +26,6 @@ export default function PostTemplate({ data, pageContext }) {
   if (!post.id) {
     post.id = slug;
   }
-  const [isShowDisqus, setIsShowDisqus] = useState(false);
 
   return (
     <Layout>
@@ -66,7 +55,7 @@ export default function PostTemplate({ data, pageContext }) {
                 {prevtitle}
               </PrePostButton>
             ) : (
-              <div></div>
+              <div />
             )}
             {nextslug ? (
               <NextPostButton
@@ -78,27 +67,10 @@ export default function PostTemplate({ data, pageContext }) {
                 {nexttitle}
               </NextPostButton>
             ) : (
-              <div></div>
+              <div />
             )}
           </PostButtonContainer>
-          <Typography variant="h3" component="h3">
-            Comment
-          </Typography>
-          {isShowDisqus ? (
-            <Disqus postNode={postNode} />
-          ) : (
-            <DisqusButtonContainer>
-              <Button
-                variant="contained"
-                color="secondary"
-                size="large"
-                startIcon={<CommentIcon />}
-                onClick={() => setIsShowDisqus(true)}
-              >
-                Disqus
-              </Button>
-            </DisqusButtonContainer>
-          )}
+          <Comments />
         </article>
       </Container>
     </Layout>
@@ -260,9 +232,4 @@ const NextPostButton = styled(PostButton)`
   ${mediaQueryBreakpoint("sm")} {
     justify-content: flex-end;
   }
-`;
-
-const DisqusButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
 `;
