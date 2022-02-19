@@ -6,7 +6,7 @@ date: "2022-01-29"
 excerpt: "介紹資料結構的堆積（Heap），並以 JavaScript 來實作。"
 language: "zh_Hant"
 published: true
-featured: true
+featured: false
 tags:
   - 資料結構
   - OOP物件導向
