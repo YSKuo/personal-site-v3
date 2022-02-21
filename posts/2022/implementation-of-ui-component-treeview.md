@@ -20,7 +20,6 @@ tags:
 了解本文內容之前需要具備的 prerequisite：
 
 - JavaScript 基礎知識及 ES6 語法
-- 物件導向
 - 遞迴
 - [Tree](/post/2021/12/12/introduction-to-tree)
 - [Tree Traversal](/post/2021/12/25/implementation-of-tree-traversal-in-javascript)
@@ -29,7 +28,7 @@ tags:
 
 近年來有許多人轉職當軟體工程師，其中網頁前端又是最熱門的選項，而前端工程師的工作內容多是處理 UI 切版、串 API 以及優化效能等等，所以有許多人認為前端不需要懂演算法與資料結構。
 
-我在自學演算法與資料結構時，原先也覺得這只是用來面試的知識，直到最近在工作上實際運用到相關內容，這才了解到學習演算法與資料結構的好處。
+我在自學演算法與資料結構時，原先也覺得這只是用來應付面試的技能，直到最近在工作上實際運用到相關內容，這才了解到學習這些知識的優點。
 
 這篇文章會實作一種常見的 UI Component: Tree View，藉此來分享如何將電腦科學的基礎知識運用在實務上。
 
@@ -68,81 +67,51 @@ Sample/C      -> 單位節點
 
 ### 前置作業
 
-把上述例子的字串整理成一個 node layer 的 hash table，用來表明各個節點底下一層的子節點。
+把上述例子中最上層的節點找出來作為 tree 的 root，並將所有的字串整理成一個 node children 的 hash table，用來表明各個節點底下一層的子節點。
 
 這個 table 將有利於建立 tree 時處理下一層的子節點，整理完會像這樣：
 
 ```js
-const nodeLayers = {
+const topNode = "Sample/";
+
+const nodeChildren = {
   "Sample/": ["Sample/A/", "Sample/B/", "Sample/A", "Sample/B", "Sample/C"],
   "Sample/A/": ["Sample/A/A"],
   "Sample/B/": ["Sample/B/B"],
-  "Sample/B/B": [],
-  "Sample/A": [],
-  "Sample/B": [],
-  "Sample/C": [],
+  "Sample/B/B": null,
+  "Sample/A": null,
+  "Sample/B": null,
+  "Sample/C": null,
 };
-```
-
-### 定義 object
-
-接著運用 JS ES6 的 [Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) 來定義 tree 的結構，這邊運用 Depth First Search (DFS) 來產生節點及子節點。
-
-```js
-class Node {
-  constructor(name) {
-    this.name = name;
-    this.children = [];
-  }
-}
-
-class Tree {
-  constructor(topNode, nodeLayers) {
-    this.root = new Node(topNode);
-    this.dfs(this.root, nodeLayers);
-  }
-
-  dfs(node, nodeLayers) {
-    if (!nodeLayers[node.name]) return;
-
-    nodeLayers[node.name].forEach((child) => {
-      const childNode = new Node(child);
-      node.children.push(childNode);
-      this.dfs(childNode, nodeLayers);
-    });
-  }
-}
 ```
 
 ### 定義 component
 
-定義完 object 之後就來實際建立 UI component，這邊我用 React 的語法來寫，並省去樣式設定以及一些 function 等細節。
+整理完節點的親子關係後，就可以開始建立 UI component，這邊我用 React 的語法來寫，並省去樣式設定以及一些 function 等細節。
 
 ```js
-const tree = new Tree("Sample/", nodeLayers);
-
-const TreeNode = ({ node }) => {
+const TreeNode = ({ node, nodeChildren }) => {
   const [isShow, setIsShow] = useState(true);
   return (
     <TreeNodeWrapper>
-      {node.children.length ? (
+      {nodeChildren[node] != null ? (
         <>
           <CategoryWrapper>
             <Checkbox />
             <CategoryName onClick={() => setIsShow((prev) => !prev)}>
-              {node.name}
+              {node}
             </CategoryName>
           </CategoryWrapper>
           {isShow && (
             <ChildrenWrapper>
-              {node.children.map((child, idx) => (
-                <TreeNode key={idx} node={child} />
+              {nodeChildren[node].map((child, idx) => (
+                <TreeNode key={idx} node={child} nodeChildren={nodeChildren} />
               ))}
             </ChildrenWrapper>
           )}
         </>
       ) : (
-        <Checkbox label={node.name} />
+        <Checkbox label={node} />
       )}
     </TreeNodeWrapper>
   );
@@ -150,16 +119,16 @@ const TreeNode = ({ node }) => {
 
 const TreeView = ({ tree }) => (
   <TreeWrapper>
-    <TreeNode node={tree.root} />
+    <TreeNode node={topNode} nodeChildren={nodeChildren} />
   </TreeWrapper>
 );
 ```
 
-其中 `TreeNode` 這個 component 一樣是運用 DFS 的概念，以便 render 出節點底下的 children，並用 `isShow` 這個狀態來處理類別節點收攏/展開子節點的狀況，如此一來就完成 Tree View 的實作了。
+其中 `TreeNode` 這個 component 是運用遞迴跑 DFS 的概念，以便 render 出節點底下的 children，並用 `isShow` 這個狀態來處理類別節點收攏/展開子節點的狀況，如此一來就完成 Tree View 的實作了。
 
 ## 結語
 
-在實作這個需求之後，讓我覺得演算法/資料結構更有趣了，畢竟誰不希望自己所學的東西是真的有機會運用呢？
+這個例子很簡單，甚至沒有用 class 來建立物件，不過在實作這個功能之後，讓我覺得演算法/資料結構更有趣了，畢竟誰不希望自己所學的東西是真的有機會運用呢？
 
 如果讀者有興趣了解其他演算法及資料結構內容，歡迎閱讀我寫的其他文章：
 
