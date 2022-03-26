@@ -16,8 +16,6 @@ export default function MainLayout({ children }) {
       <ThemeProvider theme={theme}>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
-          {/* cache for 1 week */}
-          <meta httpEquiv="cache-control" content="max-age=604800" />
           <html lang="zh_Hant" />
         </Helmet>
         <GlobalStyle />
