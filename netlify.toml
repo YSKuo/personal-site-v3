@@ -5,3 +5,12 @@
   NODE_VERSION = "12.13.0"
   YARN_VERSION = "1.19.1"
   YARN_FLAGS = "--no-ignore-optional"
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+
+  [headers.values]
+  cache-control = '''
+  public,
+  max-age=86400,
+  must-revalidate'''
