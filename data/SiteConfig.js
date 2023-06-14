@@ -17,7 +17,7 @@ const config = {
   userName: "Yan-Sheng (Arsene) Kuo", // Username to display in the author segment.
   userEmail: "crowley3141@hotmail.com", // Email used for RSS feed's author segment
   userTwitter: "https://twitter.com/ArseneKuo", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "Taipei, Taiwan", // User location to display in the author segment.
+  userLocation: "Houston, Texas", // User location to display in the author segment.
   userResume:
     "https://docs.google.com/document/d/18ASSmVnMz2kiN3NFxoN6EZEVv33ytBHiGYO5mspWSDI/edit?usp=sharing",
   userAvatar: "", // User avatar to display in the author segment.
