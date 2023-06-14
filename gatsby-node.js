@@ -12,7 +12,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
 
-    // 要把 post 的 url 改成檔名而非 title
     if (
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
@@ -45,10 +44,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
 
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")) {
-        // 文章 frontmatter 有 slug 就直接拿來用
+        // While there is slug in post, just use it
         slug = `${_.kebabCase(node.frontmatter.slug)}`;
       } else if (date.isValid) {
-        // 以日期加上檔名當 slug
+        // Set slug to be a combination of date and filename
         slug = `${_.replace(
           date.toISOString().substr(0, 10),
           new RegExp("-", "g"),
@@ -68,6 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const categoryPage = path.resolve("src/templates/category.jsx");
   const homePage = path.resolve("./src/templates/home.jsx");
   const blogPage = path.resolve("./src/templates/blog.jsx");
+  // const categoriesPage = path.resolve("./src/templates/categories.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
@@ -183,6 +183,12 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+
+  //  Create categories page
+  // createPage({
+  //   path: `/categories`,
+  //   component: categoriesPage,
+  // });
 
   //  Create tag pages
   tagSet.forEach((tag) => {
